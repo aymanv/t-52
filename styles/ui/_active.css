@@ -1,0 +1,6 @@
+@import "./_theme.css";
+
+/* SWIPER PAGINATION */
+.swiper-pagination > .swiper-pagination-bullet.swiper-pagination-bullet-active {
+  background-color: var(--first) !important;
+}

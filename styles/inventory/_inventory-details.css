@@ -1,0 +1,83 @@
+@import "../../styles/_theme.css";
+
+/* no active */
+.nav-fill .nav-item .nav-link, .nav-justified .nav-item .nav-link {
+  color: var(--black) !important;
+  background-color: var(--light) !important;
+}
+/* active */
+.nav-pills .nav-link.active, .nav-pills .show>.nav-link {
+  color: var(--white) !important;
+  background-color: var(--first) !important;
+}
+.nav-pills .nav-link.active, .nav-pills .show>.nav-link {
+  color: var(--white) !important;
+  background-color: var(--first) !important;
+}
+
+
+
+/*** SWIPER ***/
+#inventoryDetails #inventoryDetails__infos .swiper-container {
+  width: 100%;
+  height: 100%;
+}
+
+#inventoryDetails #inventoryDetails__infos .swiper-slide {
+  text-align: center;
+  /* font-size: 18px;
+  background: #fff; */
+  /* Center slide text vertically */
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  -webkit-align-items: center;
+  align-items: center;
+}
+
+#inventoryDetails #inventoryDetails__infos .swiper-slide img {
+  /* display: block; */
+  width: 100%;
+  /* height: 100%; */
+  object-fit: cover;
+}
+
+#inventoryDetails #inventoryDetails__infos .swiper-container {
+  width: 100%;
+  /* height: 300px; */
+  margin-left: auto;
+  margin-right: auto;
+}
+
+#inventoryDetails #inventoryDetails__infos .swiper-slide {
+  background-size: cover;
+  background-position: center;
+}
+
+#inventoryDetails #inventoryDetails__infos .swiperVehicle {
+  /* height: 80%; */
+  width: 100%;
+}
+
+#inventoryDetails #inventoryDetails__infos .swiperSmallVehicle {
+  height: 5rem;
+  box-sizing: border-box;
+  /* padding: 10px 0; */
+}
+
+#inventoryDetails #inventoryDetails__infos .swiperSmallVehicle .swiper-slide {
+  width: 10%;
+  height: 100%;
+  opacity: 0.4;
+}
+
+#inventoryDetails #inventoryDetails__infos .swiperSmallVehicle .swiper-slide-thumb-active {
+  opacity: 1;
+}

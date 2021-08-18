@@ -1,0 +1,1209 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]>      <html class="no-js"> <!--<![endif]-->
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Redone Motors | Inventory</title>
+    <!-- META TAGS -->
+    <meta name="theme-color" content="#0058BC">
+    <meta name="og:title" content="Redone Motors | Inventory">
+    <meta name="og:url" content="https://test.com/inventory">
+    <meta name="og:description" content="Redone Motors Inventory">
+    <meta name="og:image" content="link to my image">
+    <meta name="description" content="Redone Motors Inventory">
+    <meta name="keywords" content="Redone Motors Cars Inventory">
+    <!-- CSS -->
+    <link rel="icon" href="./favicon.ico" />
+    <link rel="stylesheet" href="./styles/_base.css">
+    <link rel="preload" href="./styles/_base-tailwind.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <link rel="stylesheet" href="./styles/_tailwind.css">
+    <link rel="stylesheet" href="./styles/_theme.css">
+    <!-- <link rel="preload" href="./styles/about/_style.css" as="style" onload="this.onload=null;this.rel='stylesheet'"> -->
+    <!-- BOOTSTRAP 5 CSS -->
+    <link rel="preload" href="./styles/bootstrap/bootstrap.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <!-- POPPINS FONT -->
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <!-- SWIPER JS CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="./styles/inventory/_inventory-details.css">
+  </head>
+
+  <body id="inventoryDetails">
+    <!--[if lt IE 7]>
+      <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="#">upgrade your browser</a> to improve your experience.</p>
+    <![endif]-->
+
+    <main>
+      <!--* HEADER *-->
+      <header id="header" class="navbar navbar-light bg--white border-b-2 border--first py-2.5">
+        <div class="container">
+          <div class="flex flex-wrap items-center" id="header__logoContainer">
+            <a href="#" class="rounded-circle p-2 me-1" id="header__menuBtn" aria-label="menu">
+              <i class="fas fa-bars text-3xl text--first"></i>
+            </a>
+            <a class="navbar-brand" href="/" id="header__logo" aria-label="go home">
+              <img class="img-fluid" src="./images/logo/logo.webp" srcset="./images/logo/logo-150.webp 768w" alt="Redone Motors Logo" width="130" height="80">
+            </a>
+          </div>
+          <div class="flex flex-wrap items-center" id="header__contactButtons">
+            <a href="tel:606060606" class="btn btn--first rounded-pill p-2 mx-5" aria-label="Call Us at (504) 226-7370">
+              <i class="fas fa-phone rounded-circle bg--white text--first p-2.5"></i>
+              <span class="text--white pl-2 pr-3">Call Us at (504) 226-7370</span>
+            </a>
+            <a href="mailto:example@example.com" class="btn btn--first rounded-pill p-2 mx-2" aria-label="Text Us">
+              <i class="fas fa-envelope rounded-circle bg--white text--first p-2.5"></i>
+              <span class="text--white pl-2 pr-3">Text Us</span>
+            </a>
+          </div>
+        </div>
+      </header>
+
+      <!--*** INVENTORY HEADER ***-->
+      <div id="inventoryDetails__header" class="">
+        <div id="inventoryDetails__headerTab" class="container-fluid bg-gray-50">
+          <div class="container">                                                                               
+            <div class="grid grid-cols-2 grid-rows-2 md:grid-rows-1 md:grid-cols-12 items-center gap-2 sm:gap-4 md:gap-6 py-6">
+              <!-- arrow & make -->
+              <div class="col-span-1 md:col-span-2 lg:col-span-2 flex flex-row">
+                <button class="pr-6">
+                  <i class="fas fa-arrow-left fs-2 text-gray-700" aria-hidden="true"></i>
+                </button>
+                <img class="object-contain w-32 md:w-auto lg:w-36 xl:w-44" loading="lazy" src="./images/inventory/mark/ford.png" width="150" height="100" alt="ford model 2020">
+              </div>
+              <!-- title & detail -->
+              <div class="col-span-2 md:col-span-8 pl-0 md:pl-10">
+                <h1 class="text-2xl lg:text-3xl font-bold uppercase">2018 FORD SUPER DUTY F-350SRW PLATINIUM TEXAS BORN</h1>
+                <h2 class="text-base md:text-lg lg:text-xl font-normal uppercase">VIN: 1FAHOPUOIIWEZEA STOCK #: F5520123</h2>
+              </div>
+              <!-- price -->
+              <div class="row-start-1 col-start-2 col-end-3 sm:row-start-1 sm:col-start-2 sm:col-end-3 md:row-start-auto md:row-end-auto md:col-span-2 flex">
+                <span class="bg--first text-white font-medium text-lg md:text-xl lg:text-2xl py-2 px-7 ml-auto">
+                  $52,566
+                </span>
+              </div>
+            
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!--* INVENTORY INFOS *-->
+      <section id="inventoryDetails__infos" class="container-fluid mt-12">
+        <div class="container">
+          <div class="grid grid-cols-12 gap-y-12 lg:gap-y-0 lg:gap-x-0 lg:gap-x-12">
+            <!--* GALLERY PICTURES *-->
+            <div class="col-span-12 lg:col-span-7">
+
+              <!-- vehicle details vehicles swiper -->
+              <div
+                id="inventoryDetails__vehicleSwiper"
+                style="--swiper-navigation-color: #000; --swiper-pagination-color: #000"
+                class="swiper-container swiperVehicle h-30r md:h-40r lg:h-45r w-100 mb-4"
+              >
+                <div class="swiper-wrapper">
+                  <div class="swiper-slide">
+                    <img src="./images/inventory/1.webp" class="h-full" alt="car make + model" />
+                  </div>
+                  <div class="swiper-slide">
+                    <img src="./images/inventory/1.webp" class="h-full" alt="car make + model" />
+                  </div>
+                  <div class="swiper-slide">
+                    <img src="./images/inventory/1.webp" class="h-full" alt="car make + model" />
+                  </div>
+                  <div class="swiper-slide">
+                    <img src="./images/inventory/1.webp" class="h-full" alt="car make + model" />
+                  </div>
+                  <div class="swiper-slide">
+                    <img src="./images/inventory/1.webp" class="h-full" alt="car make + model" />
+                  </div>
+                  <div class="swiper-slide">
+                    <img src="./images/inventory/1.webp" class="h-full" alt="car make + model" />
+                  </div>
+                  <div class="swiper-slide">
+                    <img src="./images/inventory/1.webp" class="h-full" alt="car make + model" />
+                  </div>
+                  <div class="swiper-slide">
+                    <img src="./images/inventory/1.webp" class="h-full" alt="car make + model" />
+                  </div>
+                  <div class="swiper-slide">
+                    <img src="./images/inventory/1.webp" class="h-full" alt="car make + model" />
+                  </div>
+                  <div class="swiper-slide">
+                    <img src="./images/inventory/1.webp" class="h-full" alt="car make + model" />
+                  </div>
+                </div>
+                <div class="swiper-button-next"></div>
+                <div class="swiper-button-prev"></div>
+              </div>
+              <!-- small img vehicles swiper -->
+              <div thumbsSlider="" class="swiper-container swiperSmallVehicle">
+                <div class="swiper-wrapper">
+                  <div class="swiper-slide">
+                    <img src="./images/inventory/1.webp" />
+                  </div>
+                  <div class="swiper-slide">
+                    <img src="./images/inventory/1.webp" />
+                  </div>
+                  <div class="swiper-slide">
+                    <img src="./images/inventory/1.webp" />
+                  </div>
+                  <div class="swiper-slide">
+                    <img src="./images/inventory/1.webp" />
+                  </div>
+                  <div class="swiper-slide">
+                    <img src="./images/inventory/1.webp" />
+                  </div>
+                  <div class="swiper-slide">
+                    <img src="./images/inventory/1.webp" />
+                  </div>
+                  <div class="swiper-slide">
+                    <img src="./images/inventory/1.webp" />
+                  </div>
+                  <div class="swiper-slide">
+                    <img src="./images/inventory/1.webp" />
+                  </div>
+                  <div class="swiper-slide">
+                    <img src="./images/inventory/1.webp" />
+                  </div>
+                  <div class="swiper-slide">
+                    <img src="./images/inventory/1.webp" />
+                  </div>
+                </div>
+              </div>
+
+            </div>
+            <!--* end GALLERY PICTURES *-->
+
+            <!--* SCHEDULE TEST FORM COL *-->
+            <div class="col-span-12 lg:col-span-5">
+              <!--* SCHEDULE TEST FORM *-->
+              <form action="#" class="flex flex-col" id="inventoryDetails__testForm">
+                <div class="flex flex-col w-full">
+                  <div class="bg--first py-4">
+                    <h3 class="text-white text-xl text-white uppercase text-center mb-0">Schedule Test-Drive</h3>
+                  </div>
+                  <div class="py-6 px-12 border" id="inventoryDetails__testFormInputs">
+                    <!-- last name -->
+                    <div class="mb-10">
+                      <label for="test_firstname" class="form-label mb-0">First Name</label>
+                      <input type="text" class="form-control py-2 px-5 rounded-0" name="data[firstname]" id="test_firstname" placeholder="First Name">
+                    </div>
+                    <!-- last name -->
+                    <div class="mb-10">
+                      <label for="test_lastname" class="form-label mb-0">Last Name</label>
+                      <input type="text" class="form-control py-2 px-5 rounded-0" name="data[lastname]" id="test_lastname" placeholder="Last Name">
+                    </div>
+                    <!-- email -->
+                    <div class="mb-10">
+                      <label for="test_email" class="form-label mb-0">Email</label>
+                      <input type="email" class="form-control py-2 px-5 rounded-0" name="data[email]" id="test_email" placeholder="Email">
+                    </div>
+                    <!-- phone -->
+                    <div class="mb-10">
+                      <label for="test_phone" class="form-label mb-0">Phone</label>
+                      <input type="phone" class="form-control py-2 px-5 rounded-0" name="data[phone]" id="test_phone" placeholder="Phone">
+                    </div>
+                    <!-- appointment -->
+                    <div class="mb-10">
+                      <label for="test_appointment" class="form-label mb-0">When would you like to test drive this car ?</label>
+                      <select type="text" name="data[appointment]" class="form-control border-t-0 border-r-0 border-l-0 rounded-none border-b" placeholder="Mark">
+                        <option selected disabled>Feburary 11, 2021 at 05 : 13 pm</option>
+                      </select>
+                    </div>
+                    <div class="grid grid-cols-2 gap-x-8">
+                      <!-- date -->
+                      <div class="mb-10">
+                        <label for="test_date" class="form-label mb-0">Date</label>
+                        <input type="date" class="form-control border-t-0 border-r-0 border-l-0 py-2 rounded-0" name="data[date]" id="test_date" placeholder="06/02/2021">
+                      </div>
+                      <!-- hour -->
+                      <div class="mb-10">
+                        <label for="test_hour" class="form-label mb-0">Hour</label>
+                        <input type="time" class="form-control border-t-0 border-r-0 border-l-0 py-2 rounded-0" name="data[hour]" id="test_hour" placeholder="First Name">
+                      </div>
+                    </div>
+                    
+                    <!--* SUBMIT BTN *-->
+                    <div class="w-7/12 mx-auto my-4">
+                      <button class="btn w-full text--first border--first hover:bg-blue-600 hover:text--white rounded-pill text-lg font-semibold uppercase py-2">Submit</button>
+                    </div>
+
+                  </div>
+                  
+
+                </div>
+              </form>
+              <!--* END SCHEDULE TEST FORM *-->
+            </div>
+            <!--*/ end TEST FORM COL -->
+
+          </div>
+        </div>
+      </section>
+
+      <!--* INVENTORY CHARACTERESTICS *-->
+      <section id="inventoryDetails__characters" class="container-fluid mt-12">
+        <div class="container">
+
+          <div class="bg-gray-100 border py-6 px-10">
+            <!--* characteristics *-->
+            <div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-y-2 gap-x-2">
+              <!--? Exterior -->
+              <div class="flex my-3">
+                <img class="w-10 object-contain" width="50" height="50" src="./images/icon/inventory/1.png" alt="exterior">
+                <div class="flex flex-col items-start pl-6">
+                  <span class="text-sm">Exterior</span>
+                  <span class="text-sm font-semibold">White Platinium</span>
+                </div>
+              </div>
+              <!--? Transmission -->
+              <div class="flex my-3">
+                <img class="w-10 object-contain" width="50" height="50" src="./images/icon/inventory/2.png" alt="exterior">
+                <div class="flex flex-col items-start pl-6">
+                  <span class="text-sm">Transmission</span>
+                  <span class="text-sm font-semibold">Automatic</span>
+                </div>
+              </div>
+              <!--? Engine -->
+              <div class="flex my-3">
+                <img class="w-10 object-contain" width="50" height="50" src="./images/icon/inventory/5.png" alt="exterior">
+                <div class="flex flex-col items-start pl-6">
+                  <span class="text-sm">Engine</span>
+                  <span class="text-sm font-semibold">6.7L Power</span>
+                </div>
+              </div>
+              <!--? MPG -->
+              <div class="flex my-3">
+                <img class="w-10 object-contain" width="50" height="50" src="./images/icon/inventory/7.png" alt="exterior">
+                <div class="flex flex-col items-start pl-6">
+                  <span class="text-sm">MPG</span>
+                  <span class="text-sm font-semibold">-</span>
+                </div>
+              </div>
+              <!--? Body Style -->
+              <div class="flex my-3">
+                <img class="w-10 object-contain" width="50" height="50" src="./images/icon/inventory/9.png" alt="exterior">
+                <div class="flex flex-col items-start pl-6">
+                  <span class="text-sm">Body Style</span>
+                  <span class="text-sm font-semibold">Pickup</span>
+                </div>
+              </div>
+              <!--? Fuel Type -->
+              <div class="flex my-3">
+                <img class="w-10 object-contain" width="50" height="50" src="./images/icon/inventory/11.png" alt="exterior">
+                <div class="flex flex-col items-start pl-6">
+                  <span class="text-sm">Fuel Type</span>
+                  <span class="text-sm font-semibold">-</span>
+                </div>
+              </div>
+              <!--? Door -->
+              <div class="flex my-3">
+                <img class="w-10 object-contain" width="50" height="50" src="./images/icon/inventory/3.png" alt="exterior">
+                <div class="flex flex-col items-start pl-6">
+                  <span class="text-sm">Door</span>
+                  <span class="text-sm font-semibold">4 Doors</span>
+                </div>
+              </div>
+              <!--? DriveTrain -->
+              <div class="flex my-3">
+                <img class="w-10 object-contain" width="50" height="50" src="./images/icon/inventory/4.png" alt="exterior">
+                <div class="flex flex-col items-start pl-6">
+                  <span class="text-sm">Drivetrain</span>
+                  <span class="text-sm font-semibold">4WD</span>
+                </div>
+              </div>
+              <!--? Mileage -->
+              <div class="flex my-3">
+                <img class="w-10 object-contain" width="50" height="50" src="./images/icon/inventory/6.png" alt="exterior">
+                <div class="flex flex-col items-start pl-6">
+                  <span class="text-sm">Mileage</span>
+                  <span class="text-sm font-semibold">105,260 Miles</span>
+                </div>
+              </div>
+              <!--? Seat -->
+              <div class="flex my-3">
+                <img class="w-10 object-contain" width="50" height="50" src="./images/icon/inventory/8.png" alt="exterior">
+                <div class="flex flex-col items-start pl-6">
+                  <span class="text-sm">Seat</span>
+                  <span class="text-sm font-semibold">-</span>
+                </div>
+              </div>
+              <!--? Interior -->
+              <div class="flex my-3">
+                <img class="w-10 object-contain" width="50" height="50" src="./images/icon/inventory/10.png" alt="exterior">
+                <div class="flex flex-col items-start pl-6">
+                  <span class="text-sm">Interior</span>
+                  <span class="text-sm font-semibold">Adobe</span>
+                </div>
+              </div>
+              <!--? Trim -->
+              <div class="flex my-3">
+                <img class="w-10 object-contain" width="50" height="50" src="./images/icon/inventory/12.png" alt="exterior">
+                <div class="flex flex-col items-start pl-6">
+                  <span class="text-sm">Trim</span>
+                  <span class="text-sm font-semibold">Platinum TEXAS</span>
+                </div>
+              </div>
+            </div>
+            <!--* end characteristics *-->
+          </div>
+
+          <!-- VIEWS -->
+          <div class="bg-gray-50 border-l border-r">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-y-2">
+              <!--? vues *-->
+              <div class="col-span-1 flex items-center py-4 px-10">
+                <img class="w-18 object-contain pr-6" width="70" height="70" src="./images/icon/inventory/5.png" alt="exterior">
+                <span class="font-medium py-2">294 People viewed this vehicle</span>
+              </div>
+
+              <div class="col-span-1 flex items-center lg:justify-end border-t md:border-t-0">
+                <!-- imgs inventory -->
+                <div class="flex items-center py-3 pl-10 lg:pl-0">
+                  <img class="w-18 md:w-32 sm:w-18 h-16 object-contain pr-3" loading="lazy" src="./images/inventory/common/cargurus.png" width="100" height="100" alt="ford model 2020">
+                  <img class="w-18 md:w-32 sm:w-18 h-16 object-contain pr-3" loading="lazy" src="./images/inventory/common/approuved.png" width="100" height="100" alt="ford model 2020">
+                  <img class="w-18 md:w-32 sm:w-18 h-16 object-contain pr-3" loading="lazy" src="./images/inventory/common/window-sticker.png" width="100" height="100" alt="ford model 2020">
+                </div>
+                <!--* print btn -->
+                <button class="h-full w-24 border-l self-end ml-auto lg:ml-6" onclick="window.print()">
+                  <i class="fas fa-print text-3xl text-gray-400" aria-hidden="true"></i>
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <!-- CONTACT INFOS -->
+          <div class="bg-gray-100 border py-6 px-10">
+            <div class="grid grid-cols-1 items-center lg:grid-cols-2 gap-x-2 gap-y-4 md:gap-y-0">
+              <div class="flex flex-col">
+                <span class="text-lg md:text-xl uppercase font-bold">Contact Sales at Redone Motors</span>
+                <span class="text-lg md:text-xl uppercase">2368 walsh ave santa clara ca 95051</span>
+              </div>
+              <div class="flex justify-start lg:justify-end">
+                <a href="tel:5042266638" class="font-semibold fs-5 text-black">(504) 226-6638</a>
+              </div>
+            </div>
+          </div>
+
+
+
+        </div>
+      </section>
+
+      <section id="inventoryDetails__description" class="container-fluid mt-12">
+        <div class="container">
+          <ul class="nav nav-pills nav-fill" id="pills-tab-desc" role="tablist">
+            <li class="nav-item mr-1" role="presentation">
+              <button class="nav-link active rounded-0 py-4 text-lg font-bold uppercase bg-gray-100" id="pills-desc-tab" data-bs-toggle="pill" data-bs-target="#pills-desc" type="button" role="tab" aria-controls="pills-desc" aria-selected="true">DESCRIPTION</button>
+            </li>
+            <li class="nav-item mr-1" role="presentation">
+              <button class="nav-link rounded-0 py-4 text-lg font-bold uppercase bg-gray-100" id="pills-profile-specs-tab" data-bs-toggle="pill" data-bs-target="#pills-profile-specs" type="button" role="tab" aria-controls="pills-profile-specs" aria-selected="false">SPECS</button>
+            </li>
+            <li class="nav-item mr-1" role="presentation">
+              <button class="nav-link rounded-0 py-4 text-lg font-bold uppercase bg-gray-100" id="pills-equipe-tab" data-bs-toggle="pill" data-bs-target="#pills-equipe" type="button" role="tab" aria-controls="pills-equipe" aria-selected="false">STANDARD EQUIPMENT</button>
+            </li>
+            <li class="nav-item bg--transparent" role="presentation">
+              <!-- empty -->
+            </li>
+          </ul>
+          <div class="tab-content" id="pills-tabContent-desc">
+            <div class="tab-pane fade show active border px-10 py-12" id="pills-desc" role="tabpanel" aria-labelledby="pills-desc-tab">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Culpa minima alias doloremque ad quisquam. Error quasi, repellat debitis cupiditate, veritatis culpa nam, harum quae dolore esse molestias? Sint, quidem possimus! Quae voluptates beatae aspernatur possimus, nam porro corrupti repellendus. Sed maxime, eveniet ducimus in enim dicta nihil alias corporis, deserunt tenetur aperiam quae blanditiis repellendus aut optio officiis totam qui fugit? Dolores autem quas fugit vitae reiciendis! Nam, maiores rerum dignissimos suscipit pariatur illum quo! Enim repudiandae laudantium, architecto a nulla recusandae ut ad? Eligendi error excepturi dignissimos minus, amet incidunt explicabo facilis pariatur! Libero veniam odio voluptas repudiandae quibusdam ipsam quos nostrum, odit quisquam vel fuga nam numquam cum aliquam neque, autem blanditiis commodi, facere sunt est quis dignissimos! Vel assumenda praesentium suscipit sed dolores illo maiores quo ipsum optio, maxime non delectus, nesciunt ipsam autem explicabo nostrum culpa eveniet obcaecati omnis unde quia accusantium facere quam! Adipisci quidem a ipsum voluptatibus velit, commodi iusto nostrum. Vel quaerat qui facere libero debitis non et voluptatem, praesentium aliquid! Quibusdam suscipit explicabo minus blanditiis necessitatibus dolorum enim laboriosam. Quos modi saepe veniam eos ab dolores omnis et iure delectus sequi, soluta minus. Ullam iste corporis earum atque corrupti quia rem modi?
+            </div>
+            <div class="tab-pane fade border px-10 py-12" id="pills-profile-specs" role="tabpanel" aria-labelledby="pills-profile-specs-tab">SPECS</div>
+            <div class="tab-pane fade border px-10 py-12" id="pills-equipe" role="tabpanel" aria-labelledby="pills-equipe-tab">STARNARD EQUIPMENT</div>
+          </div>
+        </div>
+      </section>
+
+      
+      <!--* INVENTORY CALCULATOR *-->
+      <section id="inventoryDetails__calculator" class="container-fluid mt-12">
+        <div class="container">
+          <ul class="nav nav-pills" id="pills-tab-desc" role="tablist">
+            <li class="nav-item mr-1" role="presentation">
+              <button class="nav-link active rounded-0 py-4 text-lg font-bold uppercase bg-gray-100" id="pills-calculator-tab" data-bs-toggle="pill" data-bs-target="#pills-calculator" type="button" role="tab" aria-controls="pills-calculator" aria-selected="true">financing calculator</button>
+            </li>
+          </ul>
+          <div class="tab-content" id="pills-tabContent-calculator">
+            <div class="tab-pane fade show active border px-10 py-12" id="pills-calculator" role="tabpanel" aria-labelledby="pills-calculator-tab">
+
+              <!--* FORM FINANCE CALCULATOR *-->
+              <form action="#" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-x-12 md:gap-x-24 gap-y-6">
+                <!--? vehicle price -->
+                <div class="">
+                  <label class="font-medium" for="vehiclePrice">Vehicle Price</label>
+                  <div class="input-group mb-3">
+                    <div class="input-group-prepend">
+                      <span class="input-group-text bg-white rounded-0" id="vehicle-price-addon">
+                        <img src="./images/icon/inventory/1.png" class="py-1" width="20" height="20" alt="vehicule price">
+                      </span>
+                    </div>
+                    <input type="text" class="form-control rounded-0" name="data[vehicle_price]" id="vehiclePrice" aria-label="Vehicule Price" aria-describedby="vehicle-price-addon" placeholder="price">
+                  </div>
+                </div>
+                <!--? tradein price -->
+                <div class="">
+                  <label class="font-medium" for="tradeValue">Trade-In value</label>
+                  <div class="input-group mb-3">
+                    <div class="input-group-prepend">
+                      <span class="input-group-text bg-white rounded-0" id="trade-value-addon">
+                        <img src="./images/icon/inventory/1.png" class="py-1" width="20" height="20" alt="trade value">
+                      </span>
+                    </div>
+                    <input type="text" class="form-control rounded-0" name="data[trade_value]" id="tradeValue" aria-label="Trade-In value" aria-describedby="trade-value-addon" placeholder="value">
+                  </div>
+                </div>
+                <!--? loan term price -->
+                <div class="">
+                  <label class="font-medium" for="loanTerm">Loan Term ( Months )</label>
+                  <div class="input-group mb-3">
+                    <div class="input-group-prepend">
+                      <span class="input-group-text bg-white rounded-0" id="loan-term-addon">
+                        <img src="./images/icon/inventory/1.png" class="py-1" width="20" height="20" alt="loan term">
+                      </span>
+                    </div>
+                    <input type="text" class="form-control rounded-0" name="data[loan_term]" id="loanTerm" aria-label="Loan Term ( Months )" aria-describedby="loan-term-addon" placeholder="0.00">
+                  </div>
+                </div>
+
+                <!-- *______* -->
+
+                <!--? Down Payment price -->
+                <div class="">
+                  <label class="font-medium" for="loanTerm">Down Payment</label>
+                  <div class="input-group mb-3">
+                    <div class="input-group-prepend">
+                      <span class="input-group-text bg-white rounded-0" id="down-payment-addon">
+                        <img src="./images/icon/inventory/1.png" class="py-1" width="20" height="20" alt="Down Payment">
+                      </span>
+                    </div>
+                    <input type="text" class="form-control rounded-0" name="data[down_payment]" id="loanTerm" aria-label="Down Payment" aria-describedby="down-payment-addon" placeholder="70">
+                  </div>
+                </div>
+                <!--? Interest Rate price -->
+                <div class="">
+                  <label class="font-medium" for="inerestRate">Interest Rate</label>
+                  <div class="input-group mb-3">
+                    <div class="input-group-prepend">
+                      <span class="input-group-text bg-white rounded-0" id="interrest-rate-addon">
+                        <img src="./images/icon/inventory/1.png" class="py-1" width="20" height="20" alt="Interest Rate">
+                      </span>
+                    </div>
+                    <input type="text" class="form-control rounded-0" name="data[interest_rate]" id="inerestRate" aria-label="Interest Rate" aria-describedby="interrest-rate-addon" placeholder="70">
+                  </div>
+                </div>
+                <!--* submit *-->
+                <div class="w-full my-auto">
+                  <button type="submit" class="btn border--first w-full hover:bg--first hover:text--white rounded-pill py-2.5 font-semibold text--first">Estimate Payment</button>
+                </div>
+
+                <!-- *______* -->
+
+                <!-- payment details -->
+                <div class="sm:col-span-2 lg:col-span-1 flex items-center mt-6 sm:mt-0">
+                  <span class="font-semibold">Payment Details :</span>
+                </div>
+                <!--? monthly -->
+                <div class="flex items-center border-t border-b py-4">
+                  <span>
+                    <strong>18</strong>
+                    Monthly Payment Of :
+                  </span>
+                  <!--? monthly value -->
+                  <strong class="ml-auto">934</strong>
+                </div>
+                <!--? amount financed -->
+                <div class="flex items-center border-t border-b py-4">
+                  <span>
+                    <strong>18</strong>
+                    Amount Financed ($) :
+                  </span>
+                  <!--? amount financed value -->
+                  <strong class="ml-auto">16811</strong>
+                </div>
+
+
+              </form>
+            </div>
+            <!-- end tab-pane -->
+          </div>
+          <!-- end tab-content -->
+        </div>
+      </section>
+
+      <!--*** INVENTORY RELATED VEHICLES ***-->
+      <section id="inventoryDetails__relatedVehicle" class="container-fluid my-12">
+        <div class="container">
+
+          <!-- Swiper -->
+          <div class="swiper-container swiperRelatedVehicle pt-12 pb-24">
+            <!--* TITLE AND NAV BTNS *-->
+            <div class="flex flex-row pb-12" id="inventoryDetails__relatedVehicleTitle">
+              <h1 class="font-extrabold h4 text-uppercase">RELATED VEHICLES</h1>
+              <div class="flex flex-row ml-auto">
+                <div class="swiper-left-btn-vehicle px-8">
+                  <i class="fas fa-arrow-left text-2xl text-black" aria-hidden="true"></i>
+                </div>
+                <div class="swiper-right-btn-vehicle pl-8">
+                  <i class="fas fa-arrow-right text-2xl text-black" aria-hidden="true"></i>
+                </div>
+              </div>
+            </div>
+            
+            <div class="swiper-wrapper">
+              <!-- swiper slide 1 -->
+              <div class="swiper-slide">
+                <!-- card col -->
+                <div class="col">
+                  <!-- card -->
+                  <div class="rounded-0 border-0">
+                    <img loading="lazy" src="./images/inventory/1.webp" srcset="./images/inventory/1-300.webp 576w, ./images/inventory/1-300.webp 992w" width="300" height="300" alt="ford model 2020" class="card-img-top object-cover h-64 rounded-0">
+                    <div class="border-r border-b border-l pt-0 px-2.5">
+                      <!-- title + price -->
+                      <div class="row border-b">
+                        <span class="col-8 fs-6 font-semibold py-2">2018 F150 PLATINIUM ...</span>
+                        <span class="col-4 bg--first text--white text-end py-2">$52,998</span>
+                      </div>
+                      <!-- features & infos -->
+                      <div class="row align-items-start border-b py-2">
+                        <div class="col-9 row flex-wrap align-items-center justify-content-between">
+                          <small class="text-nowrap pr-2 py-1 col-6 border-r">
+                            <i class="fas fa-tachometer-alt text-muted pr-2"></i>27,560 mi
+                          </small>
+                          <small class="text-nowrap px-2 py-1 col-6">
+                            <i class="fas fa-cog text-muted pr-2"></i>Automatic
+                          </small>
+                          <small class="text-nowrap pr-2 py-1 col-12">
+                            <i class="fas fa-barcode text-muted pr-2"></i>ZA4ZZ5DS4SDDF6E
+                          </small>
+                        </div>
+                        <div class="col d-flex flex-column align-items-end">
+                          <button class="rounded-pill border h-10 w-10 p-2" aria-label="add to favourite">
+                            <i class="far fa-heart text-secondary"></i>
+                          </button>
+                          <small class="text-secondary">
+                            32 views
+                          </small>
+                        </div>
+                      </div>
+                      <!-- action buttons -->
+                      <div class="row align-items-center">
+                        <!-- call us btn -->
+                        <a href="tel:6666666666" class="col-6 text-center text--first border-r py-2 px-0">
+                          <i class="fas fa-phone"></i>
+                          <span class="font-semibold">
+                            Call Us
+                          </span>
+                        </a>
+                        <!-- text-us btn -->
+                        <a href="tel:6666666666" class="col-6 text-center text--first py-2 px-0">
+                          <i class="fas fa-envelope"></i>
+                          <span class="font-semibold">
+                            Text Us
+                          </span>
+                        </a>
+                      </div>
+                    </div>
+                    <!-- end card-body -->
+                  </div>
+                  <!-- end card -->
+                </div>
+                <!-- end card col col -->
+              </div>
+              <!-- end wiper-slide 1 -->
+              
+              <!-- swiper slide 1 -->
+              <div class="swiper-slide">
+                <!-- card col -->
+                <div class="col">
+                  <!-- card -->
+                  <div class="rounded-0 border-0">
+                    <img loading="lazy" src="./images/inventory/2.webp" srcset="./images/inventory/2-300.webp 576w, ./images/inventory/2-300.webp 992w" width="300" height="300" alt="ford model 2020" class="card-img-top object-cover h-64 rounded-0">
+                    <div class="border-r border-b border-l pt-0 px-2.5">
+                      <!-- title + price -->
+                      <div class="row border-b">
+                        <span class="col-8 fs-6 font-semibold py-2">2018 F150 PLATINIUM ...</span>
+                        <span class="col-4 bg--first text--white text-end py-2">$52,998</span>
+                      </div>
+                      <!-- features & infos -->
+                      <div class="row align-items-start border-b py-2">
+                        <div class="col-9 row flex-wrap align-items-center justify-content-between">
+                          <small class="text-nowrap pr-2 py-1 col-6 border-r">
+                            <i class="fas fa-tachometer-alt text-muted pr-2"></i>27,560 mi
+                          </small>
+                          <small class="text-nowrap px-2 py-1 col-6">
+                            <i class="fas fa-cog text-muted pr-2"></i>Automatic
+                          </small>
+                          <small class="text-nowrap pr-2 py-1 col-12">
+                            <i class="fas fa-barcode text-muted pr-2"></i>ZA4ZZ5DS4SDDF6E
+                          </small>
+                        </div>
+                        <div class="col d-flex flex-column align-items-end">
+                          <button class="rounded-pill border h-10 w-10 p-2" aria-label="add to favourite">
+                            <i class="far fa-heart text-secondary"></i>
+                          </button>
+                          <small class="text-secondary">
+                            32 views
+                          </small>
+                        </div>
+                      </div>
+                      <!-- action buttons -->
+                      <div class="row align-items-center">
+                        <!-- call us btn -->
+                        <a href="tel:6666666666" class="col-6 text-center text--first border-r py-2 px-0">
+                          <i class="fas fa-phone"></i>
+                          <span class="font-semibold">
+                            Call Us
+                          </span>
+                        </a>
+                        <!-- text-us btn -->
+                        <a href="tel:6666666666" class="col-6 text-center text--first py-2 px-0">
+                          <i class="fas fa-envelope"></i>
+                          <span class="font-semibold">
+                            Text Us
+                          </span>
+                        </a>
+                      </div>
+                    </div>
+                    <!-- end card-body -->
+                  </div>
+                  <!-- end card -->
+                </div>
+                <!-- end card col col -->
+              </div>
+              <!-- end wiper-slide 1 -->
+              
+              <!-- swiper slide 1 -->
+              <div class="swiper-slide">
+                <!-- card col -->
+                <div class="col">
+                  <!-- card -->
+                  <div class="rounded-0 border-0">
+                    <img loading="lazy" src="./images/inventory/3.webp" srcset="./images/inventory/3-300.webp 576w, ./images/inventory/3-300.webp 992w" width="300" height="300" alt="ford model 2020" class="card-img-top object-cover h-64 rounded-0">
+                    <div class="border-r border-b border-l pt-0 px-2.5">
+                      <!-- title + price -->
+                      <div class="row border-b">
+                        <span class="col-8 fs-6 font-semibold py-2">2018 F150 PLATINIUM ...</span>
+                        <span class="col-4 bg--first text--white text-end py-2">$52,998</span>
+                      </div>
+                      <!-- features & infos -->
+                      <div class="row align-items-start border-b py-2">
+                        <div class="col-9 row flex-wrap align-items-center justify-content-between">
+                          <small class="text-nowrap pr-2 py-1 col-6 border-r">
+                            <i class="fas fa-tachometer-alt text-muted pr-2"></i>27,560 mi
+                          </small>
+                          <small class="text-nowrap px-2 py-1 col-6">
+                            <i class="fas fa-cog text-muted pr-2"></i>Automatic
+                          </small>
+                          <small class="text-nowrap pr-2 py-1 col-12">
+                            <i class="fas fa-barcode text-muted pr-2"></i>ZA4ZZ5DS4SDDF6E
+                          </small>
+                        </div>
+                        <div class="col d-flex flex-column align-items-end">
+                          <button class="rounded-pill border h-10 w-10 p-2" aria-label="add to favourite">
+                            <i class="far fa-heart text-secondary"></i>
+                          </button>
+                          <small class="text-secondary">
+                            32 views
+                          </small>
+                        </div>
+                      </div>
+                      <!-- action buttons -->
+                      <div class="row align-items-center">
+                        <!-- call us btn -->
+                        <a href="tel:6666666666" class="col-6 text-center text--first border-r py-2 px-0">
+                          <i class="fas fa-phone"></i>
+                          <span class="font-semibold">
+                            Call Us
+                          </span>
+                        </a>
+                        <!-- text-us btn -->
+                        <a href="tel:6666666666" class="col-6 text-center text--first py-2 px-0">
+                          <i class="fas fa-envelope"></i>
+                          <span class="font-semibold">
+                            Text Us
+                          </span>
+                        </a>
+                      </div>
+                    </div>
+                    <!-- end card-body -->
+                  </div>
+                  <!-- end card -->
+                </div>
+                <!-- end card col col -->
+              </div>
+              <!-- end wiper-slide 1 -->
+
+              <!-- swiper slide 1 -->
+              <div class="swiper-slide">
+                <!-- card col -->
+                <div class="col">
+                  <!-- card -->
+                  <div class="rounded-0 border-0">
+                    <img loading="lazy" src="./images/inventory/4.webp" srcset="./images/inventory/4-300.webp 576w, ./images/inventory/4-300.webp 992w" width="300" height="300" alt="ford model 2020" class="card-img-top object-cover h-64 rounded-0">
+                    <div class="border-r border-b border-l pt-0 px-2.5">
+                      <!-- title + price -->
+                      <div class="row border-b">
+                        <span class="col-8 fs-6 font-semibold py-2">2018 F150 PLATINIUM ...</span>
+                        <span class="col-4 bg--first text--white text-end py-2">$52,998</span>
+                      </div>
+                      <!-- features & infos -->
+                      <div class="row align-items-start border-b py-2">
+                        <div class="col-9 row flex-wrap align-items-center justify-content-between">
+                          <small class="text-nowrap pr-2 py-1 col-6 border-r">
+                            <i class="fas fa-tachometer-alt text-muted pr-2"></i>27,560 mi
+                          </small>
+                          <small class="text-nowrap px-2 py-1 col-6">
+                            <i class="fas fa-cog text-muted pr-2"></i>Automatic
+                          </small>
+                          <small class="text-nowrap pr-2 py-1 col-12">
+                            <i class="fas fa-barcode text-muted pr-2"></i>ZA4ZZ5DS4SDDF6E
+                          </small>
+                        </div>
+                        <div class="col d-flex flex-column align-items-end">
+                          <button class="rounded-pill border h-10 w-10 p-2" aria-label="add to favourite">
+                            <i class="far fa-heart text-secondary"></i>
+                          </button>
+                          <small class="text-secondary">
+                            32 views
+                          </small>
+                        </div>
+                      </div>
+                      <!-- action buttons -->
+                      <div class="row align-items-center">
+                        <!-- call us btn -->
+                        <a href="tel:6666666666" class="col-6 text-center text--first border-r py-2 px-0">
+                          <i class="fas fa-phone"></i>
+                          <span class="font-semibold">
+                            Call Us
+                          </span>
+                        </a>
+                        <!-- text-us btn -->
+                        <a href="tel:6666666666" class="col-6 text-center text--first py-2 px-0">
+                          <i class="fas fa-envelope"></i>
+                          <span class="font-semibold">
+                            Text Us
+                          </span>
+                        </a>
+                      </div>
+                    </div>
+                    <!-- end card-body -->
+                  </div>
+                  <!-- end card -->
+                </div>
+                <!-- end card col col -->
+              </div>
+              <!-- end wiper-slide 1 -->
+              <!-- swiper slide 1 -->
+              <div class="swiper-slide">
+                <!-- card col -->
+                <div class="col">
+                  <!-- card -->
+                  <div class="rounded-0 border-0">
+                    <img loading="lazy" src="./images/inventory/1.webp" srcset="./images/inventory/1-300.webp 576w, ./images/inventory/1-300.webp 992w" width="300" height="300" alt="ford model 2020" class="card-img-top object-cover h-64 rounded-0">
+                    <div class="border-r border-b border-l pt-0 px-2.5">
+                      <!-- title + price -->
+                      <div class="row border-b">
+                        <span class="col-8 fs-6 font-semibold py-2">2018 F150 PLATINIUM ...</span>
+                        <span class="col-4 bg--first text--white text-end py-2">$52,998</span>
+                      </div>
+                      <!-- features & infos -->
+                      <div class="row align-items-start border-b py-2">
+                        <div class="col-9 row flex-wrap align-items-center justify-content-between">
+                          <small class="text-nowrap pr-2 py-1 col-6 border-r">
+                            <i class="fas fa-tachometer-alt text-muted pr-2"></i>27,560 mi
+                          </small>
+                          <small class="text-nowrap px-2 py-1 col-6">
+                            <i class="fas fa-cog text-muted pr-2"></i>Automatic
+                          </small>
+                          <small class="text-nowrap pr-2 py-1 col-12">
+                            <i class="fas fa-barcode text-muted pr-2"></i>ZA4ZZ5DS4SDDF6E
+                          </small>
+                        </div>
+                        <div class="col d-flex flex-column align-items-end">
+                          <button class="rounded-pill border h-10 w-10 p-2" aria-label="add to favourite">
+                            <i class="far fa-heart text-secondary"></i>
+                          </button>
+                          <small class="text-secondary">
+                            32 views
+                          </small>
+                        </div>
+                      </div>
+                      <!-- action buttons -->
+                      <div class="row align-items-center">
+                        <!-- call us btn -->
+                        <a href="tel:6666666666" class="col-6 text-center text--first border-r py-2 px-0">
+                          <i class="fas fa-phone"></i>
+                          <span class="font-semibold">
+                            Call Us
+                          </span>
+                        </a>
+                        <!-- text-us btn -->
+                        <a href="tel:6666666666" class="col-6 text-center text--first py-2 px-0">
+                          <i class="fas fa-envelope"></i>
+                          <span class="font-semibold">
+                            Text Us
+                          </span>
+                        </a>
+                      </div>
+                    </div>
+                    <!-- end card-body -->
+                  </div>
+                  <!-- end card -->
+                </div>
+                <!-- end card col col -->
+              </div>
+              <!-- end wiper-slide 1 -->
+
+            </div>
+
+            <div class="swiper-pagination"></div>
+          </div>
+
+        </div>
+        <!-- end container -->
+      </section>
+
+      
+      <!--*** INVENTORY ACTIONS BUTTONS ***-->
+      <section id="inventoryDetails__actionsSection">
+        <div id="inventoryDetails__actionsContainer" class="action-container container-fluid bg--first mt-12 mb-2">
+          <div class="container">
+            <div id="inventoryDetails__ActionsContent" class="action-content grid grid-cols-2 sm:grid-cols-3 md:grid-cols-3 lg:grid-cols-6">
+              <!--? apply now -->
+              <a href="#" id="actionBtn1" class="action-btn flex flex-col items-center justify-center text-center uppercase text-lg font-semibold bg--first text-white hover:bg--white hover:text--first transition-all duration-100 px-6 py-8">
+                <i class="fas fa-hand-pointer text-3xl pb-4" aria-hidden="true"></i>
+                Apply Now
+              </a>
+              <!--? Chat with us -->
+              <a href="#" id="actionBtn2" class="action-btn flex flex-col items-center justify-center text-center uppercase text-lg font-semibold bg--first text-white hover:bg--white hover:text--first transition-all duration-100 px-6 py-8">
+                <i class="fas fa-comment-dots text-3xl pb-4" aria-hidden="true"></i>
+                Chat with us
+              </a>
+              <!--? Contact us -->
+              <a href="#" id="actionBtn3" class="action-btn flex flex-col items-center justify-center text-center uppercase text-lg font-semibold bg--first text-white hover:bg--white hover:text--first transition-all duration-100 px-6 py-8">
+                <i class="fas fa-question-circle text-3xl pb-4" aria-hidden="true"></i>
+                Contact us
+              </a>
+              <!--? Value your car -->
+              <a href="#" id="actionBtn4" class="action-btn flex flex-col items-center justify-center text-center uppercase text-lg font-semibold bg--first text-white hover:bg--white hover:text--first transition-all duration-100 px-6 py-8">
+                <i class="fas fa-dollar-sign text-3xl pb-4" aria-hidden="true"></i>
+                Value your car
+              </a>
+              <!--? Text us now -->
+              <a href="#" id="actionBtn5" class="action-btn flex flex-col items-center justify-center text-center uppercase text-lg font-semibold bg--first text-white hover:bg--white hover:text--first transition-all duration-100 px-6 py-8">
+                <i class="fas fa-envelope text-3xl pb-4" aria-hidden="true"></i>
+                Text us now
+              </a>
+              <!--? Schedule a test-drive -->
+              <a href="#" id="actionBtn6" class="action-btn flex flex-col items-center justify-center text-center uppercase text-lg font-semibold bg--first text-white hover:bg--white hover:text--first transition-all duration-100 px-6 py-8">
+                <i class="fas fa-calendar-alt text-3xl pb-4" aria-hidden="true"></i>
+                Schedule a test-drive
+              </a>
+              
+            </div>
+          </div>
+        </div>
+      </section>
+
+
+      <!--********************************************************************-->
+      <!--****************************** FOOTER ******************************-->
+      <!--********************************************************************-->
+      <footer id="footer" class="footer">
+        <div class="container-fluid bg--first">
+          <div class="container py-16">
+            <div class="row">
+              <!-- col -->
+              <div class="col-12 col-md-6 col-lg-4 mt-8 lg:mt-0">
+                <img src="./images/logo/logo-w.webp" srcset="./images/logo/logo-w-150.webp 768w" width="130" height="80" alt="footer logo" id="footer__logo" class="footer-logo object-contain w-48 mb-10" />
+                <ul class="list-unstyled">
+                  <li class="font-extralight mb-3">
+                    <i class="fas fa-map-marker-alt text--white"></i>
+                    <a href="#" class="text--white text-nowrap pl-2">4477 GRAS WALEY HWD, <br>Augburn CA 95633</a>
+                  </li>
+                  <li class="font-extralight mb-3">
+                    <i class="fas fa-phone text--white"></i>
+                    <a href="#" class="text--white text-nowrap pl-2">(565)-757-9588</a>
+                  </li>
+                  <li class="font-extralight mb-3">
+                    <i class="far fa-envelope text--white"></i>
+                    <a href="#" class="text--white text-nowrap pl-2">contact@redonemotors.com</a>
+                  </li>
+                </ul>
+                <div class="flex items-center mt-8">
+                  <a href="#" class="fab fa-facebook pr-3 fs-3 text--white" aria-label="facebook"></a>
+                  <a href="#" class="fab fa-instagram pr-3 fs-3 text--white" aria-label="instagram"></a>
+                  <a href="#" class="fab fa-twitter pr-3 fs-3 text--white" aria-label="twitter"></a>
+                  <a href="#" class="fab fa-youtube pr-3 fs-3 text--white" aria-label="youtube"></a>
+                </div>
+              </div>
+              <!-- end col -->
+              
+              <!-- col -->
+              <div class="col-12 col-md-6 col-lg-4 mt-8 lg:mt-0">
+                <h4 class="uppercase text--white font-bold fs-5 mb-2">Opening Hours</h4>
+                <hr class="w-2/12 bg--white h-1 mb-6">
+  
+                <ul class="px-0">
+                  <li class="flex flex-nowrap lh-lg">
+                    <span class="text--white w-5/12 font-light">Monday</span>
+                    <span class="text--white w-7/12 font-light">08:00 AM - 07:00 PM</span>
+                  </li>
+                  <li class="flex flex-nowrap lh-lg">
+                    <span class="text--white w-5/12 font-light">Tuesday</span>
+                    <span class="text--white w-7/12 font-light">08:00 AM - 07:00 PM</span>
+                  </li>
+                  <li class="flex flex-nowrap lh-lg">
+                    <span class="text--white w-5/12 font-light text-red">Wednesday</span>
+                    <span class="text--white w-7/12 font-light">08:00 AM - 07:00 PM</span>
+                  </li>
+                  <li class="flex flex-nowrap lh-lg">
+                    <span class="text--white w-5/12 font-light">Thursday</span>
+                    <span class="text--white w-7/12 font-light">08:00 AM - 07:00 PM</span>
+                  </li>
+                  <li class="flex flex-nowrap lh-lg">
+                    <span class="text--white w-5/12 font-light">Friday</span>
+                    <span class="text--white w-7/12 font-light">08:00 AM - 07:00 PM</span>
+                  </li>
+                  <li class="flex flex-nowrap lh-lg">
+                    <span class="text--white w-5/12 font-light">Saturday</span>
+                    <span class="text--white w-7/12 font-light">08:00 AM - 01:00 AM</span>
+                  </li>
+                  <li class="flex flex-nowrap lh-lg">
+                    <span class="text--white w-5/12 font-light">Sunday</span>
+                    <span class="text--white w-7/12 font-light">Closed</span>
+                  </li>
+                </ul>
+  
+              </div>
+              <!-- end col -->
+  
+              <!-- col -->
+              <div class="col-12 col-md-6 col-lg-2 mt-8 lg:mt-0">
+                <h4 class="uppercase text--white font-bold fs-5 mb-2">Our Dealership</h4>
+                <hr class="w-2/12 bg--white h-1 mb-6">
+                
+                <ul class="px-0">
+                  <li class="flex flex-nowrap lh-lg">
+                    <a href="#" class="text--white text-nowrap w-5/12 font-light">About us</a>
+                  </li>
+                  <li class="flex flex-nowrap lh-lg">
+                    <a href="#" class="text--white text-nowrap w-5/12 font-light">Meet our staff</a>
+                  </li>
+                  <li class="flex flex-nowrap lh-lg">
+                    <a href="#" class="text--white text-nowrap w-7/12 font-light">Finance</a>
+                  </li>
+                  <li class="flex flex-nowrap lh-lg">
+                    <a href="#" class="text--white text-nowrap w-5/12 font-light">Contact us</a>
+                  </li>
+                  <li class="flex flex-nowrap lh-lg">
+                    <a href="#" class="text--white text-nowrap w-5/12 font-light">Friday</a>
+                  </li>
+                  <li class="flex flex-nowrap lh-lg">
+                    <a href="#" class="text--white text-nowrap w-5/12 font-light">Privacy Policy</a>
+                  </li>
+                </ul>
+              </div>
+              <!-- end col -->
+  
+              <!-- col -->
+              <div class="col-12 col-md-6 col-lg-2 mt-8 lg:mt-0">
+                <h4 class="uppercase text--white font-bold fs-5 mb-2">Inventory</h4>
+                <hr class="w-2/12 bg--white h-1 mb-6">
+                
+                <ul class="px-0">
+                  <li class="flex flex-nowrap lh-lg">
+                    <a href="#" class="text--white text-nowrap w-5/12 font-light">Our Inventory</a>
+                  </li>
+                  <li class="flex flex-nowrap lh-lg">
+                    <a href="#" class="text--white text-nowrap w-5/12 font-light">Sell Your Car</a>
+                  </li>
+                  <li class="flex flex-nowrap lh-lg">
+                    <a href="#" class="text--white text-nowrap w-7/12 font-light">Buy a car</a>
+                  </li>
+                  <li class="flex flex-nowrap lh-lg">
+                    <a href="#" class="text--white text-nowrap w-5/12 font-light">Special</a>
+                  </li>
+                  </li>
+                </ul>
+              </div>
+              <!-- end col -->
+  
+            </div>
+            <!-- end row -->
+          </div>
+          <!-- end footer infos -->
+        </div>
+          
+        <!-- !COPYRIGHT -->
+        <div class="container-fluid bg--white py-8">
+          <div class="container">
+            <div class="grid grid-cols-1 md:grid-cols-2">
+              <div class="text-lg uppercase text-center md:text-left">&copy; Copyright 2020 All Rights Reserved</div>
+              <div class="text-lg uppercase text-center md:text-right">Powered by V12Software</div>
+            </div>
+          </div>
+        </div>
+
+      </footer>
+
+      <!--********************************************************************-->
+      <!--**************************** END FOOTER ****************************-->
+      <!--********************************************************************-->
+
+
+    </main>
+    
+
+
+    <!-- load tailwind css -->
+    <!-- <script>
+      const loadLargeCSS = function() {
+        //load local stylesheet
+        loadCss('./styles/_tailwind.css');
+      }
+      
+      const loadCss = function(cssPath){
+        const cssLink = document.createElement('link');
+        cssLink.rel = 'stylesheet';
+        cssLink.href = cssPath;
+        const head = document.getElementsByTagName('head')[0];
+        head.parentNode.insertBefore(cssLink, head);
+      };
+      
+      //call function on window load
+      window.addEventListener('load', loadLargeCSS);
+    </script> -->
+
+
+    <!-- INVENTORY DETAILS SCRIPT -->
+    <script src="./js/inventory/inventory-details.js"></script>
+    <!-- FONT AWESOME ICONS -->
+    <script async defer src="https://kit.fontawesome.com/b77e3afeef.js" crossorigin="anonymous"></script>
+    <!-- BOOTSTRAP JS -->
+    <script async defer src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
+    <script async defer src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.min.js" integrity="sha384-Atwg2Pkwv9vp0ygtn1JAojH0nYbwNJLPhwyoVbhoPwBhjQPR5VtM2+xf0Uwh9KtT" crossorigin="anonymous"></script>
+    <!-- SWIPER.JS -->
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    
+    <!-- Initialize Swiper -->
+    <script>
+      var swiper = new Swiper(".swiperSmallVehicle", {
+        spaceBetween: 5,
+        slidesPerView: 8,
+        freeMode: true,
+        watchSlidesVisibility: true,
+        watchSlidesProgress: true,
+        breakpoints: {
+          320: {
+            slidesPerView: 3,
+            spaceBetween: 5,
+          },
+          480: {
+            slidesPerView: 3,
+            spaceBetween: 5,
+          },
+          576: {
+            slidesPerView: 4,
+            spaceBetween: 5,
+          },
+          640: {
+            slidesPerView: 5,
+            spaceBetween: 5,
+          },
+          768: {
+            slidesPerView: 6,
+            spaceBetween: 5,
+          },
+          992: {
+            slidesPerView: 7,
+            spaceBetween: 5,
+          },
+          1024: {
+            slidesPerView: 8,
+            spaceBetween: 5,
+          },
+          1200: {
+            slidesPerView: 8,
+            spaceBetween: 5,
+          },
+        },
+      });
+      var swiper2 = new Swiper(".swiperVehicle", {
+        spaceBetween: 5,
+        navigation: {
+          nextEl: ".swiper-button-next",
+          prevEl: ".swiper-button-prev",
+        },
+        thumbs: {
+          swiper: swiper,
+        },
+        autoplay: {
+          delay: 2500,
+          disableOnInteraction: false,
+        },
+        pagination: {
+          el: ".swiper-pagination",
+          clickable: true,
+        },
+      });
+      
+      // related vehicles swiper
+      var swiperRelatedVehicle = new Swiper(".swiperRelatedVehicle", {
+        slidesPerView: 1,
+        spaceBetween: 0,
+        autoplay: {
+          delay: 2500,
+          disableOnInteraction: false,
+        },
+        navigation: {
+          prevEl: ".swiper-left-btn-vehicle",
+          nextEl: ".swiper-right-btn-vehicle",
+        },
+        pagination: {
+          el: ".swiper-pagination",
+          clickable: true,
+        },
+        breakpoints: {
+          480: {
+            slidesPerView: 1,
+            spaceBetween: 0,
+          },
+          576: {
+            slidesPerView: 2,
+            spaceBetween: 15,
+          },
+          640: {
+            slidesPerView: 2,
+            spaceBetween: 20,
+          },
+          768: {
+            slidesPerView: 2,
+            spaceBetween: 20,
+          },
+          992: {
+            slidesPerView: 3,
+            spaceBetween: 20,
+          },
+          1024: {
+            slidesPerView: 3,
+            spaceBetween: 30,
+          },
+          1200: {
+            slidesPerView: 4,
+            spaceBetween: 30,
+          },
+        },
+      });
+      
+    </script>
+  
+  </body>
+</html>

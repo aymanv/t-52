@@ -1,0 +1,1164 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]>      <html class="no-js"> <!--<![endif]-->
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Redone Motors</title>
+    <!-- META TAGS -->
+    <meta name="theme-color" content="#0058BC">
+    <meta name="og:title" content="Redone Motors | Home">
+    <meta name="og:url" content="https://v12software.com">
+    <meta name="og:description" content="Redone Motors">
+    <meta name="og:image" content="link to my image">
+    <meta name="description" content="Redone Motors">
+    <meta name="keywords" content="Redone Motors">
+    <!-- CSS -->
+    <link rel="icon" href="./favicon.ico" />
+    <link rel="stylesheet" href="./styles/_base.css">
+    <link rel="preload" href="./styles/_base-tailwind.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <link rel="stylesheet" href="./styles/_tailwind.css">
+    <!-- <link rel="stylesheet" href="./styles/_globals.css"> -->
+    <link rel="stylesheet" href="./styles/_theme.css">
+    <link rel="stylesheet" href="./styles/ui/_animations.css">
+    <link rel="preload" href="./styles/home/_style.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <!-- BOOTSTRAP 5 CSS -->
+    <link rel="preload" href="./styles/bootstrap/bootstrap.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+    <!-- <noscript>
+      <link rel="stylesheet" href="./styles/_base.css">
+      <link rel="stylesheet" href="./styles/_base-tailwind.css">
+      <link rel="stylesheet" href="./styles/_globals.css">
+      <link rel="stylesheet" href="./styles/home/_style.css">
+      <link rel="stylesheet" href="./styles/bootstrap/bootstrap.min.css">
+    </noscript> -->
+    <!-- TAILWIND CSS -->
+    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.0-canary.16/base.css"> -->
+    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.0-canary.16/tailwind.min.css" integrity="sha512-bCrETtEVhxwUaYXKR7LeP4wkzfqBrjL2H/u0c7tKRnZGLqatfZzSB+VvG3vCszHoo+QeWOl467pRgsRaXPyZPA==" crossorigin="anonymous" referrerpolicy="no-referrer" /> -->
+    <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous"> -->
+    <!-- POPPINS FONT -->
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <!-- <script async src="https://cdnjs.cloudflare.com/ajax/libs/sass.js/0.9.2/sass.min.js" crossorigin="anonymous"></script> -->
+  </head>
+  <body>
+    <!--[if lt IE 7]>
+      <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="#">upgrade your browser</a> to improve your experience.</p>
+    <![endif]-->
+
+    <main>
+      <!-- SITE MENU -->
+      <header id="menu__overlay" class="menu-overlay hidden top-0 left-0 h-screen w-screen bg-gray-900 bg-opacity-30 z-40">
+        <div id="menu__list" class="menu-list absolute top-0 left-0 flex flex-col items-center md:items-stretch justify-center md:justify-start lg:w-3/12 md:w-4/12 sm:w-8/12 w-full h-full bg-white shadow-xl py-32 px-12">
+          <!-- home link -->
+          <div class="menu-list-item / flex flex-col border-none md:border-b">
+            <div class="menu-item / flex items-center border-t border-b py-5">
+              <i class="fas fa-chevron-right text--first w-6 hidden md:flex" aria-hidden="true"></i>
+              <a href="/" class="menu-link / uppercase text--first text-2xl md:text-lg font-semibold md:transition md:transform md:hover:translate-x-2">Home</a>
+            </div>
+          </div>
+          <!-- Inventory link -->
+          <div class="menu-list-item / flex flex-col border-none md:border-b">
+            <div class="menu-item / flex items-center border-t border-b py-5">
+              <i class="fas fa-chevron-right text--first w-6 hidden md:flex" aria-hidden="true"></i>
+              <a href="/" class="menu-link / uppercase text--first text-2xl md:text-lg font-semibold md:transition md:transform md:hover:translate-x-2">Inventory</a>
+            </div>
+          </div>
+          <!-- Services link -->
+          <div class="menu-list-item / flex flex-col border-none md:border-b">
+            <div class="menu-item / flex items-center border-t border-b py-5">
+              <i class="fas fa-chevron-right text--first w-6 hidden md:flex" aria-hidden="true"></i>
+              <a href="#" class="menu-link / uppercase text--first text-2xl md:text-lg font-semibold md:transition md:transform md:hover:translate-x-2">Services</a>
+            </div>
+            <ul class="submenu-list / pl-0 d-none">
+              <a href="#" class="submenu-link / block bg--first border-b pl-8 py-4">
+                <span class="submenu-text / text-white">Sell Car</span>
+              </a>
+              <a href="#" class="submenu-link / block bg--first border-b pl-8 py-4">
+                <span class="submenu-text / text-white">Sell Car</span>
+              </a>
+              <a href="#" class="submenu-link / block bg--first border-b pl-8 py-4">
+                <span class="submenu-text / text-white">Sell Car</span>
+              </a>
+            </ul>
+          </div>
+        </div>
+      </header>
+
+      <!-- HEADER -->
+      <nav id="header" class="navbar navbar-light bg--white border-b-2 border--first py-3 z-50">
+        <div class="container">
+          <div class="flex flex-wrap items-center" id="header__logoContainer">
+            <a href="#" class="rounded-circle p-2 mr-1" id="header__menuBtn" aria-label="menu">
+              <span class="fas fa-bars text-3xl text--first"></span>
+            </a>
+            <a class="navbar-brand" href="/" id="header__logo" aria-label="go home">
+              <img loading="lazy" class="img-fluid" src="./images/logo/logo.webp" srcset="./images/logo/logo-150.webp 768w" alt="Redone Motors Logo" width="130" height="80">
+            </a>
+          </div>
+          <div id="header__contactButtons" class="flex flex-wrap items-center">
+            <a href="tel:606060606" class="btn btn--first rounded-pill p-2 mx-2" aria-label="Call Us at (504) 226-7370">
+              <span class="fas fa-phone rounded-circle bg--white text--first p-2.5"></span>
+              <span class="text--white pl-2 pr-3">Call Us at (504) 226-7370</span>
+            </a>
+            <a href="mailto:example@example.com" class="btn btn--first rounded-pill p-2 mx-2" aria-label="Text Us">
+              <span class="fas fa-envelope rounded-circle bg--white text--first p-2.5"></span>
+              <span class="text--white pl-2 pr-3">Text Us</span>
+            </a>
+          </div>
+        </div>
+      </nav>
+
+      <!--*** JUMBOTRON ***-->
+      <div class="container-fluid flex items-center h-55vh" id="section__jumbo">
+        <div class="container">
+          <div class="flex flex-wrap items-center">
+            <div id="section__jumboLeft" class="col-xl-5 col-lg-5 col-12 p-3 bg-gray-200 bg-opacity-40 slideLeft">
+              <h1 class="font-extrabold mb-3">FIND YOUR NEXT CAR AT REDONE MOTORS</h1>
+              <p class="col-lg-10 fs-5 mb-4">
+                Allow us to guide you through the innovative stress free approach in finding your drem car.
+              </p>
+              <a href="/inventory.html" class="btn--transparent text--first font-medium text-uppercase fs-5">
+                View our inventory
+                <div class="fas fa-arrow-right"></div>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!--*** SEARCH SECTION ***-->
+      <div class="container-fluid flex items-center py-6 bg--first" id="section__search">
+        <form action="#" method="get" class="container slideBottom">
+          <div class="row items-center gx-5 justify-content-center">
+            <!-- KEYWORD -->
+            <div class="col-md-4 col-12 position-relative my-2">
+              <label><small class="text-white font-light">Keyword</small></label>
+              <input type="text" class="form-control bg--first text--white border-t-0 border-r-0 border-l-0 rounded-none border-b border--white placeholder--white font-extralight px-0" placeholder="search anything" />
+              <!-- VOICE SEARCH BTN -->
+              <button class="position-absolute top-6 right-6 btn--first rounded-pill text--first bg--white" aria-label="voice search">
+                <i class="fas fa-microphone rounded-circle w-8 h-8 p-2"></i>
+              </button>
+            </div>
+            <!-- YEAR -->
+            <div class="col-md-2 col-sm-6 col-12 position-relative my-2">
+              <label><small class="text-white font-light">Year</small></label>
+              <select type="text" class="form-control bg--first text--white border-t-0 border-r-0 border-l-0 rounded-none border-b border--white placeholder--white font-extralight px-0" placeholder="Year">
+                <option selected disabled>Select a Year</option>
+              </select>
+            </div>
+            <!-- Mark -->
+            <div class="col-md-2 col-sm-6 col-12 position-relative my-2">
+              <label><small class="text-white font-light">Mark</small></label>
+              <select type="text" class="form-control bg--first text--white border-t-0 border-r-0 border-l-0 rounded-none border-b border--white placeholder--white font-extralight px-0" placeholder="Mark">
+                <option selected disabled>Select a Mark</option>
+              </select>
+            </div>
+            <!-- MODEL -->
+            <div class="col-md-2 col-12 position-relative my-2">
+              <label><small class="text-white font-light">Model</small></label>
+              <select type="text" class="form-control bg--first text--white border-t-0 border-r-0 border-l-0 rounded-none border-b border--white placeholder--white font-extralight px-0" placeholder="Model">
+                <option selected disabled>Select a Model</option>
+              </select>
+            </div>
+            <div class="col-lg-2 col-md-6 mx-auto col-12 position-relative mt-3">
+              <button class="btn btn-lg col-12 rounded-pill btn--white text--first text-uppercase font-medium" aria-label="search">Search</button>
+            </div>
+          </div>
+        </form>
+        
+      </div>
+
+      <!--*** INVENTORY SECTION ***-->
+      <section id="section__inventory" class="container-fluid py-24">
+        <div class="container">
+
+          <div class="flex flex-col items-center" id="section__inventoryTitle">
+            <h1 class="text-center font-extrabold h4 text-uppercase">FEATURED VEHICLES</h1>
+            <hr class="text-center opacity-100 w-20 bg--first">
+          </div>
+            
+          <!-- inventory vehicles -->
+          <div id="swiperInventoryVehicles" class="swiper-container swiperInventoryVehicles">
+
+            <div id="section__inventoryContent" class="swiper-wrapper my-12">
+              <!-- card col -->
+              <div class="swiper-slide">
+                <div class="col">
+                  <!-- card -->
+                  <div class="card rounded-0 border-0">
+                    <img loading="lazy" src="./images/inventory/1.webp" srcset="./images/inventory/1-300.webp 576w, ./images/inventory/1-300.webp 992w" width="300" height="300" alt="ford model 2020" class="card-img-top object-cover h-64 rounded-0">
+                    <div class="border-r border-b border-l pt-0 px-2.5">
+                      <!-- title + price -->
+                      <div class="row border-b">
+                        <span class="col-8 fs-6 font-semibold py-2">2018 F150 PLATINIUM ...</span>
+                        <span class="col-4 bg--first text--white text-end py-2">$52,998</span>
+                      </div>
+                      <!-- features & infos -->
+                      <div class="row align-items-start border-b py-2">
+                        <div class="col-9 row flex-wrap items-center justify-content-between">
+                          <small class="text-nowrap pr-2 py-1 col-6 border-r">
+                            <span class="fas fa-tachometer-alt text-muted pr-2"></span>27,560 mi
+                          </small>
+                          <small class="text-nowrap px-2 py-1 col-6">
+                            <span class="fas fa-cog text-muted pr-2"></span>Automatic
+                          </small>
+                          <small class="text-nowrap pr-2 py-1 col-12">
+                            <span class="fas fa-barcode text-muted pr-2"></span>Automatic
+                          </small>
+                        </div>
+                        <div class="col flex flex-col align-items-end">
+                          <button class="rounded-pill border h-10 w-10 p-2" aria-label="add to favourite">
+                            <span class="far fa-heart text-secondary"></span>
+                          </button>
+                          <small class="text-secondary">
+                            32 views
+                          </small>
+                        </div>
+                      </div>
+                      <!-- action buttons -->
+                      <div class="row items-center">
+                        <!-- call us btn -->
+                        <a href="tel:6666666666" class="col-6 text-center text--first border-r py-2 px-0">
+                          <span class="fas fa-phone"></span>
+                          <span class="font-semibold">
+                            Call Us
+                          </span>
+                        </a>
+                        <!-- text-us btn -->
+                        <a href="tel:6666666666" class="col-6 text-center text--first py-2 px-0">
+                          <span class="fas fa-envelope"></span>
+                          <span class="font-semibold">
+                            Text Us
+                          </span>
+                        </a>
+                      </div>
+                    </div>
+                    <!-- end card-body -->
+                  </div>
+                  <!-- end card -->
+                </div>
+              </div>
+              <!-- end card col col -->
+              
+              <!-- card col -->
+              <div class="swiper-slide">
+                <div class="col">
+                  <!-- card -->
+                  <div class="card rounded-0 border-0">
+                    <img loading="lazy" src="./images/inventory/2.webp" srcset="./images/inventory/2-300.webp 576w, ./images/inventory/2-300.webp 992w" width="300" height="300" alt="ford model 2020" class="card-img-top object-cover h-64 rounded-0">
+                    <div class="border-r border-b border-l pt-0 px-2.5">
+                      <!-- title + price -->
+                      <div class="row border-b">
+                        <span class="col-8 fs-6 font-semibold py-2">2018 F150 PLATINIUM ...</span>
+                        <span class="col-4 bg--first text--white text-end py-2">$52,998</span>
+                      </div>
+                      <!-- features & infos -->
+                      <div class="row align-items-start border-b py-2">
+                        <div class="col-9 row flex-wrap items-center justify-content-between">
+                          <small class="text-nowrap pr-2 py-1 col-6 border-r">
+                            <span class="fas fa-tachometer-alt text-muted pr-2"></span>27,560 mi
+                          </small>
+                          <small class="text-nowrap px-2 py-1 col-6">
+                            <span class="fas fa-cog text-muted pr-2"></span>Automatic
+                          </small>
+                          <small class="text-nowrap pr-2 py-1 col-12">
+                            <span class="fas fa-barcode text-muted pr-2"></span>Automatic
+                          </small>
+                        </div>
+                        <div class="col flex flex-col align-items-end">
+                          <button class="rounded-pill border h-10 w-10 p-2" aria-label="add to favourite">
+                            <span class="far fa-heart text-secondary"></span>
+                          </button>
+                          <small class="text-secondary">
+                            32 views
+                          </small>
+                        </div>
+                      </div>
+                      <!-- action buttons -->
+                      <div class="row items-center">
+                        <!-- call us btn -->
+                        <a href="tel:6666666666" class="col-6 text-center text--first border-r py-2 px-0">
+                          <span class="fas fa-phone"></span>
+                          <span class="font-semibold">
+                            Call Us
+                          </span>
+                        </a>
+                        <!-- text-us btn -->
+                        <a href="tel:6666666666" class="col-6 text-center text--first py-2 px-0">
+                          <span class="fas fa-envelope"></span>
+                          <span class="font-semibold">
+                            Text Us
+                          </span>
+                        </a>
+                      </div>
+                    </div>
+                    <!-- end card-body -->
+                  </div>
+                  <!-- end card -->
+                </div>
+              </div>
+              <!-- end card col col -->
+              
+              <!-- card col -->
+              <div class="swiper-slide">
+                <div class="col">
+                  <!-- card -->
+                  <div class="card rounded-0 border-0">
+                    <img loading="lazy" src="./images/inventory/3.webp" srcset="./images/inventory/3-300.webp 576w, ./images/inventory/3-300.webp 992w" width="300" height="300" alt="ford model 2020" class="card-img-top object-cover h-64 rounded-0">
+                    <div class="border-r border-b border-l pt-0 px-2.5">
+                      <!-- title + price -->
+                      <div class="row border-b">
+                        <span class="col-8 fs-6 font-semibold py-2">2018 F150 PLATINIUM ...</span>
+                        <span class="col-4 bg--first text--white text-end py-2">$52,998</span>
+                      </div>
+                      <!-- features & infos -->
+                      <div class="row align-items-start border-b py-2">
+                        <div class="col-9 row flex-wrap items-center justify-content-between">
+                          <small class="text-nowrap pr-2 py-1 col-6 border-r">
+                            <span class="fas fa-tachometer-alt text-muted pr-2"></span>27,560 mi
+                          </small>
+                          <small class="text-nowrap px-2 py-1 col-6">
+                            <span class="fas fa-cog text-muted pr-2"></span>Automatic
+                          </small>
+                          <small class="text-nowrap pr-2 py-1 col-12">
+                            <span class="fas fa-barcode text-muted pr-2"></span>Automatic
+                          </small>
+                        </div>
+                        <div class="col flex flex-col align-items-end">
+                          <button class="rounded-pill border h-10 w-10 p-2" aria-label="add to favourite">
+                            <span class="far fa-heart text-secondary"></span>
+                          </button>
+                          <small class="text-secondary">
+                            32 views
+                          </small>
+                        </div>
+                      </div>
+                      <!-- action buttons -->
+                      <div class="row items-center">
+                        <!-- call us btn -->
+                        <a href="tel:6666666666" class="col-6 text-center text--first border-r py-2 px-0">
+                          <span class="fas fa-phone"></span>
+                          <span class="font-semibold">
+                            Call Us
+                          </span>
+                        </a>
+                        <!-- text-us btn -->
+                        <a href="tel:6666666666" class="col-6 text-center text--first py-2 px-0">
+                          <span class="fas fa-envelope"></span>
+                          <span class="font-semibold">
+                            Text Us
+                          </span>
+                        </a>
+                      </div>
+                    </div>
+                    <!-- end card-body -->
+                  </div>
+                  <!-- end card -->
+                </div>
+              </div>
+              <!-- end card col col -->
+              
+              <!-- card col -->
+              <div class="swiper-slide">
+                <div class="col">
+                  <!-- card -->
+                  <div class="card rounded-0 border-0">
+                    <img loading="lazy" src="./images/inventory/4.webp" srcset="./images/inventory/4-300.webp 576w, ./images/inventory/4-300.webp 992w" width="300" height="300" alt="ford model 2020" class="card-img-top object-cover h-64 rounded-0">
+                    <div class="border-r border-b border-l pt-0 px-2.5">
+                      <!-- title + price -->
+                      <div class="row border-b">
+                        <span class="col-8 fs-6 font-semibold py-2">2018 F150 PLATINIUM ...</span>
+                        <span class="col-4 bg--first text--white text-end py-2">$52,998</span>
+                      </div>
+                      <!-- features & infos -->
+                      <div class="row align-items-start border-b py-2">
+                        <div class="col-9 row flex-wrap items-center justify-content-between">
+                          <small class="text-nowrap pr-2 py-1 col-6 border-r">
+                            <span class="fas fa-tachometer-alt text-muted pr-2"></span>27,560 mi
+                          </small>
+                          <small class="text-nowrap px-2 py-1 col-6">
+                            <span class="fas fa-cog text-muted pr-2"></span>Automatic
+                          </small>
+                          <small class="text-nowrap pr-2 py-1 col-12">
+                            <span class="fas fa-barcode text-muted pr-2"></span>Automatic
+                          </small>
+                        </div>
+                        <div class="col flex flex-col align-items-end">
+                          <button class="rounded-pill border h-10 w-10 p-2" aria-label="add to favourite">
+                            <span class="far fa-heart text-secondary"></span>
+                          </button>
+                          <small class="text-secondary">
+                            32 views
+                          </small>
+                        </div>
+                      </div>
+                      <!-- action buttons -->
+                      <div class="row items-center">
+                        <!-- call us btn -->
+                        <a href="tel:6666666666" class="col-6 text-center text--first border-r py-2 px-0">
+                          <span class="fas fa-phone"></span>
+                          <span class="font-semibold">
+                            Call Us
+                          </span>
+                        </a>
+                        <!-- text-us btn -->
+                        <a href="tel:6666666666" class="col-6 text-center text--first py-2 px-0">
+                          <span class="fas fa-envelope"></span>
+                          <span class="font-semibold">
+                            Text Us
+                          </span>
+                        </a>
+                      </div>
+                    </div>
+                    <!-- end card-body -->
+                  </div>
+                  <!-- end card -->
+                </div>
+              </div>
+              <!-- end card col col -->
+              
+              <!-- card col -->
+              <div class="swiper-slide">
+                <div class="col">
+                  <!-- card -->
+                  <div class="card rounded-0 border-0">
+                    <img loading="lazy" src="./images/inventory/2.webp" srcset="./images/inventory/2-300.webp 576w, ./images/inventory/2-300.webp 992w" width="300" height="300" alt="ford model 2020" class="card-img-top object-cover h-64 rounded-0">
+                    <div class="border-r border-b border-l pt-0 px-2.5">
+                      <!-- title + price -->
+                      <div class="row border-b">
+                        <span class="col-8 fs-6 font-semibold py-2">2018 F150 PLATINIUM ...</span>
+                        <span class="col-4 bg--first text--white text-end py-2">$52,998</span>
+                      </div>
+                      <!-- features & infos -->
+                      <div class="row align-items-start border-b py-2">
+                        <div class="col-9 row flex-wrap items-center justify-content-between">
+                          <small class="text-nowrap pr-2 py-1 col-6 border-r">
+                            <span class="fas fa-tachometer-alt text-muted pr-2"></span>27,560 mi
+                          </small>
+                          <small class="text-nowrap px-2 py-1 col-6">
+                            <span class="fas fa-cog text-muted pr-2"></span>Automatic
+                          </small>
+                          <small class="text-nowrap pr-2 py-1 col-12">
+                            <span class="fas fa-barcode text-muted pr-2"></span>Automatic
+                          </small>
+                        </div>
+                        <div class="col flex flex-col align-items-end">
+                          <button class="rounded-pill border h-10 w-10 p-2" aria-label="add to favourite">
+                            <span class="far fa-heart text-secondary"></span>
+                          </button>
+                          <small class="text-secondary">
+                            32 views
+                          </small>
+                        </div>
+                      </div>
+                      <!-- action buttons -->
+                      <div class="row items-center">
+                        <!-- call us btn -->
+                        <a href="tel:6666666666" class="col-6 text-center text--first border-r py-2 px-0">
+                          <span class="fas fa-phone"></span>
+                          <span class="font-semibold">
+                            Call Us
+                          </span>
+                        </a>
+                        <!-- text-us btn -->
+                        <a href="tel:6666666666" class="col-6 text-center text--first py-2 px-0">
+                          <span class="fas fa-envelope"></span>
+                          <span class="font-semibold">
+                            Text Us
+                          </span>
+                        </a>
+                      </div>
+                    </div>
+                    <!-- end card-body -->
+                  </div>
+                  <!-- end card -->
+                </div>
+              </div>
+              <!-- end card col col -->
+
+            </div>
+            
+            
+          </div>
+          <!-- end inventory vehicles -->
+          
+          <!-- view inventory btn -->
+          <div class="row pt-12">
+            <div class="col-lg-3 col-md-6 col-8 mx-auto">
+              <a href="#" class="w-100 btn btn-lg btn--first text--white hover:bg--white hover:text--first hover:border-px hover:border--first text-uppercase rounded-pill">
+                View Inventory
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      
+      <!--*** OFFERS SECTION ***-->
+      <div id="section__offer" class="container-fluid pt-16 position-relative">
+        <div id="section__offerBg" class="container-fluid position-absolute w-100 top-0 left-0 h-30r z-10">
+          <!-- BG -->
+        </div>
+        <div class="container position-relative z-20">
+          <!-- title -->
+          <div class="flex flex-col items-center" id="section__offerTitle">
+            <h1 class="font-bold h4 text-uppercase text--white text-center">What we Offer</h1>
+            <hr class="w-20 bg--white opacity-100 text-center">
+          </div>
+          
+          <div class="row gx-2 gx-md-0 justify-content-evenly pt-0 lg:pt-10">
+            <!-- CARD -->
+            <div class="w-80 col-md-6 col-12 card bg--light border-0 rounded-0 pt-10 pb-8 px-4 shadow-lg mt-8 lg:mt-0 slideBottom">
+              <!-- card-header -->
+              <div class="bg--light rounded-pill flex items-center justify-center border-0 my-8">
+                <i class="far fa-check-circle fs-1 bg--white text--first rounded-pill h-18 w-18 h-24 w-24 flex items-center justify-center"></i>
+              </div>
+              <!-- card-body -->
+              <div class="bg--light flex flex-col items-center border-0">
+                <!-- title -->
+                <h1 class="font-extrabold h5 text-center text-capitalize">Trusted Car Dealer</h1>
+                <hr class="h-1 opacity-100 w-2/12 bg--first text-center mt-2" />
+                <p class="card-text text-center mb-4">
+                  With 15 years on the Market we know how to care about you
+                </p>
+              </div>
+              <!-- card-footer -->
+              <div class="card-footer flex bg--light border-0">
+                <a href="#" class="col-11 mx-auto btn btn--transparent text--first hover:bg--first hover:text--white font-bold border-px border--first text-uppercase rounded-pill py-3">
+                  About Us
+                </a>
+              </div>
+            </div>
+            <!-- end card -->
+            
+            <!-- CARD -->
+            <div class="w-80 col-md-6 col-12 card bg--light border-0 rounded-0 pt-10 pb-8 px-4 shadow-lg mt-8 lg:mt-0 slideBottom">
+              <!-- card-header -->
+              <div class="bg--light rounded-pill flex items-center justify-center border-0 my-8">
+                <i class="fas fa-dollar-sign fs-1 bg--white text--first rounded-pill h-18 w-18 h-24 w-24 flex items-center justify-center"></i>
+              </div>
+              <!-- card-body -->
+              <div class="bg--light flex flex-col items-center border-0">
+                <!-- title -->
+                <h1 class="font-extrabold h5 text-center text-capitalize">In House Financing</h1>
+                <hr class="h-1 opacity-100 w-2/12 bg--first text-center mt-2" />
+                <p class="card-text text-center mb-4">
+                  With 15 years on the Market we know how to care about you
+                </p>
+              </div>
+              <!-- card-footer -->
+              <div class="card-footer flex bg--light border-0">
+                <a href="#" class="col-11 mx-auto btn btn--transparent text--first hover:bg--first hover:text--white font-bold border-px border--first text-uppercase rounded-pill py-3">
+                  GET-PREAPPROUVED
+                </a>
+              </div>
+            </div>
+            <!-- end card -->
+            
+            <!-- CARD -->
+            <div class="w-80 col-md-6 col-12 card bg--light border-0 rounded-0 pt-10 pb-8 px-4 shadow-lg mt-8 lg:mt-0 slideBottom">
+              <!-- card-header -->
+              <div class="bg--light rounded-pill flex items-center justify-center border-0 my-8">
+                <i class="fas fa-car fs-1 bg--white text--first rounded-pill h-18 w-18 h-24 w-24 flex items-center justify-center"></i>
+              </div>
+              <!-- card-body -->
+              <div class="bg--light flex flex-col items-center border-0">
+                <!-- title -->
+                <h1 class="font-extrabold h5 text-center text-capitalize">Trusted Car Dealer</h1>
+                <hr class="h-1 opacity-100 w-2/12 bg--first text-center mt-2" />
+                <p class="card-text text-center mb-4">
+                  With 15 years on the Market we know how to care about you
+                </p>
+              </div>
+              <!-- card-footer -->
+              <div class="card-footer flex bg--light border-0">
+                <a href="#" class="col-11 mx-auto btn btn--transparent text--first hover:bg--first hover:text--white font-bold border-px border--first text-uppercase rounded-pill py-3">
+                  View our inventory
+                </a>
+              </div>
+            </div>
+            <!-- end card -->
+
+          </div>
+          <!-- end row -->
+
+        </div>
+      </div>
+
+      
+      <!--*** OFFERS DIGITS ***-->
+      <div id="section__digits" class="container-fluid position-relative py-10">
+        <div class="container">
+          <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 gx-2 gx-md-0 justify-content-evenly items-center pt-0 lg:pt-10">
+            <!-- col -->
+            <div class="flex flex-col items-center my-6 lg:border-r-2 slideBottom">
+              <h1 class="font-medium h1 text--first text-center text-capitalize">387</h1>
+              <h2 class="font-bold h4 text-center text-uppercase">Vehicle Stock</h2>
+              <hr class="opacity-100 w-14 h-1 bg--first text-center" />
+            </div>
+            <!-- end col -->
+            
+            <!-- col -->
+            <div class="flex flex-col items-center my-6 lg:border-r-2 slideBottom">
+              <h1 class="font-medium h1 text--first text-center text-capitalize">82</h1>
+              <h2 class="font-bold h4 text-center text-uppercase">Vehicle Sold</h2>
+              <hr class="opacity-100 w-14 h-1 bg--first text-center" />
+            </div>
+            <!-- end col -->
+            
+            <!-- col -->
+            <div class="flex flex-col items-center my-6 slideBottom">
+              <h1 class="font-medium h1 text--first text-center text-capitalize">210</h1>
+              <h2 class="font-bold h4 text-center text-uppercase">Happy Customers</h2>
+              <hr class="opacity-100 w-14 h-1 bg--first text-center" />
+            </div>
+            <!-- end col -->
+
+
+          </div>
+        </div>
+      </div>
+
+
+      <!--*** SELL CARS ***-->
+      <section id="section__sellBuy" class="container-fluid py-24">
+        <div class="container">
+          
+          <div class="row gx-5">
+            <!-- row -->
+            <div id="section__buyAside" class="col-12 col-lg-6 relative slideBottom">
+              <div class="flex flex-col bg--light px-16 py-14">
+                <div class="flex flex-col items-center xl:items-end">
+                  <h2 class="h4 font-extrabold text-uppercase text-center xl:text-end">Are you looking</h2>
+                  <h3 class="h1 font-extrabold text-uppercase text-center xl:text-end mb-4">To Buy a Truck ?</h3>
+                  <p class="w-full md:w-8/12 xl:w-6/12 text-center xl:text-right mb-4">Redone Motors Lorem, ipsum dolor sit amet consectetur adipisicing elit. Beatae, cupiditate?</p>
+                  <a href="#" class="w-full md:w-8/12 lg:w-4/12 mb-24 btn btn--transparent text--first hover:bg--first hover:text--white font-bold border-px border--first text-uppercase text-lg rounded-pill py-3">
+                    Search Now
+                  </a>
+
+                </div>
+                <img loading="lazy" src="./images/home/1.webp" srcset="./images/home/1-250.webp 480w, ./images/home/1.webp 768w" width="400" height="500" alt="Buy a Truck" class="object-contain w-12/12 2xl:w-9/12 xl:w-9/12 relative xl:absolute xl:-left-24 xl:top-36 2xl:absolute 2xl:top-32 2xl:-left-32 mx-auto">
+              </div>
+              <!-- end row with bg -->
+            </div>
+            <!-- end row -->
+
+            
+            <!-- row -->
+            <div id="section__sellAside" class="col-12 col-lg-6 relative slideBottom">
+              <div class="flex flex-col bg--first text--white px-16 py-14">
+                <div class="flex flex-col items-center xl:items-start">
+                  <h2 class="h4 font-extrabold text-uppercase text-center xl:text-left">Are you looking</h2>
+                  <h3 class="h1 font-extrabold text-uppercase text-center xl:text-left mb-4">Sell Your car ?</h3>
+                  <p class="w-full md:w-8/12 xl:w-6/12 text-center xl:text-left mb-4">Redone Motors Lorem, ipsum dolor sit amet consectetur adipisicing elit. Beatae, cupiditate?</p>
+                  <a href="#" class="w-full md:w-8/12 lg:w-4/12 mb-24 btn btn--transparent text--white hover:bg--white hover:text--first font-bold border-px border--white text-uppercase text-lg rounded-pill py-3">
+                    Let us know
+                  </a>
+
+                </div>
+                <img loading="lazy" src="./images/home/2.webp" srcset="./images/home/2-250.webp 480w, ./images/home/2.webp 768w" width="400" height="500" alt="sell a truck" class="object-contain w-12/12 2xl:w-9/12 xl:w-9/12 relative xl:absolute xl:-right-24 xl:top-36 2xl:absolute 2xl:top-32 2xl:-right-32 mx-auto">
+              </div>
+              <!-- end row with bg -->
+            </div>
+            <!-- end row -->
+
+          </div>
+          <!-- end row-cols -->
+        </div>
+        <!-- end container -->
+      </section>
+
+
+      <!--*** MAP SECTION ***-->
+      <section id="section__map" class="container-fluid position-relative bg--first px-0">
+        <div class="position-relative mr-auto">
+          <div class="grid grid-cols-1 lg:grid-cols-2 items-center">
+            <div class="text--white p-14">
+              <h3 class="font-bold text-uppercase fs-5">Welcome to Redone Motors</h3>
+              <h4 class="font-bold text-uppercase fs-2">New and used car dealership in california</h4>
+              <p class="text-justify font-extralight lh-lg my-4">
+                Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                Neque accusamus corrupti libero ducimus dolor quam fugiat rerum?
+                Libero voluptatum sed alias amet ducimus sequi reprehenderit eos quia ipsa fugit porro possimus explicabo accusamus voluptatem asperiores eaque mollitia,
+                nulla distinctio obcaecati illo quo exercitationem? Deleniti, eligendi voluptas! Explicabo consequatur qui non.
+              </p>
+              <a href="#" class="col-12 col-md-6 col-lg-5 mb-3 btn btn--transparent text--white hover:bg--white hover:text--first font-bold border-px border--white text-uppercase text-lg rounded-pill py-3">
+                Read More
+              </a>
+            </div>
+            <div class="">
+              <iframe
+                loading="lazy"
+                class="w-full"
+                width="100%"
+                height="500"
+                frameborder="0"
+                scrolling="no"
+                marginheight="0"
+                marginwidth="0"
+                src="https://maps.google.com/maps?width=100%25&amp;height=600&amp;hl=en&amp;q=1%20Grafton%20Street,%20Dublin,%20Ireland+(My%20Business%20Name)&amp;t=&amp;z=14&amp;ie=UTF8&amp;iwloc=B&amp;output=embed">
+              </iframe>
+            </div>
+          </div>
+        </div>
+      </section>
+
+
+      <!--*** TESTIMONIAL SECTION ***-->
+      <section id="section__testimonial" class="container-fluid bg-transparent">
+        <div class="container bg-transparent pt-32">
+          <div class="flex flex-col items-center" id="section__testimonialTitle">
+            <h1 class="text-center font-extrabold h4 text-uppercase">What Our client say about us</h1>
+            <hr class="text-center opacity-100 w-20 bg--first">
+          </div>
+
+          <div id="swiperTestimonials" class="swiper-container relative bg-transparent swiperTestimonials">
+            <div class="swiper-wrapper flex items-stretch my-14">
+              <!-- review -->
+              <div class="swiper-slide">
+                <div class="grid grid-rows-3 relative">
+                  <div class="flex flex-col border row-span-2 px-8 lg:px-14 py-4 lg:py-8 mb-5">
+                    <div class="flex flex-row my-6">
+                      <span class="fas fa-star text-yellow-300 pr-1"></span>
+                      <span class="fas fa-star text-yellow-300 pr-1"></span>
+                      <span class="fas fa-star text-yellow-300 pr-1"></span>
+                      <span class="fas fa-star text-yellow-300 pr-1"></span>
+                      <span class="fas fa-star text-yellow-300 pr-1"></span>
+                    </div>
+                    <h2 class="h5 font-semibold mb-4">Great reservoir walk at great price</h2>
+                    <span class="mb-2 lh-lg">Lorem ipsum dolor sit amorem ipsum dolor sit amorem ipsum dolor sit amorem ipsum dolor sit amet, consectetur adipisicing elit. Error, debitis voluptatem </span>
+                  </div>
+                  <div class="relative flex pl-6 lg:pl-12 mt-2 lg:mt-8">
+                    <div class="absolute bg--white h-10 w-10 border-l border-b transform -rotate-45 -top-16 left-14 -mt-2 hidden lg:block">
+                      <!-- arrow -->
+                    </div>
+                    <img loading="lazy" src="./images/all/google-300.webp" srcset="./images/all/google-100.webp 576w, ./images/all/google-300.webp 1200w" width="100" height="100" alt="google review redone motors" class="w-14 h-14 p-2 border rounded-full">
+                    <div class="flex flex-col pl-4">
+                      <h3 class="h5 font-semibold mb-0">Robert D. Alvarez</h3>
+                      <span class="text-secondary font-light">4 Days Ago</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- end review -->
+              
+              <!-- review -->
+              <div class="swiper-slide">
+                <div class="grid grid-rows-3 relative">
+                  <div class="flex flex-col border row-span-2 px-8 lg:px-14 py-4 lg:py-8 mb-5">
+                    <div class="flex flex-row my-6">
+                      <span class="fas fa-star text-yellow-300 pr-1"></span>
+                      <span class="fas fa-star text-yellow-300 pr-1"></span>
+                      <span class="fas fa-star text-yellow-300 pr-1"></span>
+                      <span class="fas fa-star text-yellow-300 pr-1"></span>
+                      <span class="fas fa-star text-yellow-300 pr-1"></span>
+                    </div>
+                    <h2 class="h5 font-semibold mb-4">Installed exactly the same as the Origin</h2>
+                    <span class="mb-2 lh-lg">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Error, debitis voluptatem tempore qui numquam laboriosam?</span>
+                  </div>
+                  <div class="relative flex pl-6 lg:pl-12 mt-2 lg:mt-8">
+                    <div class="absolute bg--white h-10 w-10 border-l border-b transform -rotate-45 -top-16 left-14 -mt-2 hidden lg:block">
+                      <!-- arrow -->
+                    </div>
+                    <img loading="lazy" src="./images/all/facebook-300.webp" srcset="./images/all/facebook-100.webp 576w, ./images/all/facebook-300.webp 1200w" width="100" height="100" alt="facebook review redone motors" class="w-14 h-14 p-2 border rounded-full">
+                    <div class="flex flex-col pl-4">
+                      <h3 class="h5 font-semibold mb-0">Robert D. Alvarez</h3>
+                      <span class="text-secondary font-light">4 Days Ago</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- end review -->
+              
+              <!-- review -->
+              <div class="swiper-slide">
+                <div class="grid grid-rows-3 relative">
+                  <div class="flex flex-col border row-span-2 px-8 lg:px-14 py-4 lg:py-8 mb-5">
+                    <div class="flex flex-row my-6">
+                      <span class="fas fa-star text-yellow-300 pr-1"></span>
+                      <span class="fas fa-star text-yellow-300 pr-1"></span>
+                      <span class="fas fa-star text-yellow-300 pr-1"></span>
+                      <span class="fas fa-star text-yellow-300 pr-1"></span>
+                      <span class="fas fa-star text-yellow-300 pr-1"></span>
+                    </div>
+                    <h2 class="h5 font-semibold mb-4">Great reservoir walk at great price</h2>
+                    <span class="mb-2 lh-lg">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Error, debitis voluptatem tempore qui numquam laboriosam?</span>
+                  </div>
+                  <div class="relative flex pl-6 lg:pl-12 mt-2 lg:mt-8">
+                    <div class="absolute bg--white h-10 w-10 border-l border-b transform -rotate-45 -top-16 left-14 -mt-2 hidden lg:block">
+                      <!-- arrow -->
+                    </div>
+                    <img loading="lazy" src="./images/all/facebook-300.webp" srcset="./images/all/facebook-100.webp 576w, ./images/all/facebook-300.webp 1200w" width="100" height="100" alt="facebook review redone motors" class="w-14 h-14 p-2 border rounded-full">
+                    <div class="flex flex-col pl-4">
+                      <h3 class="h5 font-semibold mb-0">Robert D. Alvarez</h3>
+                      <span class="text-secondary font-light">4 Days Ago</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- end review -->
+              
+              <!-- review -->
+              <div class="swiper-slide">
+                <div class="grid grid-rows-3 relative">
+                  <div class="flex flex-col border row-span-2 px-8 lg:px-14 py-4 lg:py-8 mb-5">
+                    <div class="flex flex-row my-6">
+                      <span class="fas fa-star text-yellow-300 pr-1"></span>
+                      <span class="fas fa-star text-yellow-300 pr-1"></span>
+                      <span class="fas fa-star text-yellow-300 pr-1"></span>
+                      <span class="fas fa-star text-yellow-300 pr-1"></span>
+                      <span class="fas fa-star text-yellow-300 pr-1"></span>
+                    </div>
+                    <h2 class="h5 font-semibold mb-4">Great reservoir walk at great price</h2>
+                    <span class="mb-2 lh-lg">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Error, debitis voluptatem tempore qui numquam laboriosam?</span>
+                  </div>
+                  <div class="relative flex pl-6 lg:pl-12 mt-2 lg:mt-8">
+                    <div class="absolute bg--white h-10 w-10 border-l border-b transform -rotate-45 -top-16 left-14 -mt-2 hidden lg:block">
+                      <!-- arrow -->
+                    </div>
+                    <img loading="lazy" src="./images/all/facebook-300.webp" srcset="./images/all/facebook-100.webp 576w, ./images/all/facebook-300.webp 1200w" width="100" height="100" alt="facebook review redone motors" class="w-14 h-14 p-2 border rounded-full">
+                    <div class="flex flex-col pl-4">
+                      <h3 class="h5 font-semibold mb-0">Robert D. Alvarez</h3>
+                      <span class="text-secondary font-light">4 Days Ago</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- end review -->
+
+            </div>  
+            
+            <!-- swiper controls -->
+            <div class="swiper-button-prev transform scale-50 w-16 h-16 rounded-full border-2 border-grey-500 p-12 top-0 -left-6"></div>
+            <div class="swiper-button-next transform scale-50 w-16 h-16 rounded-full border-2 border-grey-500 p-12 top-0 -right-6"></div>
+
+            <!-- swiper controls -->
+            <!-- <div class="w-full flex justify-center absolute bottom-0">
+              <div class="swiper-btn-next mx-4 flex items-center justify-center w-12 h-12 rounded-full border border-grey-500">
+                <i class="fas fa-chevron-left"></i>
+              </div>
+              <div class="swiper-btn-prev mx-4 flex items-center justify-center w-12 h-12 rounded-full border border-grey-500">
+                <i class="fas fa-chevron-right"></i>
+              </div>
+            </div> -->
+            
+            <!-- <div class="swiper-pagination"></div> -->
+
+          </div>
+
+
+        </div>
+      </section>
+
+      <footer id="footer">
+        <div class="container-fluid bg--first">
+          <div class="container py-16">
+            <div class="row">
+              <!-- col -->
+              <div class="col-12 col-md-6 col-lg-4 mt-10 lg:mt-0">
+                <img loading="lazy" src="./images/logo/logo-w.webp" srcset="./images/logo/logo-w-150.webp 768w" width="130" height="70" alt="footer logo" class="object-contain w-48 mb-4" />
+                <ul class="list-unstyled">
+                  <li class="font-extralight mb-3">
+                    <span class="fas fa-map-marker-alt text--white"></span>
+                    <a href="#" class="text--white pl-2">4477 GRAS WALEY HWD, <br>Augburn CA 95633</a>
+                  </li>
+                  <li class="font-extralight mb-3">
+                    <span class="fas fa-phone text--white"></span>
+                    <a href="#" class="text--white pl-2">(565)-757-9588</a>
+                  </li>
+                  <li class="font-extralight mb-3">
+                    <span class="far fa-envelope text--white"></span>
+                    <a href="#" class="text--white pl-2">contact@redonemotors.com</a>
+                  </li>
+                </ul>
+                <div class="flex items-center mt-4.5">
+                  <a href="#" class="fab fa-facebook pr-3 fs-3 text--white" aria-label="facebook"></a>
+                  <a href="#" class="fab fa-instagram pr-3 fs-3 text--white" aria-label="instagram"></a>
+                  <a href="#" class="fab fa-twitter pr-3 fs-3 text--white" aria-label="twitter"></a>
+                  <a href="#" class="fab fa-youtube pr-3 fs-3 text--white" aria-label="youtube"></a>
+                </div>
+              </div>
+              <!-- end col -->
+              
+              <!-- col -->
+              <div class="col-12 col-md-6 col-lg-4 mt-10 lg:mt-0">
+                <h4 class="text-uppercase text--white font-bold">Opening Hours</h4>
+                <hr class="w-2/12 bg--white h-1">
+  
+                <ul class="px-0">
+                  <li class="row flex-nowrap lh-lg">
+                    <span class="text--white w-5/12 font-light">Monday</span>
+                    <span class="text--white w-7/12 font-light">08:00 AM - 07:00 PM</span>
+                  </li>
+                  <li class="row flex-nowrap lh-lg">
+                    <span class="text--white w-5/12 font-light">Tuesday</span>
+                    <span class="text--white w-7/12 font-light">08:00 AM - 07:00 PM</span>
+                  </li>
+                  <li class="row flex-nowrap lh-lg">
+                    <span class="text--white w-5/12 font-light">Wednesday</span>
+                    <span class="text--white w-7/12 font-light">08:00 AM - 07:00 PM</span>
+                  </li>
+                  <li class="row flex-nowrap lh-lg">
+                    <span class="text--white w-5/12 font-light">Thursday</span>
+                    <span class="text--white w-7/12 font-light">08:00 AM - 07:00 PM</span>
+                  </li>
+                  <li class="row flex-nowrap lh-lg">
+                    <span class="text--white w-5/12 font-light">Friday</span>
+                    <span class="text--white w-7/12 font-light">08:00 AM - 07:00 PM</span>
+                  </li>
+                  <li class="row flex-nowrap lh-lg">
+                    <span class="text--white w-5/12 font-light">Saturday</span>
+                    <span class="text--white w-7/12 font-light">08:00 AM - 01:00 AM</span>
+                  </li>
+                  <li class="row flex-nowrap lh-lg">
+                    <span class="text--white w-5/12 font-light">Sunday</span>
+                    <span class="text--white w-7/12 font-light">Closed</span>
+                  </li>
+                </ul>
+  
+              </div>
+              <!-- end col -->
+  
+              <!-- col -->
+              <div class="col-12 col-md-6 col-lg-4 mt-10 lg:mt-0">
+                <h4 class="text-uppercase text--white font-bold">Our dealership</h4>
+                <hr class="w-2/12 bg--white h-1">
+                
+                <ul class="px-0">
+                  <li class="row flex-nowrap lh-lg">
+                    <a href="#" class="text--white w-5/12 font-light">About us</a>
+                    <a href="#" class="text--white w-7/12 font-light">Our inventory</a>
+                  </li>
+                  <li class="row flex-nowrap lh-lg">
+                    <a href="#" class="text--white w-5/12 font-light">Meet our staff</a>
+                    <a href="#" class="text--white w-7/12 font-light">Sell your car</a>
+                  </li>
+                  <li class="row flex-nowrap lh-lg">
+                    <a href="#" class="text--white w-5/12 font-light">Finance</a>
+                    <a href="#" class="text--white w-7/12 font-light">Buy a car</a>
+                  </li>
+                  <li class="row flex-nowrap lh-lg">
+                    <a href="#" class="text--white w-5/12 font-light">Contact us</a>
+                    <a href="#" class="text--white w-7/12 font-light">Special</a>
+                  </li>
+                  <li class="row flex-nowrap lh-lg">
+                    <a href="#" class="text--white w-5/12 font-light">Friday</a>
+                  </li>
+                  <li class="row flex-nowrap lh-lg">
+                    <a href="#" class="text--white w-5/12 font-light">Privacy Policy</a>
+                  </li>
+                </ul>
+              </div>
+              <!-- end col -->
+  
+            </div>
+            <!-- end row -->
+          </div>
+          <!-- end footer infos -->
+        </div>
+
+        <!-- !COPYRIGHT -->
+        <div class="container-fluid bg--white py-8">
+          <div class="container">
+            <div class="grid grid-cols-1 md:grid-cols-2">
+              <div class="text-lg uppercase text-center md:text-left">&copy; Copyright 2020 All Rights Reserved</div>
+              <div class="text-lg uppercase text-center md:text-right">Powered by V12Software</div>
+            </div>
+          </div>
+        </div>
+
+      </footer>
+
+
+    </main>
+    
+
+    
+    <!-- SCROLL ANIMATIONS -->
+    <script src="./js/ui/animation-scroll.js"></script>
+    <!-- FONT AWESOME ICONS -->
+    <script async defer src="https://kit.fontawesome.com/b77e3afeef.js" crossorigin="anonymous"></script>
+    <!-- BOOTSTRAP JS -->
+    <script async defer src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
+    <script async defer src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.min.js" integrity="sha384-Atwg2Pkwv9vp0ygtn1JAojH0nYbwNJLPhwyoVbhoPwBhjQPR5VtM2+xf0Uwh9KtT" crossorigin="anonymous"></script>
+    <!-- Swiper JS -->
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+
+    
+    <!-- Initialize Swiper -->
+    <script>
+      // inventory vehicles swiper
+      var swiperInventoryVehicles = new Swiper(".swiperInventoryVehicles", {
+        slidesPerView: 1,
+        spaceBetween: 0,
+        autoplay: {
+          delay: 2500,
+          disableOnInteraction: false,
+        },
+        navigation: {
+          prevEl: ".swiper-button-left",
+          nextEl: ".swiper-button-right",
+        },
+        pagination: {
+          el: ".swiper-pagination",
+          clickable: true,
+        },
+        breakpoints: {
+          480: {
+            slidesPerView: 1,
+            spaceBetween: 0,
+          },
+          576: {
+            slidesPerView: 2,
+            spaceBetween: 15,
+          },
+          640: {
+            slidesPerView: 2,
+            spaceBetween: 20,
+          },
+          768: {
+            slidesPerView: 2,
+            spaceBetween: 20,
+          },
+          992: {
+            slidesPerView: 3,
+            spaceBetween: 20,
+          },
+          1024: {
+            slidesPerView: 3,
+            spaceBetween: 30,
+          },
+          1200: {
+            slidesPerView: 4,
+            spaceBetween: 30,
+          },
+        },
+      });
+      
+      // reviews swiper
+      var swiperTestimonials = new Swiper(".swiperTestimonials", {
+        slidesPerView: 1,
+        spaceBetween: 0,
+        autoplay: {
+          delay: 2500,
+          disableOnInteraction: false,
+        },
+        navigation: {
+          prevEl: ".swiper-button-prev",
+          nextEl: ".swiper-button-next",
+        },
+        pagination: {
+          el: ".swiper-pagination",
+          clickable: true,
+        },
+        breakpoints: {
+          480: {
+            slidesPerView: 1,
+            spaceBetween: 0,
+          },
+          576: {
+            slidesPerView: 2,
+            spaceBetween: 15,
+          },
+          640: {
+            slidesPerView: 2,
+            spaceBetween: 20,
+          },
+          768: {
+            slidesPerView: 2,
+            spaceBetween: 20,
+          },
+          992: {
+            slidesPerView: 3,
+            spaceBetween: 20,
+          },
+          1024: {
+            slidesPerView: 3,
+            spaceBetween: 30,
+          },
+          1200: {
+            slidesPerView: 3,
+            spaceBetween: 30,
+          },
+        },
+      });
+    </script>
+
+
+    <script>
+      // SIDEBAR MENU CONTROLS
+      const menu__overlay = document.querySelector('#menu__overlay');
+      const menu__list = document.querySelector('#menu__list');
+      const header__menuBtn = document.querySelector('#header__menuBtn');
+
+      [header__menuBtn /*, menu__overlay*/].forEach(elem => {
+        elem.addEventListener('click', () => {
+          if (menu__overlay.classList.contains('fixed')) {
+            menu__list.classList.remove('slide-in-menu');
+            menu__list.classList.add('slide-out-menu');
+            setTimeout(() => {
+              menu__overlay.classList.add('hidden');
+              menu__overlay.classList.remove('fixed');
+            }, 300);
+          } else {
+            menu__overlay.classList.remove('hidden');
+            menu__overlay.classList.add('fixed');
+            menu__list.classList.add('slide-in-menu');
+            menu__list.classList.remove('slide-out-menu');
+          }
+        });
+      });
+
+      // SUBMENU CONTROLS
+      const menuListItems = document.querySelectorAll('.menu-list-item');
+
+      menuListItems.forEach(item => {
+        console.log('item', item);
+        let submenu = document.querySelector(`.${item.className.split(" ").slice(0, 1).join("")} .submenu-list`) || null;
+        item.addEventListener('click', () => {
+          if (submenu) {
+            if (submenu.classList.contains('d-none')) {
+              submenu.classList.remove('d-none');
+              submenu.classList.add('d-block');
+              submenu.classList.add('slide-from-left');
+            } else {
+              submenu.classList.remove('d-block');
+              submenu.classList.remove('slide-from-left');
+              submenu.classList.add('d-none');
+            }
+          }
+          item.classList.add('active')
+        });
+      });
+
+    </script>
+
+
+
+
+    <!-- load custom css -->
+    <!-- <script>
+      const loadLargeCSS = function(){
+        //load local stylesheet
+        loadCss('./styles/_tailwind.css');
+      }
+      const loadCss = function(cssPath) {
+        setTimeout(() => {
+          const cssLink = document.createElement('link');
+          cssLink.rel = 'stylesheet';
+          cssLink.href = cssPath;
+          const head = document.getElementsByTagName('head')[0];
+          head.parentNode.insertBefore(cssLink, head);
+        }, 2000);
+      };
+      //call function on window load
+      window.addEventListener('load', loadLargeCSS);
+    </script> -->
+
+    
+  </body>
+</html>

@@ -1,0 +1,31 @@
+@import "../_theme.css";
+
+body {
+  overflow-x: hidden !important;
+}
+
+#section__jumbo {
+  background: url('../../images/2-2.webp') center center no-repeat;
+}
+#section__offerBg {
+  background: linear-gradient(var(--first-95), var(--first-95)), url('../../images/3-2.webp') center center no-repeat;
+}
+
+/* show menu */
+.slide-in-menu {
+  transform: translateX(-100%);
+  animation: slideInMenu 300ms ease-in-out forwards;
+}
+@keyframes slideInMenu {
+  from { transform: translateX(-100%); }
+  to { transform: translateX(0); }
+}
+/* hide menu */
+.slide-out-menu {
+  transform: translateX(0);
+  animation: slideOutMenu 300ms ease-in-out forwards;
+}
+@keyframes slideOutMenu {
+  from { transform: translateX(0); }
+  to { transform: translateX(-100%); }
+}

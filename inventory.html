@@ -1,0 +1,536 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]>      <html class="no-js"> <!--<![endif]-->
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Redone Motors | Inventory</title>
+    <!-- META TAGS -->
+    <meta name="theme-color" content="#0058BC">
+    <meta name="og:title" content="Redone Motors | Inventory">
+    <meta name="og:url" content="https://test.com/inventory">
+    <meta name="og:description" content="Redone Motors Inventory">
+    <meta name="og:image" content="link to my image">
+    <meta name="description" content="Redone Motors Inventory">
+    <meta name="keywords" content="Redone Motors Cars Inventory">
+    <!-- CSS -->
+    <link rel="icon" href="./favicon.ico" />
+    <link rel="stylesheet" href="./styles/inventory/_inventory.css">
+    <link rel="stylesheet" href="./styles/_base.css">
+    <link rel="preload" href="./styles/_base-tailwind.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <link rel="stylesheet" href="./styles/_tailwind.css">
+    <!-- <link rel="stylesheet" href="./styles/_globals.css"> -->
+    <link rel="stylesheet" href="./styles/_theme.css">
+    <!-- <link rel="preload" href="./styles/about/_style.css" as="style" onload="this.onload=null;this.rel='stylesheet'"> -->
+    <!-- BOOTSTRAP 5 CSS -->
+    <link rel="preload" href="./styles/bootstrap/bootstrap.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <!-- POPPINS FONT -->
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
+  </head>
+  <body id="inventory">
+    <!--[if lt IE 7]>
+      <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="#">upgrade your browser</a> to improve your experience.</p>
+    <![endif]-->
+
+    <main id="inventory-main">
+      <!-- HEADER -->
+      <header id="header" class="navbar navbar-light bg--white border-b-2 border--first py-2.5">
+        <div class="container">
+          <div class="flex flex-wrap items-center" id="header__logoContainer">
+            <a href="#" class="rounded-circle p-2 me-1" id="header__menuBtn" aria-label="menu">
+              <span class="fas fa-bars text-3xl text--first"></span>
+            </a>
+            <a class="navbar-brand" href="/" id="header__logo" aria-label="go home">
+              <img class="img-fluid" src="./images/logo/logo.webp" srcset="./images/logo/logo-150.webp 768w" alt="Redone Motors Logo" width="130" height="80">
+            </a>
+          </div>
+          <div class="flex flex-wrap items-center" id="header__contactButtons">
+            <a href="tel:606060606" class="btn btn--first rounded-pill p-2 mx-5" aria-label="Call Us at (504) 226-7370">
+              <span class="fas fa-phone rounded-circle bg--white text--first p-2.5"></span>
+              <span class="text--white pl-2 pr-3">Call Us at (504) 226-7370</span>
+            </a>
+            <a href="mailto:example@example.com" class="btn btn--first rounded-pill p-2 mx-2" aria-label="Text Us">
+              <span class="fas fa-envelope rounded-circle bg--white text--first p-2.5"></span>
+              <span class="text--white pl-2 pr-3">Text Us</span>
+            </a>
+          </div>
+        </div>
+      </header>
+
+      <!--*** SEARCH FORM ***-->
+      <div class="container-fluid flex items-end bg-gray-100 lg:h-48">
+        <div class="container bg--first px-10 py-3">
+
+          <form class="grid grid-rows-3 md:grid-rows-1 md:grid-cols-12 items-center gap-x-2 md:gap-x-8 lg:gap-x-24" action="#">
+            <div class="row-span-1 md:col-span-7 relative my-2">
+              <label><small class="text-white font-light">Keyword</small></label>
+              <input type="text" class="form-control bg--first text--white border-t-0 border-r-0 border-l-0 rounded-none border-b border-white placeholder--white font-extralight px-0 py-1" placeholder="search by year, make, model" />
+              <!-- VOICE SEARCH BTN -->
+              <button class="position-absolute top-2 -right-2 btn--first rounded-pill text--white" aria-label="voice search">
+                <span class="fas fa-microphone rounded-circle w-10 h-10 p-2 fs-3"></span>
+              </button>
+            </div>
+            <!-- YEAR -->
+            <div class="row-span-1 md:col-span-3 relative my-2">
+              <label><small class="text-white font-light">Sort By</small></label>
+              <select type="text" class="form-control bg--first text--white border-t-0 border-r-0 border-l-0 rounded-none border-b border-red-100 focus:border-white placeholder--white font-extralight px-0 py-1" placeholder="Year">
+                <option selected disabled>Year ( Low to High )</option>
+              </select>
+            </div>
+
+            <div class="row-span-1 md:col-span-2 relative flex flex-row justify-end my-2">
+              <button class="btn--first border border--light w-12 h-12 flex items-center p-3">
+                <span class="fas fa-list-ul text--white fs-4"></span>
+              </button>
+              <button id="searchFilterOpenBtn" class="btn--first border border--light w-12 h-12 flex items-center p-3 ml-5">
+                <span class="fas fa-filter text--white fs-4"></span>
+              </button>
+            </div>
+
+          </form>
+
+        </div>
+      </div>
+
+      <!--*** INVENTORY ***-->
+      <section class="container-fluid">
+        <!-- container -->
+        <div class="container px-0 py-6">
+          <div class="flex gap-6">
+
+            <!--*** FILTER SIDEBAR ***-->
+            <aside id="searchFilterSection" class="hidden lg:flex w-full lg:w-3/12 top-0 left-0 bottom-0 overflow-y-scroll lg:overflow-y-hidden lg:relative w-full z-50 bg-gray-900 bg-opacity-20 p-12 md:p-24 lg:p-0">
+              
+              <!-- filter title -->
+              <form id="searchFilterForm" action="#" class="relative bg-white w-full slide-in-filter-section">
+                <div class="flex flex-col items-center text-center text-white bg--first py-6">
+                  <!-- close btn -->
+                  <button id="searchFilterCloseBtn" class="fixed lg:hidden top-2 right-2 bg--first border-2 border-white w-10 h-10 rounded-full ring-2 focus:ring-white" aria-label="close">
+                    <i class="fas fa-times text-white text-xl" aria-hidden="true"></i>
+                  </button>
+                  <span class="font-normal text-ms mb-1">
+                    55 Vehicle
+                    <span class="font-light">Matching</span>
+                  </span>
+                  <hr class="w-24 h-1 bg--white opacity-100 mb-0 mt-1">
+                </div>
+                <!-- filter inputs -->
+                <div class="flex flex-col border">
+                  <!-- action btns -->
+                  <div class="flex flex-row border-b">
+                    <button class="w-6/12 py-4 px-2 text-center text-sm text--first border-r">Reset All</button>
+                    <button class="w-6/12 py-4 px-2 text-center text-sm text--first">Search</button>
+                  </div>
+                  <!-- search inputs -->
+                  <div class="flex flex-wrap px-6 py-5">
+                    <!-- make all select -->
+                    <select type="text" class="form-control border-t-0 border-r-0 border-l-0 border-b rounded-none px-0 py-2 my-5">
+                      <option selected disabled>Make All</option>
+                    </select>
+                    <!-- model all select -->
+                    <select type="text" class="form-control border-t-0 border-r-0 border-l-0 border-b rounded-none px-0 py-2 my-5">
+                      <option selected disabled>Model All</option>
+                    </select>
+                    <!-- body style all btn -->
+                    <button class="w-full text-left text-gray-900 rounded-none px-0 py-2 mt-5 mb-2">Body Style All</button>
+                    <div class="flex flex-wrap w-full">
+                      <input type="text" class="form-control mb-2 placeholder-gray-200" placeholder="Body Style All">
+                      <button class="ml-auto"><small class="text-muted border-b-2">Reset All</small></button>
+                    </div>
+
+                    <!--*** body style filter ***-->
+                    <div id="inventory__filterBodyStyleCheckboxes" class="flex flex-wrap w-full my-4">
+                      <!-- convertible -->
+                      <div class="form-check flex items-center w-full my-2">
+                        <input class="form-check-input border-2 p-2 mr-3" type="checkbox" name="convertible-check" value="convertible" id="convertibleCheck">
+                        <label class="form-check-label pt-1" for="convertibleCheck">
+                          Convertible
+                        </label>
+                        <span class="bg-gray-200 rounded p-1 px-2 ml-auto text-sm">3</span>
+                      </div>
+                      <!-- coupe -->
+                      <div class="form-check flex items-center w-full my-2">
+                        <input class="form-check-input border-2 p-2 mr-3" type="checkbox" name="coupe-check" value="coupe" id="coupeCheck">
+                        <label class="form-check-label pt-1" for="coupeCheck">
+                          Coupe
+                        </label>
+                        <span class="bg-gray-200 rounded p-1 px-2 ml-auto text-sm">6</span>
+                      </div>
+                      <!-- hatchback -->
+                      <div class="form-check flex items-center w-full my-2">
+                        <input class="form-check-input border-2 p-2 mr-3" type="checkbox" name="hatchback-check" value="hatchback" id="hatchbackCheck">
+                        <label class="form-check-label pt-1" for="hatchbackCheck">
+                          Hatchback
+                        </label>
+                        <span class="bg-gray-200 rounded p-1 px-2 ml-auto text-sm">4</span>
+                      </div>
+                      <!-- minivan -->
+                      <div class="form-check flex items-center w-full my-2">
+                        <input class="form-check-input border-2 p-2 mr-3" type="checkbox" name="minivan-check" value="minivan" id="minivanCheck">
+                        <label class="form-check-label pt-1" for="minivanCheck">
+                          Mini-Van
+                        </label>
+                        <span class="bg-gray-200 rounded p-1 px-2 ml-auto text-sm">1</span>
+                      </div>
+                      <!-- pickup -->
+                      <div class="form-check flex items-center w-full my-2">
+                        <input class="form-check-input border-2 p-2 mr-3" type="checkbox" name="pickup-check" value="pickup" id="pickupCheck">
+                        <label class="form-check-label pt-1" for="pickupCheck">
+                          Pickup
+                        </label>
+                        <span class="bg-gray-200 rounded p-1 px-2 ml-auto text-sm">6</span>
+                      </div>
+                      <!-- sedan -->
+                      <div class="form-check flex items-center w-full my-2">
+                        <input class="form-check-input border-2 p-2 mr-3" type="checkbox" name="sedan-check" value="sedan" id="sedanCheck">
+                        <label class="form-check-label pt-1" for="sedanCheck">
+                          Sedan
+                        </label>
+                        <span class="bg-gray-200 rounded p-1 px-2 ml-auto text-sm">16</span>
+                      </div>
+                    </div>
+                    <!-- inventory inventory__filterBodyStyleCheckboxes -->
+
+                    <!-- price ranges -->
+                    <div id="inventory__filterRanges" class="w-full my-3">
+                      <div class="w-full my-3">
+                        <label for="priceRange" class="form-label">Price <span class="text-gray-500">$500 - $100000</span></label>
+                        <input type="range" class="form-range" min="500" max="100000" step="0.5" id="priceRange">
+                      </div>
+                      <!-- price year -->
+                      <div class="w-full my-3">
+                        <label for="yearRange" class="form-label">Year</label>
+                        <input type="range" class="form-range" min="500" max="100000" step="0.5" id="yearRange">
+                      </div>
+                      <!-- mileage ranges -->
+                      <div class="w-full my-3">
+                        <label for="mileageRange" class="form-label">Mileage</label>
+                        <input type="range" class="form-range" min="500" max="100000" step="0.5" id="mileageRange">
+                      </div>
+                    </div>
+                    
+                    <!-- Drive select -->
+                    <select type="text" name="data[drive-type]" class="form-control border-t-0 border-r-0 border-l-0 border-b rounded-none px-0 py-2 my-5">
+                      <option selected disabled>Fuel Type All</option>
+                    </select>
+                    <!-- Condition select -->
+                    <select type="text" name="data[condition]" class="form-control border-t-0 border-r-0 border-l-0 border-b rounded-none px-0 py-2 my-5">
+                      <option selected disabled>Condition Type All</option>
+                    </select>
+                    <!-- Fuel select -->
+                    <select type="text" name="data[fuel-type]" class="form-control border-t-0 border-r-0 border-l-0 border-b rounded-none px-0 py-2 my-5">
+                      <option selected disabled>Fuel Type All</option>
+                    </select>
+                    <!-- Transmission select -->
+                    <select type="text" name="data[transmission]" class="form-control border-t-0 border-r-0 border-l-0 border-b rounded-none px-0 py-2 my-5">
+                      <option selected disabled>Transmission All</option>
+                    </select>
+                    <!-- Engine select -->
+                    <select type="text" name="data[engine]" class="form-control border-t-0 border-r-0 border-l-0 border-b rounded-none px-0 py-2 my-5">
+                      <option selected disabled>Engine All</option>
+                    </select>
+
+                    <!--* search btn *-->
+                    <div class="w-10/12 xl:w-7/12 mx-auto my-6">
+                      <button class="btn w-full text--first border--first rounded-pill text-lg font-semibold py-2">Save Search</button>
+                    </div>
+                    
+                  </div>
+                </div>
+                <!-- end filter inputs -->
+
+              </form>
+            </aside>
+            <!-- end filter sidebar -->
+
+            <!--*** INVENTORY ***-->
+            <section class="relative w-full lg:w-9/12" id="section__inventoryList">
+              <!--* 1 CARD *-->
+              <div class="grid grid-cols-12 w-full relative mb-8">
+                <!-- card image -->
+                <div class="col-span-12 md:col-span-5 lg:col-span-4 row-span-3">
+                  <img class="w-full h-full object-cover rounded-0" loading="lazy" src="./images/inventory/1.webp" srcset="./images/inventory/1-300.webp 576w, ./images/inventory/1-300.webp 992w" width="300" height="300" alt="ford model 2020">
+                </div>
+                <div class="col-span-12 md:col-span-7 lg:col-span-8 row-span-3 bg-gray-50">
+                  <!-- card header -->
+                  <div class="grid grid-cols-6 w-full border-t-none md:border-t border-l md:border-l-none" id="section__inventoryCardHeader">
+                    <a href="/inventory-details.html"class="col-span-4 lg:col-span-5 text-black fs-4 font-semibold py-2 px-6">2018 F150 PLATINIUM ...</a>
+                    <span class="col-span-2 lg:col-span-1 fs-5 font-medium bg--first text--white py-2 flex items-center justify-center py-2 px-6 md:px-0">$52,998</span>
+                  </div>
+                  <!-- card body -->
+                  <div class="flex flex-col py-7 px-6 border-b border-t border-r border-l md:border-l-none" id="section__inventoryCardBody">
+                    <div class="flex flex-row flex-wrap w-full">
+                      <!-- miles -->
+                      <small class="text-nowrap text-xs px-3 py-1 border-r"><span class="fas fa-tachometer-alt text-gray-500 pr-2"></span>27,560 mi</small>
+                      <!-- automatic -->
+                      <small class="text-nowrap text-xs px-3 py-1 border-r"><span class="fas fa-cog text-gray-500 pr-2"></span>Automatic</small>
+                      <!-- bar code -->
+                      <small class="text-nowrap text-xs px-3 py-1 border-r"><span class="fas fa-barcode text-gray-500 pr-2"></span>#Z954D54AZ5454A4D</small>
+                      <!-- exterior -->
+                      <small class="text-nowrap text-xs px-3 py-1 border-r"><span class="fas fa-spray-can text-gray-500 pr-2"></span>Exterior</small>
+                      <!-- exterior -->
+                      <small class="text-nowrap text-xs px-3 py-1"><span class="fas fa-gas-pump text-gray-500 pr-2"></span>Fuel Type</small>
+                    </div>
+                    <p class="my-6">
+                      Lorem ipsum dolor sit, amet consectetur adipisicing elit. Laudantium alias eum cum quos hic consequatur tempore id sint mollitia praesentium!
+                      <a href="#" class="text--first">[...More]</a>
+                    </p>
+                    <!-- end card body -->
+                    <div id="section__inventoryCardFooter" class="grid grid-cols-1 lg:grid-flow-col items-center">
+                      <div class="lg:col-span-2 mt-2">
+                        <a href="#" class="btn rounded-pill btn--white text--first font-bold border--first px-5 my-1 mr-2">
+                          <small class="fas fa-phone"></small>
+                          <small class="pl-1">Call Us</small>
+                        </a>
+                        <a href="#" class="btn rounded-pill btn--white text--first font-bold border--first px-5 my-1 mr-2">
+                          <small class="fas fa-envelope"></small>
+                          <small class="pl-1">Text Us</small>
+                        </a>
+                        <a href="#" class="btn rounded-pill btn--white text--first font-bold border--first px-5 my-1 mr-2">
+                          <small class="fas fa-check"></small>
+                          <small class="pl-1">Check Availability</small>
+                        </a>
+                      </div>
+                      <div class="lg:col-span-1 flex flex-row justify-evenly md:justify-end mt-2">
+                        <img class="w-16 h-18 object-contain pr-3" loading="lazy" src="./images/inventory/common/approuved.png" width="100" height="100" alt="ford model 2020">
+                        <img class="w-16 h-18 object-contain pr-3" loading="lazy" src="./images/inventory/common/cargurus.png" width="100" height="100" alt="ford model 2020">
+                        <img class="w-16 h-18 object-contain pr-3" loading="lazy" src="./images/inventory/common/window-sticker.png" width="100" height="100" alt="ford model 2020">
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <nav class="flex justify-between items-center" aria-label="...">
+                <button><span class="fas fa-chevron-left"></span></button>
+                <ul class="pagination pagination-lg">
+                  <li class="page-item active m-2 w-12 h-12 text-center" aria-current="page">
+                    <span class="page-link p-2">1</span>
+                  </li>
+                  <li class="page-item m-2 w-12 h-12 text-center"><a class="page-link p-2" href="#">2</a></li>
+                  <li class="page-item m-2 w-12 h-12 text-center"><a class="page-link p-2" href="#">3</a></li>
+                </ul>
+                <button><span class="fas fa-chevron-right"></span></button>
+              </nav>
+              
+            </section>
+            <!-- end inventory section -->
+
+          </div>
+          <!-- end container -->
+        </div>
+      </section>
+
+
+
+      <!--********************************************************************-->
+      <!--****************************** FOOTER ******************************-->
+      <!--********************************************************************-->
+      <footer id="footer">
+        <div class="container-fluid bg--first">
+          <div class="container py-16">
+            <div class="row">
+              <!-- col -->
+              <div class="col-12 col-md-6 col-lg-4 mt-8 lg:mt-0">
+                <img src="./images/logo/logo-w.webp" srcset="./images/logo/logo-w-150.webp 768w" width="130" height="80" alt="footer logo" class="object-contain w-48 mb-10" />
+                <ul class="list-unstyled">
+                  <li class="font-extralight mb-3">
+                    <span class="fas fa-map-marker-alt text--white"></span>
+                    <a href="#" class="text--white text-nowrap pl-2">4477 GRAS WALEY HWD, <br>Augburn CA 95633</a>
+                  </li>
+                  <li class="font-extralight mb-3">
+                    <span class="fas fa-phone text--white"></span>
+                    <a href="#" class="text--white text-nowrap pl-2">(565)-757-9588</a>
+                  </li>
+                  <li class="font-extralight mb-3">
+                    <span class="far fa-envelope text--white"></span>
+                    <a href="#" class="text--white text-nowrap pl-2">contact@redonemotors.com</a>
+                  </li>
+                </ul>
+                <div class="flex items-center mt-8">
+                  <a href="#" class="fab fa-facebook pr-3 fs-3 text--white" aria-label="facebook"></a>
+                  <a href="#" class="fab fa-instagram pr-3 fs-3 text--white" aria-label="instagram"></a>
+                  <a href="#" class="fab fa-twitter pr-3 fs-3 text--white" aria-label="twitter"></a>
+                  <a href="#" class="fab fa-youtube pr-3 fs-3 text--white" aria-label="youtube"></a>
+                </div>
+              </div>
+              <!-- end col -->
+              
+              <!-- col -->
+              <div class="col-12 col-md-6 col-lg-4 mt-8 lg:mt-0">
+                <h4 class="uppercase text--white font-bold fs-5 mb-2">Opening Hours</h4>
+                <hr class="w-2/12 bg--white h-1 mb-6">
+  
+                <ul class="px-0">
+                  <li class="flex flex-nowrap lh-lg">
+                    <span class="text--white w-5/12 font-light">Monday</span>
+                    <span class="text--white w-7/12 font-light">08:00 AM - 07:00 PM</span>
+                  </li>
+                  <li class="flex flex-nowrap lh-lg">
+                    <span class="text--white w-5/12 font-light">Tuesday</span>
+                    <span class="text--white w-7/12 font-light">08:00 AM - 07:00 PM</span>
+                  </li>
+                  <li class="flex flex-nowrap lh-lg">
+                    <span class="text--white w-5/12 font-light text-red">Wednesday</span>
+                    <span class="text--white w-7/12 font-light">08:00 AM - 07:00 PM</span>
+                  </li>
+                  <li class="flex flex-nowrap lh-lg">
+                    <span class="text--white w-5/12 font-light">Thursday</span>
+                    <span class="text--white w-7/12 font-light">08:00 AM - 07:00 PM</span>
+                  </li>
+                  <li class="flex flex-nowrap lh-lg">
+                    <span class="text--white w-5/12 font-light">Friday</span>
+                    <span class="text--white w-7/12 font-light">08:00 AM - 07:00 PM</span>
+                  </li>
+                  <li class="flex flex-nowrap lh-lg">
+                    <span class="text--white w-5/12 font-light">Saturday</span>
+                    <span class="text--white w-7/12 font-light">08:00 AM - 01:00 AM</span>
+                  </li>
+                  <li class="flex flex-nowrap lh-lg">
+                    <span class="text--white w-5/12 font-light">Sunday</span>
+                    <span class="text--white w-7/12 font-light">Closed</span>
+                  </li>
+                </ul>
+  
+              </div>
+              <!-- end col -->
+  
+              <!-- col -->
+              <div class="col-12 col-md-6 col-lg-2 mt-8 lg:mt-0">
+                <h4 class="uppercase text--white font-bold fs-5 mb-2">Our Dealership</h4>
+                <hr class="w-2/12 bg--white h-1 mb-6">
+                
+                <ul class="px-0">
+                  <li class="flex flex-nowrap lh-lg">
+                    <a href="#" class="text--white text-nowrap w-5/12 font-light">About us</a>
+                  </li>
+                  <li class="flex flex-nowrap lh-lg">
+                    <a href="#" class="text--white text-nowrap w-5/12 font-light">Meet our staff</a>
+                  </li>
+                  <li class="flex flex-nowrap lh-lg">
+                    <a href="#" class="text--white text-nowrap w-7/12 font-light">Finance</a>
+                  </li>
+                  <li class="flex flex-nowrap lh-lg">
+                    <a href="#" class="text--white text-nowrap w-5/12 font-light">Contact us</a>
+                  </li>
+                  <li class="flex flex-nowrap lh-lg">
+                    <a href="#" class="text--white text-nowrap w-5/12 font-light">Friday</a>
+                  </li>
+                  <li class="flex flex-nowrap lh-lg">
+                    <a href="#" class="text--white text-nowrap w-5/12 font-light">Privacy Policy</a>
+                  </li>
+                </ul>
+              </div>
+              <!-- end col -->
+  
+              <!-- col -->
+              <div class="col-12 col-md-6 col-lg-2 mt-8 lg:mt-0">
+                <h4 class="uppercase text--white font-bold fs-5 mb-2">Inventory</h4>
+                <hr class="w-2/12 bg--white h-1 mb-6">
+                
+                <ul class="px-0">
+                  <li class="flex flex-nowrap lh-lg">
+                    <a href="#" class="text--white text-nowrap w-5/12 font-light">Our Inventory</a>
+                  </li>
+                  <li class="flex flex-nowrap lh-lg">
+                    <a href="#" class="text--white text-nowrap w-5/12 font-light">Sell Your Car</a>
+                  </li>
+                  <li class="flex flex-nowrap lh-lg">
+                    <a href="#" class="text--white text-nowrap w-7/12 font-light">Buy a car</a>
+                  </li>
+                  <li class="flex flex-nowrap lh-lg">
+                    <a href="#" class="text--white text-nowrap w-5/12 font-light">Special</a>
+                  </li>
+                  </li>
+                </ul>
+              </div>
+              <!-- end col -->
+  
+            </div>
+            <!-- end row -->
+          </div>
+          <!-- end footer infos -->
+        </div>
+          
+        <!-- !COPYRIGHT -->
+        <div class="container-fluid bg--white py-8">
+          <div class="container">
+            <div class="grid grid-cols-1 md:grid-cols-2">
+              <div class="text-lg uppercase text-center md:text-left">&copy; Copyright 2020 All Rights Reserved</div>
+              <div class="text-lg uppercase text-center md:text-right">Powered by V12Software</div>
+            </div>
+          </div>
+        </div>
+
+      </footer>
+
+      <!--********************************************************************-->
+      <!--**************************** END FOOTER ****************************-->
+      <!--********************************************************************-->
+
+
+    </main>
+    
+
+
+    <!-- load tailwind css -->
+    <!-- <script>
+      const loadLargeCSS = function() {
+        //load local stylesheet
+        loadCss('./styles/_tailwind.css');
+      }
+      
+      const loadCss = function(cssPath){
+        const cssLink = document.createElement('link');
+        cssLink.rel = 'stylesheet';
+        cssLink.href = cssPath;
+        const head = document.getElementsByTagName('head')[0];
+        head.parentNode.insertBefore(cssLink, head);
+      };
+      
+      //call function on window load
+      window.addEventListener('load', loadLargeCSS);
+    </script> -->
+
+    <script>
+
+      // SHOW FILTER FORM
+      const searchFilterOpenBtn = document.querySelector('#searchFilterOpenBtn');
+      const searchFilterCloseBtn = document.querySelector('#searchFilterCloseBtn');
+      const searchFilterForm = document.querySelector('#searchFilterForm');
+      const searchFilterSection = document.querySelector('#searchFilterSection');
+
+      // const toggleFilterSection = () => {
+      //   searchFilterSection.classList.toggle("hidden");
+      //   searchFilterSection.classList.toggle("fixed");
+      // }
+      if (window.innerWidth < 1023) {
+        searchFilterOpenBtn.addEventListener("click", () => {
+          searchFilterSection.classList.add("fixed");
+          searchFilterSection.classList.remove("hidden");
+          searchFilterForm.classList.remove("slide-out-filter-section");
+          searchFilterForm.classList.add("slide-in-filter-section");
+        });
+        searchFilterCloseBtn.addEventListener("click", () => {
+          searchFilterForm.classList.remove("slide-in-filter-section");
+          searchFilterForm.classList.add("slide-out-filter-section");
+          setTimeout(() => {
+            searchFilterSection.classList.remove("fixed");
+            searchFilterSection.classList.add("hidden");
+          }, 300);
+        });
+      }
+      
+
+    </script>
+
+    <!-- FONT AWESOME ICONS -->
+    <script async defer src="https://kit.fontawesome.com/b77e3afeef.js" crossorigin="anonymous"></script>
+    <script async defer src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
+    <script async defer src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.min.js" integrity="sha384-Atwg2Pkwv9vp0ygtn1JAojH0nYbwNJLPhwyoVbhoPwBhjQPR5VtM2+xf0Uwh9KtT" crossorigin="anonymous"></script>
+  </body>
+</html>

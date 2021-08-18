@@ -1,0 +1,21 @@
+
+
+/* show */
+.slide-in-filter-section {
+  transform: translateX(-200%);
+  animation: slideInSectionAnim 300ms ease-in-out forwards;
+}
+@keyframes slideInSectionAnim {
+  from { transform: translateX(200%); }
+  to { transform: translateX(0); }
+}
+
+/* hide */
+.slide-out-filter-section {
+  transform: translateX(0);
+  animation: slideOutSectionAnim 300ms ease-in-out forwards;
+}
+@keyframes slideOutSectionAnim {
+  from { transform: translateX(0); }
+  to { transform: translateX(200%); }
+}

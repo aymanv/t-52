@@ -1,0 +1,25 @@
+
+*,
+::after,
+::before {
+  box-sizing: border-box
+}
+* {
+  padding: 0; margin: 0;
+  font-family: 'Poppins', sans-serif;
+  font-size: 13.5px;
+}
+
+button, input, textarea, select, a {
+  outline: none !important;
+  box-shadow: none !important;
+}
+/* button:focus, input:focus, textarea:focus, select:focus {
+  box-shadow: 0 0 0 .2rem#0058BC90 !important;
+} */
+button {
+  background-color: unset;
+}
+a {
+  text-decoration: none !important;
+}
