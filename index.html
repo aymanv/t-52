@@ -25,6 +25,7 @@
     <!-- <link rel="stylesheet" href="./styles/_globals.css"> -->
     <link rel="stylesheet" href="./styles/_theme.css">
     <link rel="stylesheet" href="./styles/ui/_animations.css">
+    <link rel="preload" href="./styles/ui/_active.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
     <link rel="preload" href="./styles/home/_style.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
     <!-- BOOTSTRAP 5 CSS -->
     <link rel="preload" href="./styles/bootstrap/bootstrap.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
@@ -52,39 +53,33 @@
     <main>
       <!-- SITE MENU -->
       <header id="menu__overlay" class="menu-overlay hidden top-0 left-0 h-screen w-screen bg-gray-900 bg-opacity-30 z-40">
-        <div id="menu__list" class="menu-list absolute top-0 left-0 flex flex-col items-center md:items-stretch justify-center md:justify-start lg:w-3/12 md:w-4/12 sm:w-8/12 w-full h-full bg-white shadow-xl py-32 px-12">
+        <div id="menu__list" class="menu-list / absolute top-0 left-0 flex flex-col items-center md:items-stretch justify-center md:justify-start lg:w-3/12 md:w-4/12 sm:w-8/12 w-full h-full bg-white shadow-xl py-32 px-12">
           <!-- home link -->
-          <div class="menu-list-item / flex flex-col border-none md:border-b">
-            <div class="menu-item / flex items-center border-t border-b py-5">
-              <i class="fas fa-chevron-right text--first w-6 hidden md:flex" aria-hidden="true"></i>
-              <a href="/" class="menu-link / uppercase text--first text-2xl md:text-lg font-semibold md:transition md:transform md:hover:translate-x-2">Home</a>
-            </div>
-          </div>
-          <!-- Inventory link -->
-          <div class="menu-list-item / flex flex-col border-none md:border-b">
-            <div class="menu-item / flex items-center border-t border-b py-5">
-              <i class="fas fa-chevron-right text--first w-6 hidden md:flex" aria-hidden="true"></i>
-              <a href="/" class="menu-link / uppercase text--first text-2xl md:text-lg font-semibold md:transition md:transform md:hover:translate-x-2">Inventory</a>
-            </div>
+          <div class="menu-item / flex flex-col w-full mb-1">
+            <a href="#" class="menu-item-link / flex items-center w-full uppercase font-semibold rounded-xl transition duration-150 cursor-pointer p-2 mb-1">
+              <i class="menu-item-icon / fas fa-chevron-right transition duration-150 hidden md:flex m-4" aria-hidden="true"></i>
+              <span class="md:transform md:translate-x-2 text-2xl md:text-lg">Home</span>
+            </a>
           </div>
           <!-- Services link -->
-          <div class="menu-list-item / flex flex-col border-none md:border-b">
-            <div class="menu-item / flex items-center border-t border-b py-5">
-              <i class="fas fa-chevron-right text--first w-6 hidden md:flex" aria-hidden="true"></i>
-              <a href="#" class="menu-link / uppercase text--first text-2xl md:text-lg font-semibold md:transition md:transform md:hover:translate-x-2">Services</a>
+          <div class="menu-item / flex flex-col w-full mb-1">
+            <div class="menu-item-link / flex items-center w-full uppercase font-semibold rounded-xl transition duration-150 cursor-pointer p-2 mb-1">
+              <i class="menu-item-icon / fas fa-chevron-right transition duration-150 hidden md:flex m-4" aria-hidden="true"></i>
+              <span class="md:transform md:translate-x-2 text-2xl md:text-lg">Services</span>
             </div>
-            <ul class="submenu-list / pl-0 d-none">
-              <a href="#" class="submenu-link / block bg--first border-b pl-8 py-4">
-                <span class="submenu-text / text-white">Sell Car</span>
+            <ul class="submenu-list / origin-top-left pl-0 ml-8">
+              <a href="#" class="submenu-link / block rounded-xl transition duration-150 px-8 py-4">
+                Sell a Car
               </a>
-              <a href="#" class="submenu-link / block bg--first border-b pl-8 py-4">
-                <span class="submenu-text / text-white">Sell Car</span>
+              <a href="#" class="submenu-link / block rounded-xl transition duration-150 px-8 py-4">
+                Buy a Car
               </a>
-              <a href="#" class="submenu-link / block bg--first border-b pl-8 py-4">
-                <span class="submenu-text / text-white">Sell Car</span>
+              <a href="#" class="submenu-link / block rounded-xl transition duration-150 px-8 py-4">
+                Premium Service
               </a>
             </ul>
           </div>
+
         </div>
       </header>
 
@@ -100,17 +95,29 @@
             </a>
           </div>
           <div id="header__contactButtons" class="flex flex-wrap items-center">
-            <a href="tel:606060606" class="btn btn--first rounded-pill p-2 mx-2" aria-label="Call Us at (504) 226-7370">
-              <span class="fas fa-phone rounded-circle bg--white text--first p-2.5"></span>
+            <a href="tel:606060606" class="btn btn--first rounded-full p-2 mx-2" aria-label="Call Us at (504) 226-7370">
+              <i class="fas fa-phone rounded-circle bg--white text--first p-2.5 h-9 w-9" aria-hidden="true"></i>
               <span class="text--white pl-2 pr-3">Call Us at (504) 226-7370</span>
             </a>
-            <a href="mailto:example@example.com" class="btn btn--first rounded-pill p-2 mx-2" aria-label="Text Us">
-              <span class="fas fa-envelope rounded-circle bg--white text--first p-2.5"></span>
+            <a href="mailto:example@example.com" class="btn btn--first rounded-full p-2 mx-2" aria-label="Text Us">
+              <i class="fas fa-envelope rounded-circle bg--white text--first p-2.5 h-9 w-9" aria-hidden="true"></i>
               <span class="text--white pl-2 pr-3">Text Us</span>
+            </a>
+            <a href="#" class="btn btn--first rounded-full p-2 mx-2" id="header__favoriteBtn" aria-label="Favorite List">
+              <i class="fas fa-heart rounded-circle bg--white text--first p-2.5 h-9 w-9" aria-hidden="true"></i>
+              <!-- <span class="text--white pl-2 pr-3">Favorite</span> -->
             </a>
           </div>
         </div>
       </nav>
+
+      <!-- FAVOURITE LIST -->
+      <aside id="favorite__overlay" class="favorite-overlay / hidden top-0 left-0 right-0 h-screen w-screen bg-gray-900 bg-opacity-30 z-40">
+        <div id="favorite__list" class="favorite-list / fixed top-0 right-0 flex flex-col items-center md:items-stretch justify-center md:justify-start lg:w-3/12 md:w-4/12 sm:w-8/12 w-full h-full bg-white shadow-xl py-32 px-12">
+
+        </div>
+        
+      </aside>
 
       <!--*** JUMBOTRON ***-->
       <div class="container-fluid flex items-center h-55vh" id="section__jumbo">
@@ -211,7 +218,7 @@
                           </small>
                         </div>
                         <div class="col flex flex-col align-items-end">
-                          <button class="rounded-pill border h-10 w-10 p-2" aria-label="add to favourite">
+                          <button class="rounded-pill border h-10 w-10 p-2" aria-label="add to favorite">
                             <span class="far fa-heart text-secondary"></span>
                           </button>
                           <small class="text-secondary">
@@ -270,7 +277,7 @@
                           </small>
                         </div>
                         <div class="col flex flex-col align-items-end">
-                          <button class="rounded-pill border h-10 w-10 p-2" aria-label="add to favourite">
+                          <button class="rounded-pill border h-10 w-10 p-2" aria-label="add to favorite">
                             <span class="far fa-heart text-secondary"></span>
                           </button>
                           <small class="text-secondary">
@@ -329,7 +336,7 @@
                           </small>
                         </div>
                         <div class="col flex flex-col align-items-end">
-                          <button class="rounded-pill border h-10 w-10 p-2" aria-label="add to favourite">
+                          <button class="rounded-pill border h-10 w-10 p-2" aria-label="add to favorite">
                             <span class="far fa-heart text-secondary"></span>
                           </button>
                           <small class="text-secondary">
@@ -388,7 +395,7 @@
                           </small>
                         </div>
                         <div class="col flex flex-col align-items-end">
-                          <button class="rounded-pill border h-10 w-10 p-2" aria-label="add to favourite">
+                          <button class="rounded-pill border h-10 w-10 p-2" aria-label="add to favorite">
                             <span class="far fa-heart text-secondary"></span>
                           </button>
                           <small class="text-secondary">
@@ -447,7 +454,7 @@
                           </small>
                         </div>
                         <div class="col flex flex-col align-items-end">
-                          <button class="rounded-pill border h-10 w-10 p-2" aria-label="add to favourite">
+                          <button class="rounded-pill border h-10 w-10 p-2" aria-label="add to favorite">
                             <span class="far fa-heart text-secondary"></span>
                           </button>
                           <small class="text-secondary">
@@ -987,155 +994,9 @@
     <script async defer src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.min.js" integrity="sha384-Atwg2Pkwv9vp0ygtn1JAojH0nYbwNJLPhwyoVbhoPwBhjQPR5VtM2+xf0Uwh9KtT" crossorigin="anonymous"></script>
     <!-- Swiper JS -->
     <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
-
     
-    <!-- Initialize Swiper -->
-    <script>
-      // inventory vehicles swiper
-      var swiperInventoryVehicles = new Swiper(".swiperInventoryVehicles", {
-        slidesPerView: 1,
-        spaceBetween: 0,
-        autoplay: {
-          delay: 2500,
-          disableOnInteraction: false,
-        },
-        navigation: {
-          prevEl: ".swiper-button-left",
-          nextEl: ".swiper-button-right",
-        },
-        pagination: {
-          el: ".swiper-pagination",
-          clickable: true,
-        },
-        breakpoints: {
-          480: {
-            slidesPerView: 1,
-            spaceBetween: 0,
-          },
-          576: {
-            slidesPerView: 2,
-            spaceBetween: 15,
-          },
-          640: {
-            slidesPerView: 2,
-            spaceBetween: 20,
-          },
-          768: {
-            slidesPerView: 2,
-            spaceBetween: 20,
-          },
-          992: {
-            slidesPerView: 3,
-            spaceBetween: 20,
-          },
-          1024: {
-            slidesPerView: 3,
-            spaceBetween: 30,
-          },
-          1200: {
-            slidesPerView: 4,
-            spaceBetween: 30,
-          },
-        },
-      });
-      
-      // reviews swiper
-      var swiperTestimonials = new Swiper(".swiperTestimonials", {
-        slidesPerView: 1,
-        spaceBetween: 0,
-        autoplay: {
-          delay: 2500,
-          disableOnInteraction: false,
-        },
-        navigation: {
-          prevEl: ".swiper-button-prev",
-          nextEl: ".swiper-button-next",
-        },
-        pagination: {
-          el: ".swiper-pagination",
-          clickable: true,
-        },
-        breakpoints: {
-          480: {
-            slidesPerView: 1,
-            spaceBetween: 0,
-          },
-          576: {
-            slidesPerView: 2,
-            spaceBetween: 15,
-          },
-          640: {
-            slidesPerView: 2,
-            spaceBetween: 20,
-          },
-          768: {
-            slidesPerView: 2,
-            spaceBetween: 20,
-          },
-          992: {
-            slidesPerView: 3,
-            spaceBetween: 20,
-          },
-          1024: {
-            slidesPerView: 3,
-            spaceBetween: 30,
-          },
-          1200: {
-            slidesPerView: 3,
-            spaceBetween: 30,
-          },
-        },
-      });
-    </script>
-
-
-    <script>
-      // SIDEBAR MENU CONTROLS
-      const menu__overlay = document.querySelector('#menu__overlay');
-      const menu__list = document.querySelector('#menu__list');
-      const header__menuBtn = document.querySelector('#header__menuBtn');
-
-      [header__menuBtn /*, menu__overlay*/].forEach(elem => {
-        elem.addEventListener('click', () => {
-          if (menu__overlay.classList.contains('fixed')) {
-            menu__list.classList.remove('slide-in-menu');
-            menu__list.classList.add('slide-out-menu');
-            setTimeout(() => {
-              menu__overlay.classList.add('hidden');
-              menu__overlay.classList.remove('fixed');
-            }, 300);
-          } else {
-            menu__overlay.classList.remove('hidden');
-            menu__overlay.classList.add('fixed');
-            menu__list.classList.add('slide-in-menu');
-            menu__list.classList.remove('slide-out-menu');
-          }
-        });
-      });
-
-      // SUBMENU CONTROLS
-      const menuListItems = document.querySelectorAll('.menu-list-item');
-
-      menuListItems.forEach(item => {
-        console.log('item', item);
-        let submenu = document.querySelector(`.${item.className.split(" ").slice(0, 1).join("")} .submenu-list`) || null;
-        item.addEventListener('click', () => {
-          if (submenu) {
-            if (submenu.classList.contains('d-none')) {
-              submenu.classList.remove('d-none');
-              submenu.classList.add('d-block');
-              submenu.classList.add('slide-from-left');
-            } else {
-              submenu.classList.remove('d-block');
-              submenu.classList.remove('slide-from-left');
-              submenu.classList.add('d-none');
-            }
-          }
-          item.classList.add('active')
-        });
-      });
-
-    </script>
+    <!-- HOME -->
+    <script src="./js/home/home.js"></script>
 
 
 

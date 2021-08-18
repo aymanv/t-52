@@ -23,7 +23,7 @@
     <link rel="stylesheet" href="./styles/_base.css">
     <link rel="preload" href="./styles/_base-tailwind.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
     <link rel="stylesheet" href="./styles/_tailwind.css">
-    <!-- <link rel="stylesheet" href="./styles/_globals.css"> -->
+    <link rel="preload" href="./styles/ui/_active.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
     <link rel="stylesheet" href="./styles/_theme.css">
     <!-- <link rel="preload" href="./styles/about/_style.css" as="style" onload="this.onload=null;this.rel='stylesheet'"> -->
     <!-- BOOTSTRAP 5 CSS -->
@@ -305,16 +305,32 @@
                 </div>
               </div>
 
-              <nav class="flex justify-between items-center" aria-label="...">
-                <button><span class="fas fa-chevron-left"></span></button>
-                <ul class="pagination pagination-lg">
-                  <li class="page-item active m-2 w-12 h-12 text-center" aria-current="page">
-                    <span class="page-link p-2">1</span>
+              <nav class="" aria-label="...">
+                <ul class="pagination pagination-lg / flex justify-center items-center">
+                  <!-- prev page btn -->
+                  <li class="page-item left m-2 w-12 h-12 text-center">
+                    <a class="page-link border-0 p-2" href="#">
+                      <i class="fas fa-chevron-left"></i>
+                    </a>
                   </li>
-                  <li class="page-item m-2 w-12 h-12 text-center"><a class="page-link p-2" href="#">2</a></li>
-                  <li class="page-item m-2 w-12 h-12 text-center"><a class="page-link p-2" href="#">3</a></li>
+
+                  <li class="page-item active m-2 w-12 h-12 text-center" aria-current="page">
+                    <a href="#" class="page-link p-2">1</a>
+                  </li>
+                  <li class="page-item m-2 w-12 h-12 text-center">
+                    <a href="#" class="page-link p-2">2</a>
+                  </li>
+                  <li class="page-item m-2 w-12 h-12 text-center">
+                    <a href="#" class="page-link p-2">3</a>
+                  </li>
+
+                  <!-- next-page-btn -->
+                  <li class="page-item right m-2 w-12 h-12 text-center">
+                    <a class="page-link border-0 p-2" href="#">
+                      <i class="fas fa-chevron-right"></i>
+                    </a>
+                  </li>
                 </ul>
-                <button><span class="fas fa-chevron-right"></span></button>
               </nav>
               
             </section>
