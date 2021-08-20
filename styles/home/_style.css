@@ -4,9 +4,9 @@ body {
   overflow-x: hidden !important;
 }
 
-#section__jumbo {
+/* #section__jumbo {
   background: url('../../images/2-2.webp') center center no-repeat;
-}
+} */
 #section__offerBg {
   background: linear-gradient(var(--first-95), var(--first-95)), url('../../images/3-2.webp') center center no-repeat;
 }

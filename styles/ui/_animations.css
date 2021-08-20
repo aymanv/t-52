@@ -1,9 +1,16 @@
 /* SLIDE FROM LEFT ANIMATION */
+
+.slideLeft { transform: translateX(-100%); }
+.slideRight { transform: translateX(100%); }
+.slideTop { transform: translateY(-100%); }
+.slideBottom { transform: translateY(100%); }
+
 .slide-from-left {
   transform: translateX(-100%);
   opacity: 0;
   animation: slideFromLeft 1500ms cubic-bezier(0.075, 0.82, 0.165, 1) forwards;
 }
+.slideLeft { transform: translateX(-100%); }
 @keyframes slideFromLeft {
   from {
     opacity: 0;

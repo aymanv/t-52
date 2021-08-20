@@ -54,6 +54,10 @@
       <!-- SITE MENU -->
       <header id="menu__overlay" class="menu-overlay hidden top-0 left-0 h-screen w-screen bg-gray-900 bg-opacity-30 z-40">
         <div id="menu__list" class="menu-list / absolute top-0 left-0 flex flex-col items-center md:items-stretch justify-center md:justify-start lg:w-3/12 md:w-4/12 sm:w-8/12 w-full h-full bg-white shadow-xl py-32 px-12">
+          <!-- close btn -->
+          <button class="header-menu-btn / absolute top-8 left-8 w-10 h-10 rounded-full hover:shadow-xl">
+            <i class="fas fa-times fa-2x text--first" aria-hidden="true"></i>
+          </button>
           <!-- home link -->
           <div class="menu-item / flex flex-col w-full mb-1">
             <a href="#" class="menu-item-link / flex items-center w-full uppercase font-semibold rounded-xl transition duration-150 cursor-pointer p-2 mb-1">
@@ -68,73 +72,143 @@
               <span class="md:transform md:translate-x-2 text-2xl md:text-lg">Services</span>
             </div>
             <ul class="submenu-list / origin-top-left pl-0 ml-8">
-              <a href="#" class="submenu-link / block rounded-xl transition duration-150 px-8 py-4">
-                Sell a Car
-              </a>
-              <a href="#" class="submenu-link / block rounded-xl transition duration-150 px-8 py-4">
-                Buy a Car
-              </a>
-              <a href="#" class="submenu-link / block rounded-xl transition duration-150 px-8 py-4">
-                Premium Service
-              </a>
+              <li>
+                <a href="#" class="submenu-link / block uppercase rounded-xl transition duration-150 px-8 py-4">
+                  Sell a Car
+                </a>
+              </li>
+              <li>
+                <a href="#" class="submenu-link / block uppercase rounded-xl transition duration-150 px-8 py-4">
+                  Buy a Car
+                </a>
+              </li>
+              <li>
+                <a href="#" class="submenu-link / block uppercase rounded-xl transition duration-150 px-8 py-4">
+                  Premium Service
+                </a>
+              </li>
             </ul>
           </div>
-
         </div>
+
       </header>
 
       <!-- HEADER -->
       <nav id="header" class="navbar navbar-light bg--white border-b-2 border--first py-3 z-50">
         <div class="container">
-          <div class="flex flex-wrap items-center" id="header__logoContainer">
-            <a href="#" class="rounded-circle p-2 mr-1" id="header__menuBtn" aria-label="menu">
-              <span class="fas fa-bars text-3xl text--first"></span>
-            </a>
-            <a class="navbar-brand" href="/" id="header__logo" aria-label="go home">
-              <img loading="lazy" class="img-fluid" src="./images/logo/logo.webp" srcset="./images/logo/logo-150.webp 768w" alt="Redone Motors Logo" width="130" height="80">
-            </a>
-          </div>
-          <div id="header__contactButtons" class="flex flex-wrap items-center">
-            <a href="tel:606060606" class="btn btn--first rounded-full p-2 mx-2" aria-label="Call Us at (504) 226-7370">
-              <i class="fas fa-phone rounded-circle bg--white text--first p-2.5 h-9 w-9" aria-hidden="true"></i>
-              <span class="text--white pl-2 pr-3">Call Us at (504) 226-7370</span>
-            </a>
-            <a href="mailto:example@example.com" class="btn btn--first rounded-full p-2 mx-2" aria-label="Text Us">
-              <i class="fas fa-envelope rounded-circle bg--white text--first p-2.5 h-9 w-9" aria-hidden="true"></i>
-              <span class="text--white pl-2 pr-3">Text Us</span>
-            </a>
-            <a href="#" class="btn btn--first rounded-full p-2 mx-2" id="header__favoriteBtn" aria-label="Favorite List">
-              <i class="fas fa-heart rounded-circle bg--white text--first p-2.5 h-9 w-9" aria-hidden="true"></i>
-              <!-- <span class="text--white pl-2 pr-3">Favorite</span> -->
-            </a>
+          <div class="grid grid-cols-2 md:grid-cols-3 w-full">
+            <div id="header__logoContainer" class="col-span-1 md:col-span-1 flex flex-nowrap items-center">
+              <a href="#" class="header-menu-btn rounded-circle p-2 mr-1" id="header__menuBtn" aria-label="menu">
+                <span class="fas fa-bars text-3xl text--first"></span>
+              </a>
+              <a class="navbar-brand" href="/" id="header__logo" aria-label="go home">
+                <img loading="lazy" id="header__logoImg" class="img-fluid" src="./images/logo/logo.webp" srcset="./images/logo/logo-150.webp 768w" alt="Redone Motors Logo" width="130" height="80">
+              </a>
+            </div>
+            <div id="header__actionsBtns" class="col-span-1 md:col-span-2 flex flex-wrap items-center justify-end">
+              <a href="tel:606060606" class="btn btn--first rounded-full p-1 md:p-2 mx-2" aria-label="Call Us at (504) 226-7370">
+                <i class="fas fa-phone rounded-circle bg--white text--first p-2.5 h-9 w-9" aria-hidden="true"></i>
+                <span class="text--white pl-2 pr-3 hidden md:inline">Call Us at (504) 226-7370</span>
+              </a>
+              <a href="mailto:example@example.com" class="btn btn--first rounded-full p-1 md:p-2 mx-2" aria-label="Text Us">
+                <i class="fas fa-envelope rounded-circle bg--white text--first p-2.5 h-9 w-9" aria-hidden="true"></i>
+                <span class="text--white pl-2 pr-3 hidden md:inline">Text Us</span>
+              </a>
+              <a href="#" class="favorite-sidebar-btn / btn btn--first rounded-full p-1 md:p-2 mx-2" id="header__favoriteBtn" aria-label="Favorite List">
+                <i class="fas fa-heart rounded-circle bg--white text--first p-2.5 h-9 w-9" aria-hidden="true"></i>
+                <!-- <span class="text--white pl-2 pr-3">Favorite</span> -->
+              </a>
+            </div>
           </div>
         </div>
       </nav>
 
       <!-- FAVOURITE LIST -->
       <aside id="favorite__overlay" class="favorite-overlay / hidden top-0 left-0 right-0 h-screen w-screen bg-gray-900 bg-opacity-30 z-40">
-        <div id="favorite__list" class="favorite-list / fixed top-0 right-0 flex flex-col items-center md:items-stretch justify-center md:justify-start lg:w-3/12 md:w-4/12 sm:w-8/12 w-full h-full bg-white shadow-xl py-32 px-12">
-
-        </div>
+        <div id="favorite__list" class="favorite-list / fixed overflow-y-auto scroll--first top-0 right-0 flex flex-col xl:w-3/12 lg:w-4/12 md:w-5/12 sm:w-8/12 w-full h-full bg-white shadow-xl py-32 px-8 sm:px-12 md:px-12">
+          <!-- close btn -->
+          <button class="favorite-sidebar-btn / absolute top-8 right-8 w-10 h-10 rounded-full">
+            <i class="fas fa-times fa-2x text--first" aria-hidden="true"></i>
+          </button>
+          <!--? title -->
+          <div class="text-xl uppercase font-bold">
+            <i class="fas fa-heart text--first border-2 rounded-full p-2" aria-hidden="true"></i>
+            Saved Vehicles
+          </div>
+          <div class="favorite-items">
+            <!--? favorite item -->
+            <a href="#" class="favorite-item / flex flex-col bg--first text-white shadow-xl my-4">
+              <img src="./images/inventory/3-300.webp" class="object-cover h-52" alt="car item">
+              <div class="">
+                <div class="flex px-2">
+                  <span class="w-4/6 font-semibold py-2">2018 F150 PLATINIUM ...</span>
+                  <span class="w-2/6 bg--first-50 text--white text-end py-2">$52,998</span>
+                </div>              
+              </div>
+            </a>
+            
+            <!--? favorite item -->
+            <a href="#" class="favorite-item / relative flex flex-col bg--first text-white border shadow-xl my-4">
+              <button class="absolute top-2 right-2 bg--first-70 text-white rounded-full p-2 w-10 h-10">
+                <i class="fas fa-times"></i>
+                </button>
+              <img src="./images/inventory/3-300.webp" class="object-cover h-52" alt="car item">
+              <div class="">
+                <div class="flex px-2">
+                  <span class="w-4/6 font-semibold py-2">2018 F150 PLATINIUM ...</span>
+                  <span class="w-2/6 bg--first text--white text-end py-2">$52,998</span>
+                </div>
+              </div>
+            </a>
+          </div>
+          
         
+        </div>        
       </aside>
 
       <!--*** JUMBOTRON ***-->
-      <div class="container-fluid flex items-center h-55vh" id="section__jumbo">
-        <div class="container">
-          <div class="flex flex-wrap items-center">
-            <div id="section__jumboLeft" class="col-xl-5 col-lg-5 col-12 p-3 bg-gray-200 bg-opacity-40 slideLeft">
-              <h1 class="font-extrabold mb-3">FIND YOUR NEXT CAR AT REDONE MOTORS</h1>
-              <p class="col-lg-10 fs-5 mb-4">
-                Allow us to guide you through the innovative stress free approach in finding your drem car.
-              </p>
-              <a href="/inventory.html" class="btn--transparent text--first font-medium text-uppercase fs-5">
-                View our inventory
-                <div class="fas fa-arrow-right"></div>
-              </a>
+      <div class="container-fluid px-0" id="section__jumbo">
+        <!-- TYPE IMAGE -->
+        <div id="jumbo__imgType" class="relative flex items-center h-55vh" style="background: url('./images/2-2.webp') center center no-repeat;">
+          <div class="container">
+            <div class="flex flex-wrap items-center">
+              <div id="section__jumboLeft" class="col-xl-5 col-lg-5 col-12 p-3 bg-gray-200 bg-opacity-40 slideLeft">
+                <h1 class="font-extrabold mb-3">FIND YOUR NEXT CAR AT REDONE MOTORS</h1>
+                <p class="col-lg-10 fs-5 mb-4">
+                  Allow us to guide you through the innovative stress free approach in finding your drem car.
+                </p>
+                <a href="/inventory.html" class="btn--transparent text--first font-medium text-uppercase fs-5">
+                  View our inventory
+                  <div class="fas fa-arrow-right"></div>
+                </a>
+              </div>
             </div>
           </div>
         </div>
+
+        <!-- TYPE VIDEO -->
+        <!-- <div id="jumbo__videoType" class="relative h-55vh">
+          <video autoplay muted loop width="100%" height="100%" class="object-cover h-55vh w-full">
+            <source src="https://cdn.videvo.net/videvo_files/video/free/2018-07/small_watermarked/180607_A_101_preview.webm" type="video/webm">
+            Your browser does not support HTML video.
+          </video>
+        </div> -->
+
+        <!-- TYPE SLIDER -->
+        <!-- <div id="jumbo__swiperType" class="relative h-55vh jumbo__swiperType">
+          <!-- Swiper -->
+          <!-- <div class="swiper-container swiperJumboHome" id="swiperJumboHome">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide h-55vh">
+                <img src="./images/3-2.webp" alt="" class="object-cover w-full h-full">
+              </div>
+              <div class="swiper-slide h-55vh">
+                <img src="./images/3-2.webp" alt="" class="object-cover w-full h-full">
+              </div>
+            </div>
+          </div>
+        </div> -->
+
       </div>
 
       <!--*** SEARCH SECTION ***-->
@@ -189,7 +263,7 @@
           </div>
             
           <!-- inventory vehicles -->
-          <div id="swiperInventoryVehicles" class="swiper-container swiperInventoryVehicles">
+          <div id="swiperInventoryVehicles" class="swiper-container swiperInventoryVehicles slideBottom">
 
             <div id="section__inventoryContent" class="swiper-wrapper my-12">
               <!-- card col -->
@@ -723,7 +797,7 @@
             <hr class="text-center opacity-100 w-20 bg--first">
           </div>
 
-          <div id="swiperTestimonials" class="swiper-container relative bg-transparent swiperTestimonials">
+          <div id="swiperTestimonials" class="swiper-container relative bg-transparent swiperTestimonials slideBottom">
             <div class="swiper-wrapper flex items-stretch my-14">
               <!-- review -->
               <div class="swiper-slide">
@@ -985,6 +1059,8 @@
     
 
     
+    <!-- LAYOUTS (SIDEBARS/MENU) -->
+    <script src="./js/ui/layouts.js"></script>
     <!-- SCROLL ANIMATIONS -->
     <script src="./js/ui/animation-scroll.js"></script>
     <!-- FONT AWESOME ICONS -->
