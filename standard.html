@@ -25,6 +25,7 @@
     <link rel="stylesheet" href="./styles/_tailwind.css">
     <link rel="preload" href="./styles/ui/_active.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
     <link rel="stylesheet" href="./styles/_theme.css">
+    <link rel="stylesheet" href="./styles/ui/_animations.css">
     <!-- <link rel="preload" href="./styles/about/_style.css" as="style" onload="this.onload=null;this.rel='stylesheet'"> -->
     <!-- BOOTSTRAP 5 CSS -->
     <link rel="preload" href="./styles/bootstrap/bootstrap.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
@@ -298,27 +299,33 @@
                   <hr class="custom-title-divider / opacity-100 w-24 h-1 bg--first">
                 </div>
 
-                <!--vehicle card -->
-                <a href="#" class="custom-inventory-card / relative flex flex-col bg--first hover:text--white text-white border shadow-xl my-4">
-                  <img src="./images/inventory/3-300.webp" class="object-cover h-52" alt="car item">
-                  <div class="">
-                    <div class="flex px-2">
-                      <span class="w-4/6 font-semibold py-2 hover:text-white text-lg">2018 F150 PLATINIUM ...</span>
+                <div class="grid grid-cols-12 gap-2">
+                  <!--vehicle card -->
+                  <a href="#" class="custom-inventory-card / col-span-12 grid grid-cols-2 relative bg--first hover:text--white text-white border shadow-xl my-4">
+                    <div class="col-span-1 md:col-span-2">
+                      <img src="./images/inventory/3-300.webp" class="object-cover h-52 w-full" alt="car item">
                     </div>
-                    <div class="flex px-2 border-t border-white">
-                      <span class="w-4/6 font-semibold py-2 hover:text-white">Price</span>
-                      <span class="w-2/6 bg--first text--white text-end py-2">$52,000</span>
+                    <div class="col-span-1 md:col-span-2">
+                      <div class="flex px-2">
+                        <span class="w-4/6 font-semibold py-2 hover:text-white text-lg">2018 F150 PLATINIUM ...</span>
+                      </div>
+                      <div class="flex px-2 border-t border-white">
+                        <span class="w-4/6 font-semibold py-2 hover:text-white">Price</span>
+                        <span class="w-2/6 bg--first text--white text-end py-2">$52,000</span>
+                      </div>
+                      <div class="flex px-2 border-t border-white">
+                        <span class="w-4/6 font-semibold py-2 hover:text-white">Mileage</span>
+                        <span class="w-2/6 bg--first text--white text-end py-2">150,000</span>
+                      </div>
+                      <div class="flex px-2 border-t border-white">
+                        <span class="w-4/6 font-semibold py-2 hover:text-white">Color</span>
+                        <span class="w-2/6 bg--first text--white text-end py-2">White</span>
+                      </div>
                     </div>
-                    <div class="flex px-2 border-t border-white">
-                      <span class="w-4/6 font-semibold py-2 hover:text-white">Mileage</span>
-                      <span class="w-2/6 bg--first text--white text-end py-2">150,000</span>
-                    </div>
-                    <div class="flex px-2 border-t border-white">
-                      <span class="w-4/6 font-semibold py-2 hover:text-white">Color</span>
-                      <span class="w-2/6 bg--first text--white text-end py-2">White</span>
-                    </div>
-                  </div>
-                </a>
+                  </a>
+                  
+
+                </div>
 
               </div>
 
