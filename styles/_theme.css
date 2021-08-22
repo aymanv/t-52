@@ -1,12 +1,19 @@
 
 :root {
-  --first: #0058BC;
+  /* --first: #0058BC;
   --first-50: #0058BC50;
   --first-60: #0058BC60;
   --first-70 : #0058BC70;
   --first-80 : #0058BC80;
   --first-90 : #0058BC90;
-  --first-95 : #0058BC95;
+  --first-95 : #0058BC95; */
+  --first: #313131;
+  --first-50: #31313150;
+  --first-60: #31313160;
+  --first-70 : #31313170;
+  --first-80 : #31313180;
+  --first-90 : #31313190;
+  --first-95 : #31313195;
   --second: #FFCC00;
   --second-50: #FFCC0050;
   --second-60: #FFCC0060;
@@ -111,6 +118,29 @@
 .scroll--grey::-webkit-scrollbar-track { background-color: var(--grey) !important; }
 .scroll--grey::-webkit-scrollbar-thumb:hover { background-color: var(--grey-95) !important; }
 
+/*** INPUT RANGE ***/
+input[type="range"]::-webkit-slider-thumb {
+  -webkit-appearance: none !important;
+  appearance: none !important;
+  width: 1rem !important; height: 1rem !important;
+  background: var(--first) !important;
+  cursor: ew-resize;
+}
+input[type="range"]::-webkit-slider-thumb:active {
+  background: var(--first-90) !important;
+  box-shadow: 0 0 0 .2rem var(--first-50) !important;
+}
+
+/*** CHECKBOX / RADIO ***/
+input[type="checkbox"]:checked, input[type="radio"]:checked {
+  background-color: var(--first) !important;
+  border-color: var(--first) !important;
+}
+
+/*** LINK ***/
+a:hover, a:active {
+  color: var(--first) !important;
+}
 
 /*** BUTTON COLORS ***/
 .btn--transparent { background-color: var(--transparent) !important; color: var(--black); }

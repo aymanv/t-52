@@ -1,0 +1,501 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]>      <html class="no-js"> <!--<![endif]-->
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Redone Motors | Inventory</title>
+    <!-- META TAGS -->
+    <meta name="theme-color" content="#0058BC">
+    <meta name="og:title" content="Redone Motors | Inventory">
+    <meta name="og:url" content="https://test.com/inventory">
+    <meta name="og:description" content="Redone Motors Inventory">
+    <meta name="og:image" content="link to my image">
+    <meta name="description" content="Redone Motors Inventory">
+    <meta name="keywords" content="Redone Motors Cars Inventory">
+    <!-- CSS -->
+    <link rel="icon" href="./favicon.ico" />
+    <link rel="stylesheet" href="./styles/inventory/_inventory.css">
+    <link rel="stylesheet" href="./styles/_base.css">
+    <link rel="preload" href="./styles/_base-tailwind.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <link rel="stylesheet" href="./styles/_tailwind.css">
+    <link rel="preload" href="./styles/ui/_active.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <link rel="stylesheet" href="./styles/_theme.css">
+    <!-- <link rel="preload" href="./styles/about/_style.css" as="style" onload="this.onload=null;this.rel='stylesheet'"> -->
+    <!-- BOOTSTRAP 5 CSS -->
+    <link rel="preload" href="./styles/bootstrap/bootstrap.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <!-- POPPINS FONT -->
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
+  </head>
+  <body id="pageId" class="page-class">
+    <!--[if lt IE 7]>
+      <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="#">upgrade your browser</a> to improve your experience.</p>
+    <![endif]-->
+
+    <main>
+      <!-- SITE MENU -->
+      <header id="menu__overlay" class="menu-overlay / hidden top-0 left-0 h-screen w-screen bg-gray-900 bg-opacity-30 z-40">
+        <div id="menu__list" class="menu-list / absolute top-0 left-0 flex flex-col items-center md:items-stretch md:justify-start lg:w-3/12 md:w-4/12 sm:w-8/12 w-full h-full bg-white shadow-xl py-32 px-12">
+          <!-- close btn -->
+          <button class="header-menu-btn / absolute top-8 left-8 w-10 h-10 rounded-full hover:shadow-xl">
+            <i class="fas fa-times fa-2x text--first" aria-hidden="true"></i>
+          </button>
+          <!-- home link -->
+          <div class="menu-item / flex flex-col w-full mb-1">
+            <a href="#" class="menu-item-link / flex items-center w-full uppercase font-semibold rounded-xl transition duration-150 cursor-pointer p-2 mb-1">
+              <i class="menu-item-icon / fas fa-chevron-right transition duration-150 hidden md:flex m-4" aria-hidden="true"></i>
+              <span class="md:transform md:translate-x-2 text-2xl md:text-lg">Home</span>
+            </a>
+          </div>
+          <!-- Services link -->
+          <div class="menu-item / flex flex-col w-full mb-1">
+            <div class="menu-item-link / flex items-center w-full uppercase font-semibold rounded-xl transition duration-150 cursor-pointer p-2 mb-1">
+              <i class="menu-item-icon / fas fa-chevron-right transition duration-150 hidden md:flex m-4" aria-hidden="true"></i>
+              <span class="md:transform md:translate-x-2 text-2xl md:text-lg">Services</span>
+            </div>
+            <ul class="submenu-list / origin-top-left pl-0 md:ml-8">
+              <li>
+                <a href="#" class="submenu-link / text-black hover:text--first block uppercase rounded-xl transition duration-150 px-8 py-4">
+                  Sell a Car
+                </a>
+              </li>
+              <li>
+                <a href="#" class="submenu-link / text-black hover:text--first block uppercase rounded-xl transition duration-150 px-8 py-4">
+                  Buy a Car
+                </a>
+              </li>
+              <li>
+                <a href="#" class="submenu-link / text-black hover:text--first block uppercase rounded-xl transition duration-150 px-8 py-4">
+                  Premium Service
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+      </header>
+
+      <!-- HEADER -->
+      <nav id="header" class="header / navbar navbar-light bg--white border-b-2 border--first py-3 z-50">
+        <div class="container">
+          <div class="grid grid-cols-2 md:grid-cols-3 w-full">
+            <div id="header__logoContainer" class="col-span-1 md:col-span-1 flex flex-nowrap items-center">
+              <a href="#" class="header-menu-btn rounded-circle p-2 mr-1" id="header__menuBtn" aria-label="menu">
+                <span class="fas fa-bars text-3xl text--first"></span>
+              </a>
+              <a class="navbar-brand" href="/" id="header__logo" aria-label="go home">
+                <img loading="lazy" id="header__logoImg" class="img-fluid" src="./images/logo/logo.webp" srcset="./images/logo/logo-150.webp 768w" alt="Redone Motors Logo" width="130" height="80">
+              </a>
+            </div>
+            <div id="header__actionsBtns" class="col-span-1 md:col-span-2 flex flex-wrap items-center justify-end">
+              <a href="tel:606060606" class="btn btn--first rounded-full p-1 md:p-2 mx-2" aria-label="Call Us at (504) 226-7370">
+                <i class="fas fa-phone rounded-circle bg--white text--first p-2.5 h-9 w-9" aria-hidden="true"></i>
+                <span class="text--white pl-2 pr-3 hidden md:inline">Call Us at (504) 226-7370</span>
+              </a>
+              <a href="mailto:example@example.com" class="btn btn--first rounded-full p-1 md:p-2 mx-2" aria-label="Text Us">
+                <i class="fas fa-envelope rounded-circle bg--white text--first p-2.5 h-9 w-9" aria-hidden="true"></i>
+                <span class="text--white pl-2 pr-3 hidden md:inline">Text Us</span>
+              </a>
+              <a href="#" class="favorite-sidebar-btn / btn btn--first rounded-full p-1 md:p-2 mx-2" id="header__favoriteBtn" aria-label="Favorite List">
+                <i class="fas fa-heart rounded-circle bg--white text--first p-2.5 h-9 w-9" aria-hidden="true"></i>
+                <!-- <span class="text--white pl-2 pr-3">Favorite</span> -->
+              </a>
+            </div>
+          </div>
+        </div>
+      </nav>
+      
+
+      <!-- FAVOURITE LIST -->
+      <aside id="favorite__overlay" class="favorite-overlay / hidden top-0 left-0 right-0 h-screen w-screen bg-gray-900 bg-opacity-30 z-40">
+        <div id="favorite__list" class="favorite-list / fixed overflow-y-auto scroll--first top-0 right-0 flex flex-col xl:w-3/12 lg:w-4/12 md:w-5/12 sm:w-8/12 w-full h-full bg-white shadow-xl py-32 px-8 sm:px-12 md:px-12">
+          <!-- close btn -->
+          <button class="favorite-sidebar-btn / absolute top-8 right-8 w-10 h-10 rounded-full">
+            <i class="fas fa-times fa-2x text--first" aria-hidden="true"></i>
+          </button>
+          <!--? title -->
+          <div class="text-xl uppercase font-bold">
+            <i class="fas fa-heart text--first border-2 rounded-full p-2" aria-hidden="true"></i>
+            Saved Vehicles
+          </div>
+          <div class="favorite-items">
+            <!--? favorite item -->
+            <a href="#" class="favorite-item / flex flex-col bg--first text-white shadow-xl my-4">
+              <img src="./images/inventory/3-300.webp" class="object-cover h-52" alt="car item">
+              <div class="">
+                <div class="flex px-2">
+                  <span class="w-4/6 font-semibold py-2">2018 F150 PLATINIUM ...</span>
+                  <span class="w-2/6 bg--first-50 text--white text-end py-2">$52,998</span>
+                </div>              
+              </div>
+            </a>
+            
+            <!--? favorite item -->
+            <a href="#" class="favorite-item / relative flex flex-col bg--first text-white border shadow-xl my-4">
+              <button class="absolute top-2 right-2 bg--first-70 text-white rounded-full p-2 w-10 h-10">
+                <i class="fas fa-times"></i>
+                </button>
+              <img src="./images/inventory/3-300.webp" class="object-cover h-52" alt="car item">
+              <div class="">
+                <div class="flex px-2">
+                  <span class="w-4/6 font-semibold py-2">2018 F150 PLATINIUM ...</span>
+                  <span class="w-2/6 bg--first text--white text-end py-2">$52,998</span>
+                </div>
+              </div>
+            </a>
+          </div>
+          
+        
+        </div>        
+      </aside>
+
+
+      <!--*** PAGE TEXT ***-->
+      <section id="aboutUs__cover" class="about-us-cover / container-fluid px-0">
+        <img src="./images/3-2.webp" width="100%" height="300" class="h-96 object-cover" alt="about us cover">
+      </section>
+      <!--*** PAGE TEXT ***-->
+      <section id="custom-page-content" class="container-fluid py-12">
+        <div class="container">
+          <div class="grid grid-cols-12 gap-x-6 gap-y-12">
+            <div class="custom-content / col-span-full md:col-span-8 lg:col-span-8">
+              <!-- title -->
+              <div class="custom-title-handler / flex flex-col mb-3">
+                <h1 class="custom-title / font-extrabold text-2xl uppercase">ABOUT US</h1>
+                <hr class="custom-title-divider / opacity-100 w-24 h-1 bg--first">
+              </div>
+              <!-- content -->
+              <div class="custom-content-text">
+                <h1 class="text-xl">Hello from V12Software</h1>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo nihil commodi assumenda voluptatem atque. Natus sint ea saepe illo magnam.</p>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo nihil commodi assumenda voluptatem atque. Natus sint ea saepe illo magnam.</p>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo nihil commodi assumenda voluptatem atque. Natus sint ea saepe illo magnam.</p>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo nihil commodi assumenda voluptatem atque. Natus sint ea saepe illo magnam.</p>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo nihil commodi assumenda voluptatem atque. Natus sint ea saepe illo magnam.</p>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo nihil commodi assumenda voluptatem atque. Natus sint ea saepe illo magnam.</p>
+              </div>
+            
+            </div>
+  
+            <!-- *** SIDEBAR *** -->
+            <aside class="custom-sidebar / col-span-full md:col-span-4 lg:col-span-3 flex flex-col">
+              <div class="custom-sidebar-infos">
+                <!-- title -->
+                <div class="custom-title-handler / flex flex-col mb-3">
+                  <h1 class="custom-title / font-extrabold text-2xl uppercase">Dealer Informations</h1>
+                  <hr class="custom-title-divider / opacity-100 w-24 h-1 bg--first">
+                </div>
+                <!-- phone -->
+                <div class="custom-sidebar-phone-handler py-4 border-b-2 border-dashed border--first">
+                  <h2 class="custom-sidebar-phone / text--first text-xl font-bold capitalize my-4">Phone Number</h2>
+                  <div class="flex items-center my-2">
+                    <i class="fas fa-phone fa-lg/ text--first p-2 mr-2" aria-hidden="true"></i>
+                    <a href="tel:8888888888" class="custom-sidebar-phone / text-black">888-777-6666</a>
+                  </div>
+                </div>
+                <!-- email -->
+                <div class="custom-sidebar-email-handler py-4 border-b-2 border-dashed border--first">
+                  <h2 class="custom-sidebar-email / text--first text-xl font-bold capitalize my-4">Email Address</h2>
+                  <div class="flex items-center my-2">
+                    <i class="fas fa-envelope fa-lg / text--first p-2 mr-2" aria-hidden="true"></i>
+                    <a href="mailto:contact@redounemotors.com" class="custom-sidebar-email / text-black">contact@redonemotors.com</a>
+                  </div>
+                </div>
+                <!-- location -->
+                <div class="custom-sidebar-email-handler py-4 border-b-2 border-dashed border--first">
+                  <h2 class="custom-sidebar-email / text--first text-xl font-bold capitalize my-4">address</h2>
+                  <div class="flex items-center my-2">
+                    <i class="fas fa-map-marker-alt fa-lg / text--first p-2 mr-2" aria-hidden="true"></i>
+                    <a href="#" class="custom-sidebar-email / text-black">30019 EUCLID AVE, Wickliffe OH 44092</a>
+                  </div>
+                </div>
+                <!-- hours -->
+                <div class="custom-sidebar-email-handler py-4 border-b-2 border-dashed border--first">
+                  <h2 class="custom-sidebar-email / text--first text-xl font-bold capitalize my-4">Opening hours</h2>
+                  <div class="">
+                    <!-- <i class="fas fa-clock fa-lg / text--first p-2 mr-2" aria-hidden="true"></i>   -->
+                    <ul class="px-0">
+                      <li class="flex flex-nowrap mb-2">
+                        <span class="w-5/12 font-light">Monday</span>
+                        <span class="w-7/12 font-light">08:00 AM - 07:00 PM</span>
+                      </li>
+                      <li class="flex flex-nowrap mb-2">
+                        <span class="w-5/12 font-light">Tuesday</span>
+                        <span class="w-7/12 font-light">08:00 AM - 07:00 PM</span>
+                      </li>
+                      <li class="flex flex-nowrap mb-2">
+                        <span class="w-5/12 font-light">Wednesday</span>
+                        <span class="w-7/12 font-light">08:00 AM - 07:00 PM</span>
+                      </li>
+                      <li class="flex flex-nowrap mb-2">
+                        <span class="w-5/12 font-light">Thursday</span>
+                        <span class="w-7/12 font-light">08:00 AM - 07:00 PM</span>
+                      </li>
+                      <li class="flex flex-nowrap mb-2">
+                        <span class="w-5/12 font-light">Friday</span>
+                        <span class="w-7/12 font-light">08:00 AM - 07:00 PM</span>
+                      </li>
+                      <li class="flex flex-nowrap mb-2">
+                        <span class="w-5/12 font-light">Saturday</span>
+                        <span class="w-7/12 font-light">08:00 AM - 01:00 AM</span>
+                      </li>
+                      <li class="flex flex-nowrap mb-2">
+                        <span class="w-5/12 font-light">Sunday</span>
+                        <span class="w-7/12 font-light">Closed</span>
+                      </li>
+                    </ul>
+    
+                  </div>
+                </div>
+              </div>
+
+              <!--! ASK QUESTION FORM -->
+              <div class="custom-sidebar-contact / py-12">
+                <!-- title -->
+                <div class="custom-title-handler / flex flex-col mb-3">
+                  <h1 class="custom-title / font-extrabold text-2xl uppercase">Ask a question</h1>
+                  <hr class="custom-title-divider / opacity-100 w-24 h-1 bg--first">
+                </div>
+                <form action="" class="py-4">
+                  <!-- firstname -->
+                  <div class="form-group mb-4">
+                    <label for="">Firstname</label>
+                    <input type="text" class="form-control / border-t-0 border-l-0 border-r-0 rounded-none bg--light border-b-2 hover:border--first" name="data[firstname]" id="" />
+                  </div>
+                  <!-- lastname -->
+                  <div class="form-group mb-4">
+                    <label for="">Lastname</label>
+                    <input type="text" class="form-control / border-t-0 border-l-0 border-r-0 rounded-none bg--light border-b-2 hover:border--first" name="data[lastname]" id="" />
+                  </div>
+                  <!-- phone -->
+                  <div class="form-group mb-4">
+                    <label for="">Phone</label>
+                    <input type="text" class="form-control / border-t-0 border-l-0 border-r-0 rounded-none bg--light border-b-2 hover:border--first" name="data[phone]" id="" />
+                  </div>
+                  <!-- email -->
+                  <div class="form-group mb-4">
+                    <label for="">Email</label>
+                    <input type="text" class="form-control / border-t-0 border-l-0 border-r-0 rounded-none bg--light border-b-2 hover:border--first" name="data[email]" id="" />
+                  </div>
+                  <!-- email -->
+                  <div class="form-group mb-4">
+                    <label for="">Message</label>
+                    <textarea rows="4" class="form-control / border-t-0 border-l-0 border-r-0 rounded-none bg--light border-b-2 hover:border--first" name="data[Message]" id=""></textarea>
+                  </div>
+                  <button type="submit" class="btn w-full bg--first text--white font-bold text-xl uppercase border border-transparent hover:bg--transparent hover:text--first hover:border--first rounded-none">Submit</button>
+                </form>
+
+              </div>
+              <!-- end ask question form div -->
+              
+              <div class="custom-inventory">
+                <div class="custom-title-handler / flex flex-col mb-3">
+                  <h1 class="custom-title / font-extrabold text-2xl uppercase">Featured Inventory</h1>
+                  <hr class="custom-title-divider / opacity-100 w-24 h-1 bg--first">
+                </div>
+
+                <!--vehicle card -->
+                <a href="#" class="custom-inventory-card / relative flex flex-col bg--first hover:text--white text-white border shadow-xl my-4">
+                  <img src="./images/inventory/3-300.webp" class="object-cover h-52" alt="car item">
+                  <div class="">
+                    <div class="flex px-2">
+                      <span class="w-4/6 font-semibold py-2 hover:text-white text-lg">2018 F150 PLATINIUM ...</span>
+                    </div>
+                    <div class="flex px-2 border-t border-white">
+                      <span class="w-4/6 font-semibold py-2 hover:text-white">Price</span>
+                      <span class="w-2/6 bg--first text--white text-end py-2">$52,000</span>
+                    </div>
+                    <div class="flex px-2 border-t border-white">
+                      <span class="w-4/6 font-semibold py-2 hover:text-white">Mileage</span>
+                      <span class="w-2/6 bg--first text--white text-end py-2">150,000</span>
+                    </div>
+                    <div class="flex px-2 border-t border-white">
+                      <span class="w-4/6 font-semibold py-2 hover:text-white">Color</span>
+                      <span class="w-2/6 bg--first text--white text-end py-2">White</span>
+                    </div>
+                  </div>
+                </a>
+
+              </div>
+
+            </aside>
+
+          </div>
+
+
+        </div>
+        <!-- end container -->
+      </section>
+
+      
+
+
+
+      <!--********************************************************************-->
+      <!--****************************** FOOTER ******************************-->
+      <!--********************************************************************-->
+      <footer id="footer">
+        <div class="container-fluid bg--first">
+          <div class="container py-16">
+            <div class="row">
+              <!-- col -->
+              <div class="col-12 col-md-6 col-lg-4 mt-8 lg:mt-0">
+                <img src="./images/logo/logo-w.webp" srcset="./images/logo/logo-w-150.webp 768w" width="130" height="80" alt="footer logo" class="object-contain w-48 mb-10" />
+                <ul class="list-unstyled">
+                  <li class="font-extralight mb-3">
+                    <span class="fas fa-map-marker-alt text--white"></span>
+                    <a href="#" class="text--white text-nowrap pl-2">4477 GRAS WALEY HWD, <br>Augburn CA 95633</a>
+                  </li>
+                  <li class="font-extralight mb-3">
+                    <span class="fas fa-phone text--white"></span>
+                    <a href="#" class="text--white text-nowrap pl-2">(565)-757-9588</a>
+                  </li>
+                  <li class="font-extralight mb-3">
+                    <span class="far fa-envelope text--white"></span>
+                    <a href="#" class="text--white text-nowrap pl-2">contact@redonemotors.com</a>
+                  </li>
+                </ul>
+                <div class="flex items-center mt-8">
+                  <a href="#" class="fab fa-facebook pr-3 fs-3 text--white" aria-label="facebook"></a>
+                  <a href="#" class="fab fa-instagram pr-3 fs-3 text--white" aria-label="instagram"></a>
+                  <a href="#" class="fab fa-twitter pr-3 fs-3 text--white" aria-label="twitter"></a>
+                  <a href="#" class="fab fa-youtube pr-3 fs-3 text--white" aria-label="youtube"></a>
+                </div>
+              </div>
+              <!-- end col -->
+              
+              <!-- col -->
+              <div class="col-12 col-md-6 col-lg-4 mt-8 lg:mt-0">
+                <h4 class="uppercase text--white font-bold fs-5 mb-2">Opening Hours</h4>
+                <hr class="w-2/12 bg--white h-1 mb-6">
+  
+                <ul class="px-0">
+                  <li class="flex flex-nowrap lh-lg">
+                    <span class="text--white w-5/12 font-light">Monday</span>
+                    <span class="text--white w-7/12 font-light">08:00 AM - 07:00 PM</span>
+                  </li>
+                  <li class="flex flex-nowrap lh-lg">
+                    <span class="text--white w-5/12 font-light">Tuesday</span>
+                    <span class="text--white w-7/12 font-light">08:00 AM - 07:00 PM</span>
+                  </li>
+                  <li class="flex flex-nowrap lh-lg">
+                    <span class="text--white w-5/12 font-light text-red">Wednesday</span>
+                    <span class="text--white w-7/12 font-light">08:00 AM - 07:00 PM</span>
+                  </li>
+                  <li class="flex flex-nowrap lh-lg">
+                    <span class="text--white w-5/12 font-light">Thursday</span>
+                    <span class="text--white w-7/12 font-light">08:00 AM - 07:00 PM</span>
+                  </li>
+                  <li class="flex flex-nowrap lh-lg">
+                    <span class="text--white w-5/12 font-light">Friday</span>
+                    <span class="text--white w-7/12 font-light">08:00 AM - 07:00 PM</span>
+                  </li>
+                  <li class="flex flex-nowrap lh-lg">
+                    <span class="text--white w-5/12 font-light">Saturday</span>
+                    <span class="text--white w-7/12 font-light">08:00 AM - 01:00 AM</span>
+                  </li>
+                  <li class="flex flex-nowrap lh-lg">
+                    <span class="text--white w-5/12 font-light">Sunday</span>
+                    <span class="text--white w-7/12 font-light">Closed</span>
+                  </li>
+                </ul>
+  
+              </div>
+              <!-- end col -->
+  
+              <!-- col -->
+              <div class="col-12 col-md-6 col-lg-2 mt-8 lg:mt-0">
+                <h4 class="uppercase text--white font-bold fs-5 mb-2">Our Dealership</h4>
+                <hr class="w-2/12 bg--white h-1 mb-6">
+                
+                <ul class="px-0">
+                  <li class="flex flex-nowrap lh-lg">
+                    <a href="#" class="text--white text-nowrap w-5/12 font-light">About us</a>
+                  </li>
+                  <li class="flex flex-nowrap lh-lg">
+                    <a href="#" class="text--white text-nowrap w-5/12 font-light">Meet our staff</a>
+                  </li>
+                  <li class="flex flex-nowrap lh-lg">
+                    <a href="#" class="text--white text-nowrap w-7/12 font-light">Finance</a>
+                  </li>
+                  <li class="flex flex-nowrap lh-lg">
+                    <a href="#" class="text--white text-nowrap w-5/12 font-light">Contact us</a>
+                  </li>
+                  <li class="flex flex-nowrap lh-lg">
+                    <a href="#" class="text--white text-nowrap w-5/12 font-light">Friday</a>
+                  </li>
+                  <li class="flex flex-nowrap lh-lg">
+                    <a href="#" class="text--white text-nowrap w-5/12 font-light">Privacy Policy</a>
+                  </li>
+                </ul>
+              </div>
+              <!-- end col -->
+  
+              <!-- col -->
+              <div class="col-12 col-md-6 col-lg-2 mt-8 lg:mt-0">
+                <h4 class="uppercase text--white font-bold fs-5 mb-2">Inventory</h4>
+                <hr class="w-2/12 bg--white h-1 mb-6">
+                
+                <ul class="px-0">
+                  <li class="flex flex-nowrap lh-lg">
+                    <a href="#" class="text--white text-nowrap w-5/12 font-light">Our Inventory</a>
+                  </li>
+                  <li class="flex flex-nowrap lh-lg">
+                    <a href="#" class="text--white text-nowrap w-5/12 font-light">Sell Your Car</a>
+                  </li>
+                  <li class="flex flex-nowrap lh-lg">
+                    <a href="#" class="text--white text-nowrap w-7/12 font-light">Buy a car</a>
+                  </li>
+                  <li class="flex flex-nowrap lh-lg">
+                    <a href="#" class="text--white text-nowrap w-5/12 font-light">Special</a>
+                  </li>
+                  </li>
+                </ul>
+              </div>
+              <!-- end col -->
+  
+            </div>
+            <!-- end row -->
+          </div>
+          <!-- end footer infos -->
+        </div>
+          
+        <!-- !COPYRIGHT -->
+        <div class="container-fluid bg--white py-8">
+          <div class="container">
+            <div class="grid grid-cols-1 md:grid-cols-2">
+              <div class="text-lg uppercase text-center md:text-left">&copy; Copyright 2020 All Rights Reserved</div>
+              <div class="text-lg uppercase text-center md:text-right">Powered by V12Software</div>
+            </div>
+          </div>
+        </div>
+
+      </footer>
+
+      <!--********************************************************************-->
+      <!--**************************** END FOOTER ****************************-->
+      <!--********************************************************************-->
+
+
+    </main>
+    
+
+    <!-- LAYOUTS (SIDEBARS/MENU) -->
+    <script src="./js/ui/layouts.js"></script>
+    <!-- SCROLL ANIMATIONS -->
+    <script src="./js/ui/animation-scroll.js"></script>
+    <!-- FONT AWESOME ICONS -->
+    <script async defer src="https://kit.fontawesome.com/b77e3afeef.js" crossorigin="anonymous"></script>
+    <!-- BOOTSTRAP JS -->
+    <script async defer src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
+    <script async defer src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.min.js" integrity="sha384-Atwg2Pkwv9vp0ygtn1JAojH0nYbwNJLPhwyoVbhoPwBhjQPR5VtM2+xf0Uwh9KtT" crossorigin="anonymous"></script>
+    <!-- Swiper JS -->
+    <script defer src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    
+  
+  </body>
+</html>

@@ -47,8 +47,8 @@ console.log('menuListItems', menuListItems);
 menuListItems.forEach((item, idx) => {
   console.log('item', item);
   // let menuItemSelector = item.className.split(" ").slice(0, 1).join("");
-  let submenu = document.querySelector(`.menu-item:nth-child(${(idx+2)}) > .submenu-list`) || null;
-  let menuItemLink = document.querySelector(`.menu-item:nth-child(${(idx+2)}) > .menu-item-link`) || null;
+  let submenu = document.querySelector(`.menu-item:nth-child(${(idx+2)}) .submenu-list`) || null;
+  let menuItemLink = document.querySelector(`.menu-item:nth-child(${(idx+2)}) .menu-item-link`) || null;
   console.log('submenu', submenu);
   console.log('menuItemLink', menuItemLink);
 

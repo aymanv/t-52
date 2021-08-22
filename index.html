@@ -52,8 +52,9 @@
 
     <main>
       <!-- SITE MENU -->
-      <header id="menu__overlay" class="menu-overlay hidden top-0 left-0 h-screen w-screen bg-gray-900 bg-opacity-30 z-40">
-        <div id="menu__list" class="menu-list / absolute top-0 left-0 flex flex-col items-center md:items-stretch justify-center md:justify-start lg:w-3/12 md:w-4/12 sm:w-8/12 w-full h-full bg-white shadow-xl py-32 px-12">
+      <!-- SITE MENU -->
+      <header id="menu__overlay" class="menu-overlay / hidden top-0 left-0 h-screen w-screen bg-gray-900 bg-opacity-30 z-40">
+        <div id="menu__list" class="menu-list / absolute top-0 left-0 flex flex-col items-center md:items-stretch md:justify-start lg:w-3/12 md:w-4/12 sm:w-8/12 w-full h-full bg-white shadow-xl py-32 px-12">
           <!-- close btn -->
           <button class="header-menu-btn / absolute top-8 left-8 w-10 h-10 rounded-full hover:shadow-xl">
             <i class="fas fa-times fa-2x text--first" aria-hidden="true"></i>
@@ -71,19 +72,19 @@
               <i class="menu-item-icon / fas fa-chevron-right transition duration-150 hidden md:flex m-4" aria-hidden="true"></i>
               <span class="md:transform md:translate-x-2 text-2xl md:text-lg">Services</span>
             </div>
-            <ul class="submenu-list / origin-top-left pl-0 ml-8">
+            <ul class="submenu-list / origin-top-left pl-0 md:ml-8">
               <li>
-                <a href="#" class="submenu-link / block uppercase rounded-xl transition duration-150 px-8 py-4">
+                <a href="#" class="submenu-link / text-black hover:text--first block uppercase rounded-xl transition duration-150 px-8 py-4">
                   Sell a Car
                 </a>
               </li>
               <li>
-                <a href="#" class="submenu-link / block uppercase rounded-xl transition duration-150 px-8 py-4">
+                <a href="#" class="submenu-link / text-black hover:text--first block uppercase rounded-xl transition duration-150 px-8 py-4">
                   Buy a Car
                 </a>
               </li>
               <li>
-                <a href="#" class="submenu-link / block uppercase rounded-xl transition duration-150 px-8 py-4">
+                <a href="#" class="submenu-link / text-black hover:text--first block uppercase rounded-xl transition duration-150 px-8 py-4">
                   Premium Service
                 </a>
               </li>
@@ -137,7 +138,7 @@
           </div>
           <div class="favorite-items">
             <!--? favorite item -->
-            <a href="#" class="favorite-item / flex flex-col bg--first text-white shadow-xl my-4">
+            <a href="#" class="favorite-item / relative flex flex-col bg--first text-white shadow-xl bg--first hover:text--white my-4">
               <img src="./images/inventory/3-300.webp" class="object-cover h-52" alt="car item">
               <div class="">
                 <div class="flex px-2">
@@ -148,7 +149,7 @@
             </a>
             
             <!--? favorite item -->
-            <a href="#" class="favorite-item / relative flex flex-col bg--first text-white border shadow-xl my-4">
+            <a href="#" class="favorite-item / relative flex flex-col bg--first text-white shadow-xl bg--first hover:text--white my-4">
               <button class="absolute top-2 right-2 bg--first-70 text-white rounded-full p-2 w-10 h-10">
                 <i class="fas fa-times"></i>
                 </button>
@@ -969,7 +970,7 @@
               <div class="col-12 col-md-6 col-lg-4 mt-10 lg:mt-0">
                 <h4 class="text-uppercase text--white font-bold">Opening Hours</h4>
                 <hr class="w-2/12 bg--white h-1">
-  
+
                 <ul class="px-0">
                   <li class="row flex-nowrap lh-lg">
                     <span class="text--white w-5/12 font-light">Monday</span>
